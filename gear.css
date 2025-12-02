@@ -1,0 +1,264 @@
+/* ===== GEAR PAGE STYLES ===== */
+
+.gear-hero .hero-background {
+    background-image: url('Media/antarctica_adventure.png');
+}
+
+.gear-note {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 16px;
+}
+
+/* Gear Tabs */
+.gear-tabs-section {
+    padding: 32px 0;
+    background: var(--color-card);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+}
+
+.gear-tabs {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gear-tab {
+    padding: 12px 28px;
+    background: var(--color-bg-alt);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gear-tab:hover {
+    background: #e8e8e8;
+    transform: translateY(-2px);
+}
+
+.gear-tab.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(45, 52, 54, 0.2);
+}
+
+/* Gear Section */
+.gear-section {
+    padding: 64px 0;
+    background: var(--color-bg-alt);
+}
+
+.gear-category {
+    display: none;
+}
+
+.gear-category.active {
+    display: block;
+    animation: fadeUp 0.6s ease;
+}
+
+.category-title {
+    font-size: 42px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.category-description {
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-text-muted);
+    margin-bottom: 48px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gear-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+/* Gear Cards */
+.gear-card {
+    background: var(--color-card);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+
+.gear-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.gear-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 16px;
+    background: var(--color-accent);
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+}
+
+.gear-image {
+    aspect-ratio: 16/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.gear-content {
+    padding: 24px;
+}
+
+.gear-name {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.gear-rating {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #ffd700;
+}
+
+.gear-description {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.gear-specs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+}
+
+.spec {
+    padding: 4px 12px;
+    background: var(--color-bg-alt);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.gear-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: gap 0.3s ease;
+}
+
+.gear-card:hover .gear-link {
+    gap: 12px;
+}
+
+/* Packing Tips */
+.packing-tips-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.packing-tips {
+    color: white;
+    text-align: center;
+}
+
+.tips-title {
+    font-size: 42px;
+    margin-bottom: 48px;
+    color: white;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.tip-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tip-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-8px);
+}
+
+.tip-icon {
+    font-size: 56px;
+    margin-bottom: 16px;
+}
+
+.tip-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.tip-text {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gear-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gear-tabs {
+        flex-direction: column;
+    }
+
+    .gear-tab {
+        width: 100%;
+    }
+
+    .category-title {
+        font-size: 32px;
+    }
+
+    .tips-title {
+        font-size: 32px;
+    }
+}
+
+/* ===== DARK MODE STYLES ===== */
+body.dark-mode .gear-tab.active {
+    background: white;
+    color: #1A1A2E;
+    border-color: white;
+}

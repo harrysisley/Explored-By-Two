@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Explored By Two</title>
+  <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .profile-section {
+      padding: 120px 0 80px;
+      min-height: 60vh;
+    }
+    
+    .profile-card {
+      background: var(--bg-card, #fff);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .profile-avatar-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+    }
+    
+    .profile-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--bg-body, #f8f9fa);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .avatar-upload-btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--primary-color, #000);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 2px solid #fff;
+      transition: transform 0.2s;
+    }
+    
+    .avatar-upload-btn:hover {
+      transform: scale(1.1);
+    }
+    
+    .profile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    
+    .profile-email {
+      color: var(--text-muted, #666);
+      margin-bottom: 32px;
+    }
+    
+    .profile-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-color, #eee);
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color, #000);
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-muted, #666);
+    }
+    
+    .logout-btn {
+      background: #ef4444;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    
+    .logout-btn:hover {
+      opacity: 0.9;
+    }
+    
+    #fileInput {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+        </a>
+        <nav class="nav" id="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="story.html" class="nav-link">Our Story</a>
+          <a href="destinations.html" class="nav-link">Destinations</a>
+          <a href="photography.html" class="nav-link">Photography</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="gear.html" class="nav-link">Gear</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-card fade-up">
+        <div class="profile-avatar-container">
+          <img src="Media/default-avatar.png" alt="Profile" class="profile-avatar" id="profileAvatar">
+          <label for="fileInput" class="avatar-upload-btn">
+            📷
+          </label>
+          <input type="file" id="fileInput" accept="image/*">
+        </div>
+        
+        <h1 class="profile-name" id="profileEmail">Loading...</h1>
+        <p class="profile-email">Member since 2024</p>
+        
+        <div class="profile-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="visitedCountProfile">0</div>
+            <div class="stat-label">Countries Visited</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="commentsCountProfile">0</div>
+            <div class="stat-label">Comments Posted</div>
+          </div>
+        </div>
+        
+        <button class="logout-btn" id="logoutBtn">Log Out</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+          </div>
+          <p class="footer-text">Join Harry & Hannah on their journey around the world.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="blog.html">Travel Tips</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="src/auth.js"></script>
+  <script type="module">
+    import { supabase } from './src/supabase.js';
+    
+    const avatarImg = document.getElementById('profileAvatar');
+    const emailEl = document.getElementById('profileEmail');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const fileInput = document.getElementById('fileInput');
+    const visitedCountEl = document.getElementById('visitedCountProfile');
+    
+    // Check Auth
+    async function loadProfile() {
+      const { data: { user } } = await supabase.auth.getUser();
+      
+      if (!user) {
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      emailEl.textContent = user.email;
+      if (user.user_metadata?.avatar_url) {
+        avatarImg.src = user.user_metadata.avatar_url;
+      } else {
+        // Generate a placeholder if no avatar
+        avatarImg.src = `https://ui-avatars.com/api/?name=${user.email}&background=random`;
+      }
+      
+      // Load stats (mock for now, or from local storage/db)
+      const visited = JSON.parse(localStorage.getItem('visitedCountries') || '[]');
+      visitedCountEl.textContent = visited.length;
+    }
+    
+    // Upload Avatar
+    fileInput.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${user.id}-${Math.random()}.${fileExt}`;
+      const filePath = `avatars/${fileName}`;
+      
+      // Upload to Supabase Storage
+      const { error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(filePath, file);
+        
+      if (uploadError) {
+        alert('Error uploading image: ' + uploadError.message);
+        return;
+      }
+      
+      // Get Public URL
+      const { data: { publicUrl } } = supabase.storage
+        .from('avatars')
+        .getPublicUrl(filePath);
+        
+      // Update User Metadata
+      const { error: updateError } = await supabase.auth.updateUser({
+        data: { avatar_url: publicUrl }
+      });
+      
+      if (updateError) {
+        alert('Error updating profile: ' + updateError.message);
+      } else {
+        avatarImg.src = publicUrl;
+        alert('Profile picture updated!');
+      }
+    });
+    
+    // Logout
+    logoutBtn.addEventListener('click', async () => {
+      await supabase.auth.signOut();
+      window.location.href = 'index.html';
+    });
+    
+    loadProfile();
+  </script>
+</body>
+</html>

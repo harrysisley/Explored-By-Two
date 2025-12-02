@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mardi Gras: A Complete Guide to the Ultimate Party - Explored By Two</title>
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        /* Inline styles for specific blog post elements */
+        .post-header {
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .post-background {
+            position: absolute;
+            inset: 0;
+            background: url('Media/mardi-gras-parade.png') center/cover;
+            z-index: -1;
+        }
+
+        .post-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .post-title {
+            font-size: clamp(48px, 6vw, 84px);
+            margin-bottom: 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-meta-large {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+
+        .post-content {
+            max-width: 800px;
+            margin: -100px auto 0;
+            background: white;
+            padding: 80px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 84px;
+            float: left;
+            line-height: 0.8;
+            margin-right: 16px;
+            margin-top: 8px;
+            color: var(--color-text);
+        }
+
+        .post-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .post-image-full {
+            width: 90%;
+            max-width: 1200px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            height: 600px;
+            object-fit: cover;
+            margin-bottom: 64px;
+            margin-top: 64px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .post-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-style: italic;
+            text-align: center;
+            margin: 64px 0;
+            color: var(--color-text);
+            line-height: 1.4;
+            border-left: none;
+            padding: 0 40px;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--color-accent);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        @media (max-width: 768px) {
+            .post-content {
+                padding: 32px;
+                margin-top: -50px;
+                width: 90%;
+            }
+            
+            .post-image-full {
+                height: 300px;
+            }
+            
+            .post-quote {
+                font-size: 24px;
+                padding: 0;
+            }
+        }
+        
+        /* Image Container Styling */
+        .image-container {
+            margin: 48px 0;
+            text-align: center;
+        }
+        
+        .content-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="story.html" class="nav-link">Our Story</a>
+                    <a href="destinations.html" class="nav-link">Destinations</a>
+                    <a href="photography.html" class="nav-link">Photography</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="gear.html" class="nav-link">Gear</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                        <span class="toggle-icon">🌙</span>
+                    </button>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Header -->
+    <header class="post-header">
+        <div class="post-background"></div>
+        <div class="post-overlay"></div>
+        <div class="container">
+            <span class="post-category fade-up">Festival Guide</span>
+            <h1 class="page-title fade-up delay-1">Mardi Gras: A Complete Guide to the Ultimate Party</h1>
+            <div class="post-meta fade-up delay-2">
+                <span class="meta-item">📅 Feb 15, 2025</span>
+                <span class="meta-item">⏱️ 8 min read</span>
+                <span class="meta-item">👤 By Hannah</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article class="post-content fade-up delay-3">
+        <div class="blog-content fade-up delay-3">
+            <p class="lead-paragraph drop-cap">
+                Right, let's talk about Mardi Gras. Everyone's heard of it – the festivals, the parades, the absolutely mental costumes – but have you ever thought about actually going? If New Orleans is already high up on your bucket list, then honestly, visiting during Mardi Gras should be non-negotiable. Trust me on this one.
+            </p>
+
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">The Basics</h2>
+            <p class="post-text">
+                <strong>When:</strong> 47 days before Easter on the day before Ash Wednesday, so the date changes every year<br>
+                <strong>Where:</strong> New Orleans (but Sydney does one now too!)<br>
+                <strong>Why:</strong> To mark the start of the Christian holiday Lent
+            </p>
+
+            <div class="image-container">
+                <img src="Media/mardi-gras-beads.png" alt="Mardi Gras beads" class="content-image">
+                <p class="image-caption">The iconic purple, green, and gold beaded necklaces that define Mardi Gras.</p>
+            </div>
+
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">What's in a Name?</h2>
+            <p class="post-text">
+                So "Mardi Gras" literally translates to "Fat Tuesday" in French, which is honestly quite fitting. Back in the day, it was all about eating up your goodies before giving them up for Lent – you know, that Christian tradition where you fast from rich foods (like fats) from Ash Wednesday right through to Easter. Basically, this parade was a proper send-off before everyone had to behave themselves for 40 days. I mean, I'd definitely need a massive party if I was giving up all my favourite things too!
+            </p>
+            <p class="post-text">
+                This tradition is so important because the French had a huge influence over this part of America back then – which is also where all that incredible Creole cooking comes from. Lucky for us, these traditions stuck around! Interestingly, this Christian festival is celebrated all over the world. In England, we've got pancake day on the exact same day – though I think New Orleans does it with a bit more flair, if I'm being honest.
+            </p>
+
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">What to Expect</h2>
+            <p class="post-text">
+                Picture this: brass bands playing jazz music on every corner, the most gorgeous brightly coloured costumes you've ever seen, king cakes (seriously, try them), and of course those iconic beaded necklaces that everyone seems to collect by the dozen. It's basically a non-stop celebration of incredible food, brilliant music, and good drinks. What more could you want?
+            </p>
+
+            <div class="image-container">
+                <img src="Media/king-cake.png" alt="King Cake" class="content-image">
+                <p class="image-caption">Traditional King Cake with purple, green, and gold icing – a Mardi Gras must-try!</p>
+            </div>
+
+            <div class="pro-tip-box">
+                <h3>💡 Pro Tip: King Cakes</h3>
+                <p>Don't leave New Orleans without trying a king cake! These sweet braided pastries are decorated in the traditional Mardi Gras colors and often contain a hidden plastic baby. If you find it in your slice, tradition says you have to buy the next cake!</p>
+            </div>
+
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Beyond New Orleans</h2>
+            <p class="post-text">
+                Here's something that might surprise you – Mardi Gras isn't even originally from New Orleans! The first American Mardi Gras was actually held in Mobile, Alabama. And now it's gone completely global. Sydney, Australia has their own version, which is absolutely massive. It's wild how this tradition has spread across the world!
+            </p>
+
+            <blockquote class="post-quote">
+                "It's a true bucket list festival that everyone should experience at least once."
+            </blockquote>
+
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Should You Go?</h2>
+            <p class="post-text">
+                If you're into proper southern food, amazing music, and just fancy a good boogie for a few days, then this place is absolutely made for you. Honestly, it's a true bucket list festival that everyone should experience at least once.
+            </p>
+            <p class="post-text">
+                And if you've read our previous blogs about New Orleans, you'll already know just how stunning that city is. The buildings alone are absolutely breathtaking – add in the Mardi Gras atmosphere and you've got yourself an unforgettable trip.
+            </p>
+            <p class="post-text">
+                So what are you waiting for? Start planning your Mardi Gras adventure!
+            </p>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 48px; border-radius: 16px; margin: 64px 0; color: white;">
+                <h3 style="font-size: 28px; margin-bottom: 16px; font-family: 'Playfair Display', serif;">🎭 Have you been to Mardi Gras?</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                    Let us know your experiences in the comments below! We'd love to hear your favorite moments and top tips for first-timers.
+                </p>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Reading Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <script type="module" src="src/auth.js"></script>
+    <script type="module" src="src/comments.js"></script>
+</body>
+
+</html>

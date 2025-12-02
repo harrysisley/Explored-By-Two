@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Hidden Gems in Iceland - Explored By Two</title>
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        /* Inline styles for specific blog post elements */
+        .post-header {
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .post-background {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=2073&auto=format&fit=crop') center/cover;
+            z-index: -1;
+        }
+
+        .post-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .post-title {
+            font-size: clamp(48px, 6vw, 84px);
+            margin-bottom: 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-meta-large {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+
+        .post-content {
+            max-width: 800px;
+            margin: -100px auto 0;
+            background: white;
+            padding: 80px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 84px;
+            float: left;
+            line-height: 0.8;
+            margin-right: 16px;
+            margin-top: 8px;
+            color: var(--color-text);
+        }
+
+        .post-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .post-image-full {
+            width: 90%;
+            max-width: 1200px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            height: 600px;
+            object-fit: cover;
+            margin-bottom: 64px;
+            margin-top: 64px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .post-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-style: italic;
+            text-align: center;
+            margin: 64px 0;
+            color: var(--color-text);
+            line-height: 1.4;
+            border-left: none;
+            padding: 0 40px;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--color-accent);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        @media (max-width: 768px) {
+            .post-content {
+                padding: 32px;
+                margin-top: -50px;
+                width: 90%;
+            }
+            
+            .post-image-full {
+                height: 300px;
+            }
+            
+            .post-quote {
+                font-size: 24px;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="story.html" class="nav-link">Our Story</a>
+                    <a href="destinations.html" class="nav-link">Destinations</a>
+                    <a href="photography.html" class="nav-link">Photography</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="gear.html" class="nav-link">Gear</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Header -->
+    <header class="post-header">
+        <div class="post-background"></div>
+        <div class="post-overlay"></div>
+        <div class="container">
+            <span class="post-category fade-up">Travel Tips</span>
+            <h1 class="page-title fade-up delay-1">Packing Light: Our 7kg Challenge</h1>
+            <div class="post-meta fade-up delay-2">
+                <span class="meta-item">📅 Nov 8, 2024</span>
+                <span class="meta-item">⏱️ 5 min read</span>
+                <span class="meta-item">👤 By Harry</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article class="post-content fade-up delay-3">
+        <div class="newsletter-card" style="background: #1a1a1a; padding: 48px; border-radius: 16px; margin: 64px 0;">
+            <h3 class="newsletter-title" style="font-size: 32px; color: #fff;">Planning a Trip to Iceland?</h3>
+            <p class="newsletter-subtitle" style="color: #fff;">Get our complete Iceland road trip guide sent to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <button type="submit" class="btn-primary">Send It</button>
+            </form>
+        </div>
+
+        <div class="blog-content fade-up delay-3">
+            <p class="lead-paragraph">
+                Traveling with just carry-on luggage changed the way we explore the world. No more waiting at baggage carousels, no more lost luggage anxiety, and total freedom to move. Here's how we survived 3 months with just 7kg each.
+            </p>
+
+            <h2>Why We Switched to Carry-On Only</h2>
+            <p>
+                After dragging massive suitcases through the cobblestone streets of Europe, we knew something had to change. The freedom of having everything you need on your back is addictive. Plus, it saves money on airline fees and saves time at the airport.
+            </p>
+
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1553531384-cc64ac80f931?q=80&w=2066&auto=format&fit=crop" alt="Backpack packing" class="content-image">
+                <p class="image-caption">Our 40L backpacks ready for adventure.</p>
+            </div>
+
+            <h2>The Capsule Wardrobe Strategy</h2>
+            <p>
+                The key is a color-coordinated capsule wardrobe. Every top must match every bottom. We stick to neutrals (black, white, grey, navy) and add one accent color. Merino wool is your best friend—it's antimicrobial, temperature regulating, and doesn't hold odors.
+            </p>
+
+            <h3>Our Packing List Essentials:</h3>
+            <ul>
+                <li><strong>Merino Wool T-shirts:</strong> 3x (wear one, pack two)</li>
+                <li><strong>Convertible Pants:</strong> 1 pair that looks good in the city and on the trail</li>
+                <li><strong>Lightweight Down Jacket:</strong> Packs into its own pocket</li>
+                <li><strong>Solid Toiletries:</strong> Shampoo bars and solid deodorant save liquid allowance</li>
+                <li><strong>Microfiber Towel:</strong> Dries fast and takes up no space</li>
+            </ul>
+
+            <div class="pro-tip-box">
+                <h3>💡 Pro Tip: The "Ranger Roll"</h3>
+                <p>Learn to "Ranger Roll" your clothes. It compresses them tighter than folding or regular rolling and prevents them from unrolling in your bag. You can fit 30% more stuff this way!</p>
+            </div>
+
+            <h2>Tech and Gear</h2>
+            <p>
+                As digital nomads, we still need our tech. We share chargers where possible and use a multi-port GaN charger that's tiny but powerful. We ditched the heavy laptop for an iPad Pro and a lightweight MacBook Air.
+            </p>
+
+            <h2>The Result</h2>
+            <p>
+                We've never felt lighter. We can hop on a train, jump on a motorbike, or walk 5km to our hostel without breaking a sweat. Give it a try on your next weekend trip and see if you can scale it up!
+            </p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Reading Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <script type="module" src="src/auth.js"></script>
+    <script type="module" src="src/comments.js"></script>
+</body>
+
+</html>

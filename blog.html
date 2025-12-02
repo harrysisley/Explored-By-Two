@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Explored By Two</title>
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="story.html" class="nav-link">Our Story</a>
+                    <a href="destinations.html" class="nav-link">Destinations</a>
+                    <a href="photography.html" class="nav-link">Photography</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="gear.html" class="nav-link">Gear</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                        <span class="toggle-icon">🌙</span>
+                    </button>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <span class="hero-label fade-up">The Journal</span>
+            <h1 class="page-title fade-up delay-1">Stories from the Road</h1>
+            <p class="page-subtitle fade-up delay-2">A collection of travel guides, photography tips, and personal stories from our journey around the world.</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filter-buttons fade-up delay-3">
+                <button class="filter-btn active" data-category="all">All Posts</button>
+                <button class="filter-btn" data-category="guides">Destinations</button>
+                <button class="filter-btn" data-category="tips">Travel Tips</button>
+                <button class="filter-btn" data-category="stories">Journal</button>
+                <button class="filter-btn" data-category="photography">Photography</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Featured Post -->
+                <article class="blog-card featured fade-up" data-category="guides" onclick="window.location.href='blog-post.html'">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=2070&auto=format&fit=crop" alt="Iceland Landscape" class="card-img">
+                        <span class="blog-category">Travel Guide</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Nov 15, 2024</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h2 class="blog-title">10 Hidden Gems in Iceland You Can't Miss</h2>
+                        <p class="blog-excerpt">Beyond the Blue Lagoon and Ring Road waterfalls lies a side of Iceland that
+                            few tourists see. Discover secret hot springs, hidden canyons, and remote beaches that will make
+                            your trip unforgettable.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')"></div>
+                                <span class="author-name">Hannah</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Regular Posts -->
+                <article class="blog-card fade-up delay-1" data-category="tips" onclick="window.location.href='blog-post-packing.html'">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=2073&auto=format&fit=crop" alt="Hiking Gear" class="card-img">
+                        <span class="blog-category">Travel Tips</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Nov 8, 2024</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <h3 class="blog-title">Packing Light: Our 7kg Challenge</h3>
+                        <p class="blog-excerpt">How we traveled for 3 months with just carry-on luggage, and why we'll
+                            never go back to checking bags.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <span class="author-name">Harry</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-up delay-2" data-category="guides" onclick="window.location.href='blog-post-mardigras.html'">
+                    <div class="blog-card-image">
+                        <img src="Media/mardi-gras-parade.png" alt="Mardi Gras" class="card-img">
+                        <span class="blog-category">Festival Guide</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Feb 15, 2025</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h3 class="blog-title">Mardi Gras: A Complete Guide to the Ultimate Party</h3>
+                        <p class="blog-excerpt">Everything you need to know about experiencing the world's most famous street party in New Orleans.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')"></div>
+                                <span class="author-name">Hannah</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-up delay-3" data-category="stories" onclick="window.location.href='blog-post-patagonia.html'">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1518182170546-0766bc6f9213?q=80&w=2070&auto=format&fit=crop" alt="Patagonia" class="card-img">
+                        <span class="blog-category">Travel Story</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Oct 15, 2024</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <h3 class="blog-title">Why We Fell in Love with Patagonia</h3>
+                        <p class="blog-excerpt">The winds are strong, the mountains are jagged, and the beauty is
+                            unmatched. Our journey through Torres del Paine.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <span class="author-name">Harry</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-up delay-4" data-category="tips" onclick="window.location.href='blog-post-vietnam.html'">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop" alt="Vietnam Food" class="card-img">
+                        <span class="blog-category">Food Guide</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Sep 30, 2024</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <h3 class="blog-title">Street Food Guide: Vietnam</h3>
+                        <p class="blog-excerpt">From Pho to Banh Mi, here's what you need to eat in Hanoi and Ho Chi
+                            Minh City to experience authentic Vietnamese cuisine.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')"></div>
+                                <span class="author-name">Hannah</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-up delay-1" data-category="photography" onclick="window.location.href='blog-post-photography.html'">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2000&auto=format&fit=crop" alt="Camera" class="card-img">
+                        <span class="blog-category">Photography</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Sep 12, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <h3 class="blog-title">Wildlife Photography Tips for Beginners</h3>
+                        <p class="blog-excerpt">Essential camera settings, composition techniques, and patience tips for
+                            capturing stunning wildlife moments.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <span class="author-name">Harry</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NEW POSTS -->
+                <article class="blog-card fade-up delay-2" data-category="guides" onclick="window.location.href='blog-post-newzealand.html'">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" alt="New Zealand" class="card-img">
+                        <span class="blog-category">Road Trip</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Aug 20, 2024</span>
+                            <span class="blog-read-time">15 min read</span>
+                        </div>
+                        <h3 class="blog-title">The Ultimate New Zealand Road Trip</h3>
+                        <p class="blog-excerpt">Two weeks in a campervan exploring the South Island. From Milford Sound to Mount Cook, here's our complete itinerary.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <span class="author-name">Harry</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card fade-up delay-3" data-category="stories" onclick="window.location.href='blog-post-antarctica.html'">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1520627996564-38b8f4981293?q=80&w=2071&auto=format&fit=crop" alt="Antarctica" class="card-img">
+                        <span class="blog-category">Expedition</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Jan 5, 2024</span>
+                            <span class="blog-read-time">20 min read</span>
+                        </div>
+                        <h3 class="blog-title">Journey to the End of the World</h3>
+                        <p class="blog-excerpt">Crossing the Drake Passage and stepping foot on the 7th continent. A diary of our expedition to Antarctica.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')"></div>
+                                <span class="author-name">Hannah</span>
+                            </div>
+                            <span class="blog-link">Read Story →</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section fade-up">
+                <button class="btn-secondary" id="loadMoreBtn">Load More Stories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card fade-up">
+                <h2 class="newsletter-title">Never Miss an Adventure</h2>
+                <p class="newsletter-subtitle">Get our latest travel stories, tips, and photography delivered to your
+                    inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+    <script type="module" src="src/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Hidden Gems in Iceland - Explored By Two</title>
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        /* Inline styles for specific blog post elements */
+        .post-header {
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .post-background {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=2070&auto=format&fit=crop') center/cover;
+            z-index: -1;
+        }
+
+        .post-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .post-title {
+            font-size: clamp(48px, 6vw, 84px);
+            margin-bottom: 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-meta-large {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+
+        .post-content {
+            max-width: 800px;
+            margin: -100px auto 0;
+            background: white;
+            padding: 80px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode .post-content {
+            background: #16213E;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 84px;
+            float: left;
+            line-height: 0.8;
+            margin-right: 16px;
+            margin-top: 8px;
+            color: var(--color-text);
+        }
+
+        .post-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        body.dark-mode .post-text {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .post-content h2 {
+            color: var(--color-text);
+        }
+
+        body.dark-mode .post-content h2 {
+            color: #fff;
+        }
+
+        .post-image-full {
+            width: 90%;
+            max-width: 1200px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            height: 600px;
+            object-fit: cover;
+            margin-bottom: 64px;
+            margin-top: 64px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .post-image-full {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .post-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-style: italic;
+            text-align: center;
+            margin: 64px 0;
+            color: var(--color-text);
+            line-height: 1.4;
+            border-left: none;
+            padding: 0 40px;
+        }
+
+        body.dark-mode .post-quote {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--color-accent);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        @media (max-width: 768px) {
+            .post-content {
+                padding: 32px;
+                margin-top: -50px;
+                width: 90%;
+            }
+            
+            .post-image-full {
+                height: 300px;
+            }
+            
+            .post-quote {
+                font-size: 24px;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+ <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+        </a>
+        <nav class="nav" id="nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="story.html" class="nav-link">Our Story</a>
+          <a href="destinations.html" class="nav-link">Destinations</a>
+          <a href="photography.html" class="nav-link">Photography</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="gear.html" class="nav-link">Gear</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Post Header -->
+    <header class="post-header">
+        <div class="post-background"></div>
+        <div class="post-overlay"></div>
+        <div class="container">
+            <div class="post-meta-large fade-up">
+                <span>Travel Guide</span>
+                <span>•</span>
+                <span>Nov 15, 2024</span>
+            </div>
+            <h1 class="page-title fade-up delay-1">10 Hidden Gems in Iceland You Can't Miss</h1>
+            <div class="blog-author fade-up delay-2" style="justify-content: center; color: white;">
+                <div class="author-avatar" style="background-image: url(/Media/hannah-image.jpeg)"></div>
+                <span class="author-name" style="color: white;">By Hannah</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article class="post-content fade-up delay-3">
+        <p class="post-text drop-cap">
+            Iceland is a land of fire and ice, where nature's raw power is on full display. While the crowds gather at the Blue Lagoon and chase waterfalls along the Ring Road, the true magic of Iceland lies in its hidden corners. It's in the steam rising from a secret hot spring, the silence of a remote black sand beach, and the dance of the Northern Lights reflected in a glacial lagoon.
+        </p>
+        <p class="post-text">
+            After spending a month exploring every fjord, highland track, and coastal village, we've compiled a list of our favorite hidden spots. These are the places where you can still feel Iceland's untamed spirit—wild, ancient, and breathtakingly beautiful.
+        </p>
+
+        <blockquote class="post-quote">
+            "Iceland is not just a destination; it's a reminder that nature is the greatest artist of all."
+        </blockquote>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">1. Hveravellir Hot Springs</h2>
+        <p class="post-text">
+            Deep in the Icelandic highlands, far from the tourist trail, lies Hveravellir—a geothermal wonderland where you can soak in natural hot springs surrounded by bubbling mud pots and steaming vents. The journey here requires a 4x4, but the reward is a completely unspoiled experience. We spent an evening here under the midnight sun, and it felt like being on another planet.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=2070&auto=format&fit=crop" alt="Iceland Landscape" class="post-image-full">
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">2. Stuðlagil Canyon</h2>
+        <p class="post-text">
+            This hidden gem only became accessible in recent years when a dam lowered the water level, revealing stunning basalt columns lining a turquoise glacial river. The hike to the viewpoint is easy, but few tourists know about it. The geometric rock formations look almost man-made, but they're entirely natural—a testament to Iceland's volcanic past.
+        </p>
+
+        <p class="post-text">
+            We arrived at golden hour, and the way the light hit the blue water against the dark basalt was absolutely mesmerizing. It's easily one of the most photogenic spots in Iceland.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?q=80&w=2070&auto=format&fit=crop" alt="Iceland Waterfall" class="post-image-full">
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">3. Rauðasandur Beach</h2>
+        <p class="post-text">
+            While Iceland is famous for its black sand beaches, Rauðasandur in the Westfjords is a rare red-golden sand beach that stretches for miles. The drive here is an adventure in itself—winding mountain roads with jaw-dropping views. When you finally arrive, you'll likely have the entire beach to yourself, with only seals and seabirds for company.
+        </p>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">4. Glymur Waterfall</h2>
+        <p class="post-text">
+            Iceland's second-highest waterfall requires a moderate hike that includes crossing a river on a log (yes, really!). The trail takes you through a narrow canyon with stunning views, and the waterfall itself plunges 198 meters into a gorge. It's an adventure that rewards you with solitude and spectacular scenery.
+        </p>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">5. Kerlingarfjöll Mountains</h2>
+        <p class="post-text">
+            This rhyolite mountain range in the highlands is a kaleidoscope of colors—reds, yellows, greens, and oranges paint the landscape. Geothermal activity creates steaming vents throughout the area, and the hiking trails offer some of the most unique scenery in Iceland. It's like walking through a painting.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop" alt="Iceland Northern Lights" class="post-image-full">
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">6. Hvítserkur Sea Stack</h2>
+        <p class="post-text">
+            This 15-meter tall basalt rock formation rises from the sea on the Vatnsnes Peninsula. Legend says it's a troll that was caught by the sunrise and turned to stone. The area is quiet and peaceful, perfect for photography and seal watching. Visit at sunset for the best light.
+        </p>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">7. Fjaðrárgljúfur Canyon</h2>
+        <p class="post-text">
+            This serpentine canyon with its winding river and moss-covered walls looks like something from a fantasy film. It's about 100 meters deep and 2 kilometers long, with walking paths along the rim offering spectacular views. The canyon was formed by glacial meltwater over thousands of years.
+        </p>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">8. Aldeyjarfoss Waterfall</h2>
+        <p class="post-text">
+            Surrounded by dramatic basalt columns, this waterfall in the northern highlands is a photographer's dream. The contrast between the white water and the dark geometric rock formations is striking. The road here can be rough, which keeps the crowds away.
+        </p>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">9. Askja Caldera</h2>
+        <p class="post-text">
+            This remote volcanic caldera in the highlands contains a stunning blue crater lake called Víti. The journey requires a high-clearance 4x4 and river crossings, but the otherworldly landscape makes it worth every bump. NASA even trained astronauts here because it resembles the moon's surface.
+        </p>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">10. Hornstrandir Nature Reserve</h2>
+        <p class="post-text">
+            The most remote part of the Westfjords, accessible only by boat or on foot. This uninhabited wilderness is home to Arctic foxes, seabirds, and some of the most dramatic coastal cliffs in Iceland. Multi-day hiking here offers complete solitude and raw, untouched nature.
+        </p>
+
+        <div class="newsletter-card" style="background: #1a1a1a; padding: 48px; border-radius: 16px; margin: 64px 0;">
+            <h3 class="newsletter-title" style="font-size: 32px; color: #fff;">Planning a Trip to Iceland?</h3>
+            <p class="newsletter-subtitle" style="color: #fff;">Get our complete Iceland road trip guide sent to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <button type="submit" class="btn-primary">Send It</button>
+            </form>
+        </div>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Practical Tips for Exploring Hidden Iceland</h2>
+        <p class="post-text">
+            <strong>Rent a 4x4:</strong> Many of these spots require a vehicle with high clearance and four-wheel drive. F-roads (highland roads) are only accessible in summer and require proper equipment.
+        </p>
+        <p class="post-text">
+            <strong>Check Road Conditions:</strong> Use road.is to check current road conditions and closures. Icelandic weather can change rapidly, and safety should always come first.
+        </p>
+        <p class="post-text">
+            <strong>Respect Nature:</strong> Iceland's nature is fragile. Stay on marked paths, don't disturb wildlife, and always practice Leave No Trace principles.
+        </p>
+        <p class="post-text">
+            <strong>Best Time to Visit:</strong> Summer (June-August) offers 24-hour daylight and access to highland roads. Winter (September-March) is best for Northern Lights but many remote areas are inaccessible.
+        </p>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 48px; border-radius: 16px; margin: 64px 0; color: white;">
+            <h3 style="font-size: 28px; margin-bottom: 16px; font-family: 'Playfair Display', serif;">💡 Pro Tip</h3>
+            <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                Download the maps.me app and save offline maps of Iceland before you go. Cell service is spotty in remote areas, and having offline navigation can be a lifesaver when exploring these hidden gems.
+            </p>
+        </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Reading Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <script type="module" src="src/auth.js"></script>
+    <script type="module" src="src/comments.js"></script>
+</body>
+
+</html>

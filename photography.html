@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - Explored By Two</title>
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="photography.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="story.html" class="nav-link">Our Story</a>
+                    <a href="destinations.html" class="nav-link">Destinations</a>
+                    <a href="photography.html" class="nav-link active">Photography</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="gear.html" class="nav-link">Gear</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                        <span class="toggle-icon">🌙</span>
+                    </button>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="photo-hero hero-section-common">
+        <div class="hero-background"></div>
+        <div class="container">
+            <span class="hero-label fade-up">Photography</span>
+            <h1 class="page-title-large fade-up delay-1">Our Photography</h1>
+            <p class="page-subtitle-large fade-up delay-2">15,000+ moments captured. Every photo tells a story.</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="photo-filter-section">
+        <div class="container">
+            <div class="photo-filters">
+                <button class="photo-filter-btn active" data-category="all">All Photos</button>
+                <button class="photo-filter-btn" data-category="wildlife">🦁 Wildlife</button>
+                <button class="photo-filter-btn" data-category="landscape">🏔️ Landscapes</button>
+                <button class="photo-filter-btn" data-category="culture">🏛️ Culture</button>
+                <button class="photo-filter-btn" data-category="people">👥 People</button>
+                <button class="photo-filter-btn" data-category="adventure">⛰️ Adventure</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="photo-gallery-section">
+        <div class="container-fluid">
+            <div class="photo-masonry" id="photoGallery">
+                <!-- Wildlife -->
+                <div class="photo-item tall" data-category="wildlife">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=2059&auto=format&fit=crop" alt="Lion in Serengeti" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">King of the Serengeti</h3>
+                                <p class="photo-location">📍 Tanzania</p>
+                                <p class="photo-caption">A male lion surveys his territory at golden hour in the
+                                    Serengeti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="landscape">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop" alt="Northern Lights" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Northern Lights Dance</h3>
+                                <p class="photo-location">📍 Iceland</p>
+                                <p class="photo-caption">Aurora borealis illuminating the night sky over a frozen lake.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item wide" data-category="landscape">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1533052601725-703d7c2707f5?q=80&w=2070&auto=format&fit=crop" alt="Torres del Paine" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Torres del Paine</h3>
+                                <p class="photo-location">📍 Chile</p>
+                                <p class="photo-caption">The iconic granite towers at sunrise in Patagonia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="landscape">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=2159&auto=format&fit=crop" alt="Glacial Lagoon" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Glacial Lagoon</h3>
+                                <p class="photo-location">📍 Iceland</p>
+                                <p class="photo-caption">Icebergs floating in the crystal-clear glacial lagoon.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item tall" data-category="wildlife">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1551406837-724303884e79?q=80&w=2070&auto=format&fit=crop" alt="Gentoo Penguin" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Antarctic Gentoo</h3>
+                                <p class="photo-location">📍 Antarctica</p>
+                                <p class="photo-caption">A curious gentoo penguin approaches our zodiac boat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="adventure">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?q=80&w=2070&auto=format&fit=crop" alt="Rainbow Mountain" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Rainbow Mountain Trek</h3>
+                                <p class="photo-location">📍 Peru</p>
+                                <p class="photo-caption">The colorful striations of Vinicunca at 5,200m altitude.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item wide" data-category="landscape">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=2144&auto=format&fit=crop" alt="Namibia Dunes" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Dune 45 Sunrise</h3>
+                                <p class="photo-location">📍 Namibia</p>
+                                <p class="photo-caption">The famous red dunes of Sossusvlei at first light.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="people">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1489769811155-68b57428706b?q=80&w=2070&auto=format&fit=crop" alt="Maasai Elder" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Maasai Elder</h3>
+                                <p class="photo-location">📍 Kenya</p>
+                                <p class="photo-caption">A Maasai elder shares stories of his tribe's traditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item tall" data-category="wildlife">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?q=80&w=2064&auto=format&fit=crop" alt="Elephant" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Desert Elephant</h3>
+                                <p class="photo-location">📍 Namibia</p>
+                                <p class="photo-caption">A rare desert-adapted elephant in Damaraland.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="culture">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1569668723429-9fb7e19bd039?q=80&w=2070&auto=format&fit=crop" alt="Angkor Wat" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Angkor Wat Dawn</h3>
+                                <p class="photo-location">📍 Cambodia</p>
+                                <p class="photo-caption">The ancient temple complex reflected in still waters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item wide" data-category="landscape">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1506361797048-46a6342d3fb1?q=80&w=2070&auto=format&fit=crop" alt="Norwegian Fjords" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Norwegian Fjords</h3>
+                                <p class="photo-location">📍 Norway</p>
+                                <p class="photo-caption">Dramatic cliffs plunging into crystal-clear waters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="adventure">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=2070&auto=format&fit=crop" alt="Kayaking" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Glacier Kayaking</h3>
+                                <p class="photo-location">📍 Antarctica</p>
+                                <p class="photo-caption">Paddling among icebergs in Paradise Bay.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item tall" data-category="landscape">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1476611317561-60e1b778edfb?q=80&w=2070&auto=format&fit=crop" alt="Skogafoss" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Skógafoss</h3>
+                                <p class="photo-location">📍 Iceland</p>
+                                <p class="photo-caption">One of Iceland's most powerful waterfalls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="people">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" alt="Marrakech" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Marrakech Souk</h3>
+                                <p class="photo-location">📍 Morocco</p>
+                                <p class="photo-caption">A vendor arranges colorful spices in the medina.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item" data-category="wildlife">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=2070&auto=format&fit=crop" alt="Leopard" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Elusive Leopard</h3>
+                                <p class="photo-location">📍 South Africa</p>
+                                <p class="photo-caption">A rare sighting of a leopard resting in a tree.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item wide" data-category="culture">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1583251633146-d603471f204e?q=80&w=2070&auto=format&fit=crop" alt="Holi Festival" class="photo-image">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h3 class="photo-title">Holi Festival</h3>
+                                <p class="photo-location">📍 India</p>
+                                <p class="photo-caption">Explosions of color during the festival of colors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Stats -->
+    <section class="photo-stats-section">
+        <div class="container">
+            <div class="photo-stats-grid">
+                <div class="photo-stat fade-up">
+                    <div class="photo-stat-number">15,000+</div>
+                    <div class="photo-stat-label">Photos Captured</div>
+                </div>
+                <div class="photo-stat fade-up delay-1">
+                    <div class="photo-stat-number">47</div>
+                    <div class="photo-stat-label">Countries Photographed</div>
+                </div>
+                <div class="photo-stat fade-up delay-2">
+                    <div class="photo-stat-number">100+</div>
+                    <div class="photo-stat-label">Wildlife Species</div>
+                </div>
+                <div class="photo-stat fade-up delay-3">
+                    <div class="photo-stat-number">3</div>
+                    <div class="photo-stat-label">Years Shooting</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="photo-cta-section">
+        <div class="container">
+            <div class="photo-cta fade-up">
+                <h2 class="photo-cta-title">Want to See More?</h2>
+                <p class="photo-cta-text">Follow our journey on Instagram for daily photo updates</p>
+                <a href="#" class="btn-primary">Follow on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">×</button>
+        <button class="lightbox-nav prev" id="lightboxPrev">‹</button>
+        <button class="lightbox-nav next" id="lightboxNext">›</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image" id="lightboxImage"></div>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-location" id="lightboxLocation"></p>
+                <p class="lightbox-caption" id="lightboxCaption"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="photography.js"></script>
+    <script type="module" src="src/auth.js"></script>
+</body>
+
+</html>

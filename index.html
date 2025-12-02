@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explored By Two - Travel Stories from Harry & Hannah</title>
+  <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="passport-stamps.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+        </a>
+        <nav class="nav" id="nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="story.html" class="nav-link">Our Story</a>
+          <a href="destinations.html" class="nav-link">Destinations</a>
+          <a href="photography.html" class="nav-link">Photography</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="gear.html" class="nav-link">Gear</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-background">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="Media/mountains.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="floating-particles"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle fade-up">Harry & Hannah</p>
+      <h1 class="hero-title fade-up delay-1">Explored By Two</h1>
+      <p class="hero-description fade-up delay-2">Chasing wildlife, capturing moments, and exploring the world one story
+        at a time. Join us on our journey across 40+ countries.</p>
+      <a href="#destinations" class="btn-primary fade-up delay-3">Start Exploring</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-image fade-up">
+          <img src="Media/selfie.jpeg" alt="Harry and Hannah" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="intro-text fade-up delay-1">
+          <h2 class="section-title">Hi, We're Harry & Hannah</h2>
+          <p class="intro-paragraph">We met during the Covid-19 lockdown in 2021, we both immediatley clicked the second we bot said it was our dream to travel</p>
+          <p class="intro-paragraph">In 2022, we started traveling together and haven't stopped since. We've explored 47
+            countries together, from the icebergs of Antarctica to the deep depths of the Northern Thai Jungle. We love wildlife,
+            photography, and meaningful travel that connects us to the world.</p>
+          <p class="intro-paragraph">This is our story. Welcome to our journey.</p>
+          <a href="story.html" class="btn-secondary">Read Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Experiences -->
+  <section class="experiences-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Curated Experiences</h2>
+        <p class="section-subtitle">Dive into our world of travel, photography, and storytelling.</p>
+      </div>
+      <div class="experiences-grid">
+        <div class="experience-card gradient-blue-teal fade-up delay-1">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="card-title">Travel Tips</h3>
+          <p class="card-description">Curated guides and expert advice to help you plan your own meaningful adventures.
+          </p>
+          <a href="blog.html" class="card-link">Discover →</a>
+        </div>
+        <div class="experience-card gradient-orange-pink fade-up delay-2">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="card-title">Photography</h3>
+          <p class="card-description">See the world through our lens. Wildlife, landscapes, and street photography
+            galleries.</p>
+          <a href="photography.html" class="card-link">Discover →</a>
+        </div>
+        <div class="experience-card gradient-cyan-purple fade-up delay-3">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+            </svg>
+          </div>
+          <h3 class="card-title">Destinations</h3>
+          <p class="card-description">Explore our detailed guides for over 40 countries. Find your next dream trip.</p>
+          <a href="destinations.html" class="card-link">Discover →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Inspiration Generator -->
+  <section class="inspiration-section">
+    <div class="container">
+      <div class="inspiration-card fade-up">
+        <div class="inspiration-icon">✨</div>
+        <h3 class="inspiration-title">Not sure where to go next?</h3>
+        <p class="inspiration-subtitle">Let the universe decide your next adventure.</p>
+        <button class="btn-primary" id="inspireBtn">Inspire Me</button>
+        <div class="inspiration-result" id="inspirationResult"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Travel Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Our Journey</h2>
+        <p class="section-subtitle">Major milestones from our travels around the world.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-up delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2021</span>
+            <h3 class="timeline-title">Where It All Began</h3>
+            <p class="timeline-description">Met during Covid-19, had one date and immediately booked our first trip which was Iceland</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <h3 class="timeline-title">The Travel Bug Catches Us</h3>
+            <p class="timeline-description">Our first year of travelling, we ended going to 12 countries</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <h3 class="timeline-title">The Year Of Small Adventures</h3>
+            <p class="timeline-description">Started travelling more around UK, Ireland and Europe.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">More Crazier Adventures</h3>
+            <p class="timeline-description">Started the year off strong with an exhibition to Antartica, We also realised that we can backpack across multiple countries.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2025</span>
+            <h3 class="timeline-title">The Year Of International Backpacking</h3>
+            <p class="timeline-description">We travelled to 7 countries in 2 weeks, from Egypt to South East Asia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Static Passport Section (Hardcoded) -->
+  <section class="passport-section static-passport">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Our Passport Collection</h2>
+        <p class="section-subtitle">A record of everywhere we've been so far.</p>
+      </div>
+      <div style="text-align: center; margin-top: 32px;">
+        <button class="passport-btn" onclick="window.passportManager?.openStaticModal()">
+          <span class="passport-btn-icon">📖</span>
+          View Our Passport Collection
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter Section -->
+  <section class="stats-section">
+    <div class="container">
+      <h2 class="stats-section-title">Our Progress</h2>
+      <div class="stats-grid">
+        <div class="stat-card fade-up">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-number" data-target="47">0</div>
+          <div class="stat-label">Countries Explored</div>
+        </div>
+        <div class="stat-card fade-up delay-1">
+          <div class="stat-icon">📸</div>
+          <div class="stat-number" data-target="15000">0</div>
+          <div class="stat-label">Photos Captured</div>
+        </div>
+        <div class="stat-card fade-up delay-2">
+          <div class="stat-icon">✈️</div>
+          <div class="stat-number" data-target="120">0</div>
+          <div class="stat-label">Flights Taken</div>
+        </div>
+        <div class="stat-card fade-up delay-3">
+          <div class="stat-icon">🎒</div>
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Years Traveling</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Quote Carousel (NEW) -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-carousel fade-up">
+        <div class="quote-content">
+          <div class="quote-icon">"</div>
+          <p class="quote-text">The world is a book, and those who do not travel read only one page.</p>
+          <p class="quote-author">— Saint Augustine</p>
+        </div>
+        <div class="quote-nav">
+          <button class="quote-btn prev">←</button>
+          <button class="quote-btn next">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Adventures (NEW) -->
+  <section class="recent-adventures-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Recent Adventures</h2>
+        <p class="section-subtitle">Our latest journeys around the globe.</p>
+      </div>
+      <div class="adventures-grid">
+        <div class="adventure-card fade-up delay-1">
+          <div class="adventure-image">
+            <img src="Media/antarctica_adventure.png" alt="Antarctica" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="adventure-date">Dec 2024</div>
+          </div>
+          <div class="adventure-content">
+            <h3 class="adventure-title">Antarctica Expedition</h3>
+            <p class="adventure-description">Witnessing penguins, icebergs, and the raw beauty of the seventh continent.
+            </p>
+          </div>
+        </div>
+        <div class="adventure-card fade-up delay-2">
+          <div class="adventure-image">
+            <img src="Media/namibia_adventure.png" alt="Namibia" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="adventure-date">Nov 2024</div>
+          </div>
+          <div class="adventure-content">
+            <h3 class="adventure-title">Namibian Desert Safari</h3>
+            <p class="adventure-description">Exploring the dramatic dunes of Sossusvlei and wildlife of Etosha.</p>
+          </div>
+        </div>
+        <div class="adventure-card fade-up delay-3">
+          <div class="adventure-image">
+            <img src="Media/iceland_adventure.png" alt="Iceland" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="adventure-date">Oct 2024</div>
+          </div>
+          <div class="adventure-content">
+            <h3 class="adventure-title">Hidden Iceland</h3>
+            <p class="adventure-description">Discovering secret hot springs, glacial canyons, and the untamed beauty of the land of fire and ice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Globe -->
+  <section class="globe-section" id="destinations">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Where Have You Been?</h2>
+        <p class="section-subtitle">Select the countries you've been to and see how much progress you've made!</p>
+        <div class="countries-counter">
+          <span id="visitedCount">47</span> of 195 countries visited
+        </div>
+      </div>
+
+      <!-- Country Search & Add -->
+      <div class="country-search-container fade-up delay-1">
+        <div class="search-wrapper">
+          <input type="text" id="countrySearch" class="country-search-input" placeholder="Search for a country...">
+          <button id="addCountryBtn" class="add-country-btn" title="Add country">+</button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <!-- Collapsible Country Selector -->
+      <div class="country-selector-section fade-up delay-1">
+        <button class="collapse-toggle" id="countrySelectorToggle">
+          <span>Browse All Countries</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+        <div class="country-selector-content" id="countrySelectorContent">
+          <div id="country-list-grid" class="country-list"></div>
+        </div>
+      </div>
+
+      <!-- World Map Visualization -->
+      <div id="map-container" class="map-container">
+        <div id="world-map-svg" class="world-map-svg"></div>
+      </div>
+
+      <!-- Dynamic Passport Section (Linked to Map) -->
+      <div class="dynamic-passport-section fade-up delay-2" style="margin-top: 64px; text-align: center;">
+        <div class="section-header">
+          <h3 class="section-title" style="font-size: 24px;">Your Travel Passport</h3>
+          <p class="section-subtitle">Countries you select on the map will appear here.</p>
+        </div>
+        <button class="passport-btn" onclick="window.passportManager?.openDynamicModal()">
+          <span class="passport-btn-icon">🌍</span>
+          View Your Passport
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+          </div>
+          <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife, adventure,
+            and meaningful travel stories.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="blog.html">Travel Tips</a></li>
+            <li><a href="gear.html">Our Gear</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">YouTube</a>
+            <a href="#" class="social-link">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Made With ♥️</p>
+        <p>&copy; 2025 Explored By Two. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="countries.js"></script>
+  <script src="passport-stamps.js"></script>
+  <script src="script.js"></script>
+  <script src="map.js"></script>
+  <script type="module" src="src/auth.js"></script>
+</body>
+
+</html>

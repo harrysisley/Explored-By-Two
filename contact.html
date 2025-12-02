@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Explored By Two</title>
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="story.html" class="nav-link">Our Story</a>
+                    <a href="destinations.html" class="nav-link">Destinations</a>
+                    <a href="photography.html" class="nav-link">Photography</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="gear.html" class="nav-link">Gear</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                        <span class="toggle-icon">🌙</span>
+                    </button>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero hero-section-common">
+        <div class="hero-background"></div>
+        <div class="container">
+            <span class="hero-label fade-up">Contact</span>
+            <h1 class="page-title-large fade-up delay-1">Let's Connect</h1>
+            <p class="page-subtitle-large fade-up delay-2">Have a question? Want to collaborate? We'd love to hear from you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper fade-up">
+                    <h2 class="form-title">Send us a message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Select a topic...</option>
+                                <option value="collaboration">Collaboration Opportunity</option>
+                                <option value="question">Travel Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="press">Press Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea"
+                                placeholder="Tell us what's on your mind..." rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-full">Send Message</button>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">✓</div>
+                        <h3 class="success-title">Message Sent!</h3>
+                        <p class="success-text">Thanks for reaching out. We'll get back to you within 48 hours.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper fade-up delay-1">
+                    <h2 class="info-title">Other ways to reach us</h2>
+
+                    <div class="contact-methods">
+                        <a href="mailto:hello@exploredbytwo.com" class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-content">
+                                <h3 class="method-title">Email</h3>
+                                <p class="method-text">hello@exploredbytwo.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://instagram.com/exploredbytwo" class="contact-method">
+                            <div class="method-icon">📸</div>
+                            <div class="method-content">
+                                <h3 class="method-title">Instagram</h3>
+                                <p class="method-text">@exploredbytwo</p>
+                            </div>
+                        </a>
+
+                        <a href="https://youtube.com/@exploredbytwo" class="contact-method">
+                            <div class="method-icon">🎥</div>
+                            <div class="method-content">
+                                <h3 class="method-title">YouTube</h3>
+                                <p class="method-text">@exploredbytwo</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="faq-section">
+                        <h3 class="faq-title">Quick Answers</h3>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>How do you afford to travel full-time?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We saved for 6 months before leaving, and now we fund our travels through a mix
+                                        of freelance work, affiliate income from this blog, and photography sales. We
+                                        also travel slowly and budget carefully.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What camera do you use?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We shoot with a Sony A7 IV and primarily use the 24-70mm f/2.8 GM II lens. For
+                                        wildlife, we use the 200-600mm f/5.6-6.3 G. Check out our <a
+                                            href="gear.html">gear page</a> for the full list!</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Do you accept sponsored content?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We're selective about partnerships and only work with brands we genuinely use and
+                                        believe in. If you think there's a good fit, reach out via the form above!</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Can you help plan my trip?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We offer personalized travel consulting! Email us with your destination and
+                                        dates, and we'll send you our rates and availability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card fade-up">
+                <h2 class="newsletter-title">Join Our Community</h2>
+                <p class="newsletter-subtitle">Get travel tips, photography guides, and destination inspiration
+                    delivered to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+    <script type="module" src="src/auth.js"></script>
+</body>
+
+</html>
