@@ -213,7 +213,7 @@ a {
     transition: all 0.4s ease;
   }
 
-  .nav.open {
+  .nav.active {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
