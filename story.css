@@ -1,11 +1,11 @@
 /* ===== STORY PAGE STYLES ===== */
 
+/*
 .story-hero {
-    /* Styles handled by .hero-section-common */
-}
+    /* Styles handled by .hero-section-common */ */
 
 .story-hero .hero-background {
-    background-image: url('Media/our-story-hero.jpeg');
+    background-image: url('Media/cold-blog-header.jpg');
 }
 
 /* Story Sections */
