@@ -4,6 +4,8 @@ create table profiles (
   updated_at timestamp with time zone,
   username text unique,
   full_name text,
+  first_name text,
+  last_name text,
   avatar_url text,
   website text,
   visited_countries text[], -- Array of country names

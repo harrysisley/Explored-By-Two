@@ -345,6 +345,10 @@ const authModalHTML = `
     <h2 class="auth-title" id="authTitle">Welcome Back</h2>
     <div class="auth-error" id="authError"></div>
     <form class="auth-form" id="authForm">
+      <div class="name-fields" id="nameFields" style="display: none; gap: 1rem;">
+        <input type="text" class="auth-input" id="authFirstName" placeholder="First Name">
+        <input type="text" class="auth-input" id="authLastName" placeholder="Last Name">
+      </div>
       <input type="email" class="auth-input" id="authEmail" placeholder="Email address" required>
       <input type="password" class="auth-input" id="authPassword" placeholder="Password" required>
       <button type="submit" class="auth-btn" id="authSubmitBtn">Log In</button>
@@ -376,6 +380,9 @@ export function initAuth() {
   const submitBtn = document.getElementById('authSubmitBtn');
   const switchText = document.getElementById('authSwitchText');
   const errorMsg = document.getElementById('authError');
+  const nameFields = document.getElementById('nameFields');
+  const firstNameInput = document.getElementById('authFirstName');
+  const lastNameInput = document.getElementById('authLastName');
 
   // Open/Close Logic
   window.openAuthModal = () => {
@@ -386,6 +393,7 @@ export function initAuth() {
     modal.classList.remove('active');
     errorMsg.style.display = 'none';
     form.reset();
+    // Reset to login mode on close if desired, or keep last state
   };
 
   closeBtn.addEventListener('click', window.closeAuthModal);
@@ -401,11 +409,17 @@ export function initAuth() {
       submitBtn.textContent = 'Log In';
       switchText.textContent = "Don't have an account?";
       switchLink.textContent = 'Sign Up';
+      nameFields.style.display = 'none';
+      firstNameInput.required = false;
+      lastNameInput.required = false;
     } else {
       title.textContent = 'Create Account';
       submitBtn.textContent = 'Sign Up';
       switchText.textContent = "Already have an account?";
       switchLink.textContent = 'Log In';
+      nameFields.style.display = 'flex';
+      firstNameInput.required = true;
+      lastNameInput.required = true;
     }
     errorMsg.style.display = 'none';
   });
@@ -415,6 +429,8 @@ export function initAuth() {
     e.preventDefault();
     const email = document.getElementById('authEmail').value;
     const password = document.getElementById('authPassword').value;
+    const firstName = firstNameInput.value;
+    const lastName = lastNameInput.value;
     
     errorMsg.style.display = 'none';
     submitBtn.disabled = true;
@@ -426,8 +442,32 @@ export function initAuth() {
         if (error) throw error;
         window.closeAuthModal();
       } else {
-        const { error } = await supabase.auth.signUp({ email, password });
+        // Sign Up with Metadata
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              first_name: firstName,
+              last_name: lastName,
+              full_name: `${firstName} ${lastName}`.trim()
+            }
+          }
+        });
+        
         if (error) throw error;
+
+        // Manually insert into profiles if trigger doesn't handle it or just to be safe/explicit
+        if (data?.user) {
+             await supabase.from('profiles').upsert({
+                id: data.user.id,
+                first_name: firstName,
+                last_name: lastName,
+                full_name: `${firstName} ${lastName}`.trim(),
+                updated_at: new Date()
+            });
+        }
+
         alert('Check your email for the confirmation link!');
         window.closeAuthModal();
       }
@@ -570,6 +610,8 @@ function updateHeader(user) {
     const avatarUrl = user.user_metadata?.avatar_url;
     const initials = user.email ? user.email[0].toUpperCase() : 'U';
     
+    const firstName = user.user_metadata?.first_name || 'Traveler';
+    
     wrapper.innerHTML = `
       <button class="account-btn" id="accountBtn">
         <div class="account-avatar" style="${avatarUrl ? `background-image: url('${avatarUrl}')` : ''}">
@@ -581,7 +623,7 @@ function updateHeader(user) {
       
       <div class="dropdown-menu" id="accountDropdown">
         <div class="dropdown-header">
-          <span class="dropdown-user-name">Hello, Traveler</span>
+          <span class="dropdown-user-name">Hello, ${firstName}</span>
           <span class="dropdown-user-email">${user.email}</span>
         </div>
         
