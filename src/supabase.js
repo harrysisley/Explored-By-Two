@@ -1,5 +1,5 @@
 
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
 // TODO: REPLACE THESE WITH YOUR ACTUAL SUPABASE KEYS
 // You can find these in your Supabase Project Settings -> API

@@ -145,5 +145,9 @@ function escapeHtml(text) {
 
 // Init
 if (typeof window !== 'undefined') {
-    document.addEventListener('DOMContentLoaded', initComments);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initComments);
+    } else {
+        initComments();
+    }
 }

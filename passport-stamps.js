@@ -125,7 +125,7 @@ class PassportStampsManager {
         return this.dynamicStamps.some(stamp => stamp.country === country);
     }
 
-    addDynamicStamp(country, showNotification = true) {
+    async addDynamicStamp(country, showNotification = true) {
         const continent = countryToContinentMap[country] || 'europe';
         const stamp = {
             id: Date.now() + Math.random(),
@@ -141,6 +141,18 @@ class PassportStampsManager {
 
         this.dynamicStamps.push(stamp);
         this.saveDynamicStamps();
+
+        // Sync with Supabase if logged in
+        if (typeof supabase !== 'undefined') {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user) {
+                await supabase.from('profiles').upsert({
+                    id: user.id,
+                    passport_stamps: this.dynamicStamps,
+                    updated_at: new Date()
+                });
+            }
+        }
 
         if (showNotification) {
             this.showStampNotification(stamp);

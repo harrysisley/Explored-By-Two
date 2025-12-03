@@ -6,7 +6,8 @@ create table profiles (
   full_name text,
   avatar_url text,
   website text,
-  visited_countries text[] -- Array of country names
+  visited_countries text[], -- Array of country names
+  passport_stamps jsonb default '[]'::jsonb -- Detailed stamp data
 );
 
 -- Set up Row Level Security (RLS)
