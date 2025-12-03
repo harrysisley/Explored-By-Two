@@ -82,6 +82,12 @@ const authStyles = `
     background: var(--input-bg, #f9fafb);
     color: var(--text-color, #333);
     transition: all 0.2s;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .name-fields .auth-input {
+    flex: 1;
   }
   
   .auth-input:focus {
