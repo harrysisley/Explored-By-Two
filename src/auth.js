@@ -220,7 +220,28 @@ const authStyles = `
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 100;
+    z-index: 1002;
+  }
+  
+  /* Mobile nav adjustments */
+  @media (max-width: 900px) {
+    .nav .account-dropdown-container {
+      width: 100%;
+      position: relative;
+    }
+    
+    .nav .dropdown-menu {
+      position: static;
+      width: 100%;
+      margin-top: 0.5rem;
+      transform: none;
+      box-shadow: none;
+      border: 1px solid var(--border-color, #e5e7eb);
+    }
+    
+    .nav .dropdown-menu.active {
+      transform: none;
+    }
   }
   
   .dropdown-menu.active {
