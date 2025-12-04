@@ -700,7 +700,6 @@ function updateHeader(user) {
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </div>
-        <span class="account-label">Menu</span>
         <span style="font-size: 0.8rem; opacity: 0.7;">▼</span>
       </button>
       
