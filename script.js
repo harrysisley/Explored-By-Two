@@ -15,6 +15,27 @@ if (savedDarkMode === 'enabled') {
     });
 }
 
+// ===== MOBILE FILTER TOGGLE - GLOBAL FUNCTION =====
+// Define this early so onclick handlers can find it
+window.toggleMobileFilters = function() {
+    console.log('🎯 toggleMobileFilters() called via onclick');
+    const filterToggle = document.getElementById('filterToggle');
+    const filterContainer = document.getElementById('mobileFilterContainer');
+    
+    if (filterToggle && filterContainer) {
+        filterToggle.classList.toggle('active');
+        filterContainer.classList.toggle('active');
+        
+        const textSpan = filterToggle.querySelector('span:first-child');
+        if (textSpan) {
+            textSpan.textContent = filterToggle.classList.contains('active') ? 'Hide Filters' : 'Show Filters';
+        }
+        
+        console.log('  Toggle active:', filterToggle.classList.contains('active'));
+        console.log('  Container active:', filterContainer.classList.contains('active'));
+    }
+};
+
 // ===== SCROLL ANIMATIONS =====
 const observerOptions = {
     threshold: 0.1,
@@ -757,19 +778,34 @@ backToTopBtn.addEventListener('click', () => {
 const filterToggle = document.getElementById('filterToggle');
 const filterContainer = document.getElementById('mobileFilterContainer');
 
+console.log('🔍 Filter Toggle Debug:');
+console.log('  filterToggle:', filterToggle);
+console.log('  filterContainer:', filterContainer);
+
 if (filterToggle && filterContainer) {
+    console.log('✅ Adding event listener to filterToggle');
+    
     filterToggle.addEventListener('click', (e) => {
+        console.log('🎯 Filter toggle clicked!');
         e.stopPropagation();
         
         filterToggle.classList.toggle('active');
         filterContainer.classList.toggle('active');
         
+        console.log('  Toggle active:', filterToggle.classList.contains('active'));
+        console.log('  Container active:', filterContainer.classList.contains('active'));
+        
         // Update button text
         const textSpan = filterToggle.querySelector('span:first-child');
         if (textSpan) {
             textSpan.textContent = filterToggle.classList.contains('active') ? 'Hide Filters' : 'Show Filters';
+            console.log('  Button text updated to:', textSpan.textContent);
         }
     });
+    
+    console.log('✅ Event listener attached successfully');
+} else {
+    console.log('❌ Elements not found - event listener NOT attached');
 }
 
 // Close filters when a filter option is selected
