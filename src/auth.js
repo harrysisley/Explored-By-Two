@@ -228,6 +228,19 @@ const authStyles = `
     .nav .account-dropdown-container {
       width: 100%;
       position: relative;
+      margin-top: 10px;
+    }
+
+    .nav .account-btn {
+      width: 100%;
+      justify-content: flex-start;
+      padding: 12px;
+      background: var(--bg-color, #f3f4f6);
+      border-radius: 12px;
+    }
+
+    .dark-mode .nav .account-btn {
+      background: rgba(255, 255, 255, 0.05);
     }
     
     .nav .dropdown-menu {
@@ -237,10 +250,14 @@ const authStyles = `
       transform: none;
       box-shadow: none;
       border: 1px solid var(--border-color, #e5e7eb);
+      background: transparent;
     }
     
     .nav .dropdown-menu.active {
       transform: none;
+      opacity: 1;
+      visibility: visible;
+      max-height: 500px; /* Animate height if needed, or just show */
     }
   }
   

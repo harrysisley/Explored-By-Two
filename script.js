@@ -752,3 +752,47 @@ backToTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// ===== MOBILE FILTER TOGGLE =====
+const filterToggle = document.getElementById('filterToggle');
+const filterContainer = document.getElementById('mobileFilterContainer');
+
+if (filterToggle && filterContainer) {
+    filterToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        filterToggle.classList.toggle('active');
+        filterContainer.classList.toggle('active');
+        
+        // Update button text
+        const textSpan = filterToggle.querySelector('span:first-child');
+        if (textSpan) {
+            textSpan.textContent = filterToggle.classList.contains('active') ? 'Hide Filters' : 'Show Filters';
+        }
+    });
+}
+
+// Close filters when a filter option is selected
+document.querySelectorAll('.filter-btn, .photo-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (filterToggle && filterContainer && getComputedStyle(filterToggle).display !== 'none') {
+             filterToggle.classList.remove('active');
+             const textSpan = filterToggle.querySelector('span:first-child');
+             if (textSpan) textSpan.textContent = 'Show Filters';
+             filterContainer.classList.remove('active');
+        }
+    });
+});
+
+// Close filters when clicking outside
+document.addEventListener('click', (e) => {
+    if (filterToggle && filterContainer && filterToggle.classList.contains('active')) {
+        if (!filterContainer.contains(e.target) && !filterToggle.contains(e.target)) {
+            filterToggle.classList.remove('active');
+            const textSpan = filterToggle.querySelector('span:first-child');
+            if (textSpan) textSpan.textContent = 'Show Filters';
+            filterContainer.classList.remove('active');
+        }
+    }
+});
+

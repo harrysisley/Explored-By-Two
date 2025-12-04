@@ -393,7 +393,7 @@ a {
 }
 
 /* ===== MOBILE MENU OVERLAY ===== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .mobile-toggle {
         display: flex;
         z-index: 1001;
@@ -403,19 +403,22 @@ a {
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
-        width: 280px;
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full width on mobile for better UX */
+        max-width: 300px; /* Limit width on larger mobile/tablets */
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 100px 40px;
-        gap: 24px;
+        padding: 80px 24px 40px; /* Adjusted padding */
+        gap: 20px;
         transform: translateX(-100%);
         transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         box-shadow: 4px 0 24px rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        display: flex; /* Ensure flex is applied */
+        display: flex;
+        overflow-y: auto; /* Enable vertical scrolling within nav */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
 
     .dark-mode .nav {
@@ -427,11 +430,19 @@ a {
         transform: translateX(0);
     }
 
+    /* Prevent body scroll when menu is open */
+    body.nav-open {
+        overflow: hidden;
+    }
+
     .nav-link {
-        font-size: 20px;
+        font-size: 18px; /* Slightly smaller for better fit */
         opacity: 0;
         transform: translateX(-20px);
         transition: all 0.3s ease;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--color-border);
     }
 
     .nav.active .nav-link {
@@ -450,7 +461,7 @@ a {
 
     .dark-mode-toggle {
         margin-left: 0;
-        margin-top: 20px;
+        margin-top: auto; /* Push to bottom */
         opacity: 0;
         transform: translateY(20px);
         transition: all 0.3s ease;
@@ -471,11 +482,108 @@ a {
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 999;
+        backdrop-filter: blur(2px);
     }
 
     .nav-overlay.active {
         opacity: 1;
         visibility: visible;
+    }
+
+    /* Stack Grids on Mobile */
+    .intro-grid,
+    .experiences-grid,
+    .stats-grid,
+    .footer-grid,
+    .adventures-grid {
+        grid-template-columns: 1fr; /* Stack vertically */
+        gap: 32px;
+    }
+
+    .intro-image {
+        order: -1; /* Image first */
+    }
+
+    .stats-grid {
+        gap: 24px;
+    }
+    
+    .footer-grid {
+        text-align: center;
+    }
+    
+    .footer-col {
+        align-items: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Mobile Filter Toggle */
+    .mobile-filter-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 12px 20px;
+        background: var(--color-card);
+        border: 1px solid var(--color-border);
+        border-radius: 50px;
+        font-family: var(--font-sans);
+        font-weight: 600;
+        color: var(--color-text);
+        cursor: pointer;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        position: relative;
+    }
+
+    .mobile-filter-toggle:hover {
+        background: var(--color-bg-alt);
+    }
+
+    .mobile-filter-toggle .toggle-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-filter-toggle.active .toggle-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Collapsible Filters on Mobile */
+    .filter-buttons,
+    .photo-filters {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .filter-buttons.active,
+    .photo-filters.active {
+        display: flex;
+    }
+
+    .filter-btn,
+    .photo-filter-btn {
+        width: 100%; /* Full width buttons on mobile */
+        justify-content: flex-start;
+        padding: 12px 20px;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 

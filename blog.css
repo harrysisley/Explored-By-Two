@@ -313,10 +313,16 @@
         overflow-x: auto;
     }
     
+    
     .filter-buttons {
         justify-content: flex-start;
         padding: 0 20px;
         flex-wrap: nowrap;
+        display: none; /* Hidden by default on mobile */
+    }
+    
+    .filter-buttons.active {
+        display: flex; /* Show when active */
     }
 }
 

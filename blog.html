@@ -57,7 +57,11 @@
     <!-- Filter Section -->
     <section class="blog-filters">
         <div class="container">
-            <div class="filter-buttons fade-up delay-3">
+            <button class="mobile-filter-toggle" id="filterToggle">
+                <span>Show Filters</span>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div class="filter-buttons fade-up delay-3" id="mobileFilterContainer">
                 <button class="filter-btn active" data-category="all">All Posts</button>
                 <button class="filter-btn" data-category="guides">Destinations</button>
                 <button class="filter-btn" data-category="tips">Travel Tips</button>

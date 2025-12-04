@@ -77,7 +77,11 @@
                     <input type="text" id="searchInput" placeholder="Search destinations..." class="search-input">
                     <span class="search-icon">🔍</span>
                 </div>
-                <div class="filter-buttons">
+                <button class="mobile-filter-toggle" id="filterToggle">
+                    <span>Show Filters</span>
+                    <span class="toggle-icon">▼</span>
+                </button>
+                <div class="filter-buttons" id="mobileFilterContainer">
                     <button class="filter-btn active" data-continent="all">All</button>
                     <button class="filter-btn" data-continent="africa">🦁 Africa</button>
                     <button class="filter-btn" data-continent="asia">🏯 Asia</button>
@@ -85,28 +89,28 @@
                     <button class="filter-btn" data-continent="americas">🗽 Americas</button>
                     <button class="filter-btn" data-continent="oceania">🦘 Oceania</button>
                     <button class="filter-btn" data-continent="polar">🐧 Polar</button>
-                </div>
-                <div class="view-toggle">
-                    <button class="view-btn active" data-view="grid">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                    </button>
-                    <button class="view-btn" data-view="list">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="8" y1="6" x2="21" y2="6"></line>
-                            <line x1="8" y1="12" x2="21" y2="12"></line>
-                            <line x1="8" y1="18" x2="21" y2="18"></line>
-                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                        </svg>
-                    </button>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

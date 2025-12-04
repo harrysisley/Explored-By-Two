@@ -378,8 +378,14 @@
         width: 100%;
     }
 
+
     .filter-buttons {
         justify-content: center;
+        display: none; /* Hidden by default on mobile */
+    }
+    
+    .filter-buttons.active {
+        display: flex; /* Show when active */
     }
 
     .view-toggle {

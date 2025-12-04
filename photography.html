@@ -57,7 +57,11 @@
     <!-- Category Filter -->
     <section class="photo-filter-section">
         <div class="container">
-            <div class="photo-filters">
+            <button class="mobile-filter-toggle" id="filterToggle">
+                <span>Show Filters</span>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div class="photo-filters" id="mobileFilterContainer">
                 <button class="photo-filter-btn active" data-category="all">All Photos</button>
                 <button class="photo-filter-btn" data-category="wildlife">🦁 Wildlife</button>
                 <button class="photo-filter-btn" data-category="landscape">🏔️ Landscapes</button>

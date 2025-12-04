@@ -470,6 +470,14 @@
     .lightbox-nav.next {
         right: 10px;
     }
+    
+    .photo-filters {
+        display: none; /* Hidden by default on mobile */
+    }
+    
+    .photo-filters.active {
+        display: flex; /* Show when active */
+    }
 }
 
 /* ===== DARK MODE STYLES ===== */
