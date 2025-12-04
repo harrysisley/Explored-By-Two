@@ -69,6 +69,9 @@
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin-bottom: 8px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }
     
     .profile-email {
@@ -117,6 +120,16 @@
     
     #fileInput {
       display: none;
+    }
+    
+    @media (max-width: 768px) {
+      .profile-name {
+        font-size: 1.5rem;
+      }
+      
+      .profile-card {
+        padding: 24px;
+      }
     }
   </style>
 </head>
