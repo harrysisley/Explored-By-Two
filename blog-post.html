@@ -61,17 +61,12 @@
         .post-content {
             max-width: 800px;
             margin: -100px auto 0;
-            background: white;
+            background: var(--color-card);
             padding: 80px;
             position: relative;
             z-index: 10;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-lg);
             transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        body.dark-mode .post-content {
-            background: #16213E;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
 
         .drop-cap::first-letter {
@@ -358,6 +353,8 @@
 
 </article>
 
+    <!-- Comments Section -->
+    <div id="comments-container"></div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -406,7 +403,10 @@
         };
     </script>
     <script type="module" src="src/auth.js"></script>
-    <script type="module" src="src/comments.js"></script>
+    <script type="module">
+        import { initComments } from './src/comments.js';
+        initComments('winter-escapes');
+    </script>
 </body>
 
 </html>

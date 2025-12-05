@@ -15,7 +15,7 @@ export default defineConfig({
         antarctica: resolve(__dirname, "blog-post-antarctica.html"),
         mardigras: resolve(__dirname, "blog-post-mardigras.html"),
         newzealand: resolve(__dirname, "blog-post-newzealand.html"),
-        packing: resolve(__dirname, "blog-post-packing.html"),
+        romaniaCastles: resolve(__dirname, "blog-post-romania-castles.html"),
         patagonia: resolve(__dirname, "blog-post-patagonia.html"),
         photography: resolve(__dirname, "blog-post-photography.html"),
         vietnam: resolve(__dirname, "blog-post-vietnam.html"),

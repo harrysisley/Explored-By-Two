@@ -1,153 +1,217 @@
-
 import { supabase } from './supabase.js';
 
-const commentsSectionHTML = `
-<div class="comments-container" style="max-width: 800px; margin: 64px auto; padding: 0 24px;">
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 32px;">Comments</h3>
-    
-    <div id="comments-list" style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 48px;">
-        <!-- Comments will be loaded here -->
-        <p style="color: #666; font-style: italic;">Loading comments...</p>
-    </div>
-    
-    <div id="comment-form-container" style="background: #f8f9fa; padding: 32px; border-radius: 16px;">
-        <h4 style="font-size: 20px; margin-bottom: 16px;">Leave a Comment</h4>
-        <form id="comment-form">
-            <textarea id="comment-input" placeholder="Share your thoughts..." required
-                style="width: 100%; padding: 16px; border: 1px solid #ddd; border-radius: 8px; min-height: 120px; font-family: 'Inter', sans-serif; resize: vertical; margin-bottom: 16px;"></textarea>
-            <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">Post Comment</button>
-        </form>
-        <div id="login-to-comment" style="display: none; text-align: center;">
-            <p style="margin-bottom: 16px;">Please log in to leave a comment.</p>
-            <button onclick="window.openAuthModal()" class="btn-secondary">Log In</button>
-        </div>
-    </div>
-</div>
-`;
+export async function initComments(postSlug) {
+    const commentsContainer = document.getElementById('comments-container');
+    if (!commentsContainer) return;
 
-export async function initComments() {
-    // Inject HTML
-    const article = document.querySelector('article') || document.querySelector('.blog-content') || document.querySelector('.container');
-    if (!article) return; // Only run on pages with content
+    // Render the basic structure
+    renderCommentSection(commentsContainer);
+
+    // Load existing comments
+    await loadComments(postSlug);
+
+    // Setup event listeners
+    setupCommentListeners(postSlug);
+}
+
+function renderCommentSection(container) {
+    container.innerHTML = `
+        <div class="comments-section">
+            <div class="container">
+                <h3 class="comments-title">Comments</h3>
+                
+                <div class="comment-form-container">
+                    <div id="comment-auth-message" style="display: none; text-align: center; padding: 20px;">
+                        <p>Please <a href="#" onclick="window.openAuthModal(); return false;" style="text-decoration: underline; font-weight: 600;">log in</a> to leave a comment.</p>
+                    </div>
+                    
+                    <form id="comment-form" style="display: none;">
+                        <textarea id="comment-input" class="comment-input" placeholder="Share your thoughts..." required></textarea>
+                        <div style="display: flex; justify-content: flex-end;">
+                            <button type="submit" class="submit-comment-btn">Post Comment</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="comments-list">
+                    <!-- Comments will be loaded here -->
+                    <div style="text-align: center; color: var(--color-text-muted);">Loading comments...</div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+async function loadComments(postSlug) {
+    const list = document.getElementById('comments-list');
     
-    // Find a good place to insert. Ideally after the content.
-    // In blog posts, usually inside <article> at the end.
-    article.insertAdjacentHTML('beforeend', commentsSectionHTML);
-    
-    const commentsList = document.getElementById('comments-list');
-    const commentForm = document.getElementById('comment-form');
-    const loginPrompt = document.getElementById('login-to-comment');
-    const postSlug = window.location.pathname.split('/').pop().replace('.html', '');
-    
-    // Check Auth State
-    const { data: { user } } = await supabase.auth.getUser();
-    
-    if (user) {
-        commentForm.style.display = 'block';
-        loginPrompt.style.display = 'none';
-    } else {
-        commentForm.style.display = 'none';
-        loginPrompt.style.display = 'block';
-    }
-    
-    // Fetch Comments
-    await loadComments(postSlug, commentsList);
-    
-    // Handle Submit
-    commentForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const content = document.getElementById('comment-input').value;
-        
-        if (!content.trim()) return;
-        
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) return;
-        
-        // Optimistic UI update
-        const tempComment = createCommentElement({
-            content,
-            created_at: new Date().toISOString(),
-            user_email: user.email,
-            user_metadata: user.user_metadata
-        });
-        commentsList.prepend(tempComment);
-        document.getElementById('comment-input').value = '';
-        
-        // Save to DB
-        const { error } = await supabase
+    try {
+        const { data: comments, error } = await supabase
             .from('comments')
-            .insert({
-                post_slug: postSlug,
-                user_id: user.id,
-                content: content,
-                user_email: user.email, // Storing email for display simplicity
-                user_metadata: user.user_metadata // Storing avatar etc
-            });
-            
-        if (error) {
-            console.error('Error posting comment:', error);
-            tempComment.remove();
+            .select('*')
+            .eq('post_slug', postSlug)
+            .order('created_at', { ascending: false });
+
+        if (error) throw error;
+
+        if (!comments || comments.length === 0) {
+            list.innerHTML = '<div style="text-align: center; color: var(--color-text-muted); padding: 20px;">No comments yet. Be the first to share your thoughts!</div>';
+            return;
+        }
+
+        const { data: { user } } = await supabase.auth.getUser();
+        const currentUserId = user?.id;
+
+        list.innerHTML = comments.map(comment => createCommentHTML(comment, currentUserId)).join('');
+        
+        // Add delete listeners
+        document.querySelectorAll('.delete-comment-btn').forEach(btn => {
+            btn.addEventListener('click', handleDeleteComment);
+        });
+
+    } catch (err) {
+        console.error('Error loading comments:', err);
+        list.innerHTML = '<div style="color: #ef4444; text-align: center;">Failed to load comments.</div>';
+    }
+}
+
+function createCommentHTML(comment, currentUserId) {
+    const date = new Date(comment.created_at).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+
+    const isOwner = currentUserId === comment.user_id;
+    const deleteBtn = isOwner ? `<button class="delete-comment-btn" data-id="${comment.id}">Delete</button>` : '';
+    
+    // Default avatar if none provided
+    const avatarUrl = comment.user_avatar || 'Media/default-avatar.png';
+
+    return `
+        <div class="comment-item" id="comment-${comment.id}">
+            <img src="${avatarUrl}" alt="${comment.user_name}" class="comment-avatar">
+            <div class="comment-content">
+                <div class="comment-header">
+                    <div>
+                        <span class="comment-author">${escapeHtml(comment.user_name || 'Anonymous')}</span>
+                        <span class="comment-date"> • ${date}</span>
+                    </div>
+                    ${deleteBtn}
+                </div>
+                <div class="comment-text">${escapeHtml(comment.content)}</div>
+            </div>
+        </div>
+    `;
+}
+
+async function setupCommentListeners(postSlug) {
+    const form = document.getElementById('comment-form');
+    const authMessage = document.getElementById('comment-auth-message');
+    
+    // Check auth state
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    if (session) {
+        form.style.display = 'block';
+        authMessage.style.display = 'none';
+    } else {
+        form.style.display = 'none';
+        authMessage.style.display = 'block';
+    }
+
+    // Listen for auth changes
+    supabase.auth.onAuthStateChange((event, session) => {
+        if (session) {
+            form.style.display = 'block';
+            authMessage.style.display = 'none';
+        } else {
+            form.style.display = 'none';
+            authMessage.style.display = 'block';
+        }
+    });
+
+    // Handle submit
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const input = document.getElementById('comment-input');
+        const content = input.value.trim();
+        const btn = form.querySelector('button');
+
+        if (!content) return;
+
+        try {
+            btn.disabled = true;
+            btn.textContent = 'Posting...';
+
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) throw new Error('Not authenticated');
+
+            // Get user profile for name/avatar
+            // Try to get from metadata first, then profiles table if needed
+            const userName = user.user_metadata?.full_name || user.email.split('@')[0];
+            const userAvatar = user.user_metadata?.avatar_url;
+
+            const { error } = await supabase
+                .from('comments')
+                .insert({
+                    post_slug: postSlug,
+                    user_id: user.id,
+                    content: content,
+                    user_name: userName,
+                    user_avatar: userAvatar
+                });
+
+            if (error) throw error;
+
+            input.value = '';
+            await loadComments(postSlug); // Reload list
+
+        } catch (err) {
+            console.error('Error posting comment:', err);
             alert('Failed to post comment. Please try again.');
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Post Comment';
         }
     });
 }
 
-async function loadComments(slug, container) {
-    const { data: comments, error } = await supabase
-        .from('comments')
-        .select('*')
-        .eq('post_slug', slug)
-        .order('created_at', { ascending: false });
-        
-    if (error) {
-        console.error('Error loading comments:', error);
-        container.innerHTML = '<p>Error loading comments.</p>';
-        return;
-    }
-    
-    container.innerHTML = '';
-    
-    if (comments.length === 0) {
-        container.innerHTML = '<p style="color: #666;">No comments yet. Be the first!</p>';
-        return;
-    }
-    
-    comments.forEach(comment => {
-        container.appendChild(createCommentElement(comment));
-    });
-}
+async function handleDeleteComment(e) {
+    if (!confirm('Are you sure you want to delete this comment?')) return;
 
-function createCommentElement(comment) {
-    const div = document.createElement('div');
-    div.style.cssText = 'display: flex; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid #eee;';
-    
-    const avatarUrl = comment.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${comment.user_email}&background=random`;
-    const date = new Date(comment.created_at).toLocaleDateString();
-    
-    div.innerHTML = `
-        <img src="${avatarUrl}" alt="User" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-        <div>
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                <span style="font-weight: 600;">${comment.user_email.split('@')[0]}</span>
-                <span style="font-size: 0.85rem; color: #999;">${date}</span>
-            </div>
-            <p style="line-height: 1.5; color: #333;">${escapeHtml(comment.content)}</p>
-        </div>
-    `;
-    return div;
+    const btn = e.target;
+    const commentId = btn.dataset.id;
+    const commentEl = document.getElementById(`comment-${commentId}`);
+
+    try {
+        btn.disabled = true;
+        
+        const { error } = await supabase
+            .from('comments')
+            .delete()
+            .eq('id', commentId);
+
+        if (error) throw error;
+
+        // Remove from DOM
+        commentEl.remove();
+        
+        // Check if list is empty
+        const list = document.getElementById('comments-list');
+        if (list.children.length === 0) {
+            list.innerHTML = '<div style="text-align: center; color: var(--color-text-muted); padding: 20px;">No comments yet. Be the first to share your thoughts!</div>';
+        }
+
+    } catch (err) {
+        console.error('Error deleting comment:', err);
+        alert('Failed to delete comment.');
+        btn.disabled = false;
+    }
 }
 
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
-}
-
-// Init
-if (typeof window !== 'undefined') {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initComments);
-    } else {
-        initComments();
-    }
 }

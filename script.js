@@ -847,7 +847,7 @@ const recentAdventures = [
         title: "The Ultimate Guide to Romania's Most Stunning Castles",
         date: "Nov 8, 2024",
         image: "Media/romania-castle-blog.jpg",
-        link: "blog-post-packing.html",
+        link: "blog-post-romania-castles.html",
         description: "Romania's castles are some of Europe's best-kept secrets. From vampire legends to royal residences."
     },
     {
