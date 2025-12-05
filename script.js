@@ -832,3 +832,52 @@ document.addEventListener('click', (e) => {
     }
 });
 
+
+// ===== DYNAMIC RECENT ADVENTURES =====
+// To update the homepage, simply add your new blog post to the TOP of this list.
+const recentAdventures = [
+    {
+        title: "Cozy Winter Escapes: Our Guide to the Best Cold-Weather Destinations",
+        date: "Dec 3, 2025",
+        image: "Media/cold-blog-header.jpg",
+        link: "blog-post.html",
+        description: "Forget beach holidays, winter is where the magic happens. Join us as we share our favourite snowy escapes across Europe."
+    },
+    {
+        title: "The Ultimate Guide to Romania's Most Stunning Castles",
+        date: "Nov 8, 2024",
+        image: "Media/romania-castle-blog.jpg",
+        link: "blog-post-packing.html",
+        description: "Romania's castles are some of Europe's best-kept secrets. From vampire legends to royal residences."
+    },
+    {
+        title: "Mardi Gras: A Complete Guide to the Ultimate Party",
+        date: "Feb 15, 2025",
+        image: "Media/mardi-gras-parade.png",
+        link: "blog-post-mardigras.html",
+        description: "Everything you need to know about experiencing the world's most famous street party in New Orleans."
+    }
+];
+
+function loadRecentAdventures() {
+    const grid = document.getElementById('recentAdventuresGrid');
+    if (!grid) return;
+
+    // Take the first 3 posts
+    const postsToShow = recentAdventures.slice(0, 3);
+
+    grid.innerHTML = postsToShow.map((post, index) => `
+        <div class="adventure-card fade-up delay-${index + 1}" onclick="window.location.href='${post.link}'" style="cursor: pointer;">
+            <div class="adventure-image">
+                <img src="${post.image}" alt="${post.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="adventure-date">${post.date}</div>
+            </div>
+            <div class="adventure-content">
+                <h3 class="adventure-title">${post.title}</h3>
+                <p class="adventure-description">${post.description}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', loadRecentAdventures);
