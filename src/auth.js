@@ -524,34 +524,40 @@ export function initAuth() {
     }
   });
 
-  // Initialize Header State
+  // Replace existing toggle with new dropdown container
+  replaceDarkModeToggle();
+
+  // Initial render of header (default to logged out state)
+  // This ensures the UI appears immediately, and will be updated by the auth listener if a user is found
+  updateHeader(null);
+
+  // Initialize Header State Listeners
   setupAuthListener();
   setupMapSync();
-  
-  // Replace existing toggle with new dropdown
-  replaceDarkModeToggle();
 }
 
 function replaceDarkModeToggle() {
     const existingToggle = document.getElementById('darkModeToggle');
-    if (existingToggle) {
-        // We'll hide it or remove it, but we need its container
-        // Actually, we'll insert the new auth container where the toggle was
-        // or just append it to the nav if we want to keep layout clean
-        
-        // Let's find the nav
-        const nav = document.getElementById('nav');
-        if (!nav) return;
-        
-        // Create container for our new auth UI
-        const authContainer = document.createElement('div');
+    const nav = document.getElementById('nav');
+
+    // Create container for our new auth UI if it doesn't exist
+    let authContainer = document.getElementById('auth-container');
+    if (!authContainer) {
+        authContainer = document.createElement('div');
         authContainer.id = 'auth-container';
         authContainer.className = 'auth-container';
         
-        // Insert it at the end of nav, effectively replacing the position of the toggle
-        // We will remove the old toggle in updateHeader or here
+        // Insert it where the existing toggle is, or fallback to nav
+        if (existingToggle && existingToggle.parentNode) {
+            // Insert after the toggle
+            existingToggle.parentNode.insertBefore(authContainer, existingToggle.nextSibling);
+        } else if (nav) {
+            nav.appendChild(authContainer);
+        }
+    }
+
+    if (existingToggle) {
         existingToggle.style.display = 'none'; // Hide original toggle
-        nav.appendChild(authContainer);
     }
 }
 
@@ -720,7 +726,14 @@ function updateHeader(user) {
     `;
   }
 
-  nav.appendChild(wrapper);
+  // Append to the auth container we created
+  const authContainer = document.getElementById('auth-container');
+  if (authContainer) {
+      authContainer.appendChild(wrapper);
+  } else {
+      // Fallback if container doesn't exist for some reason
+      nav.appendChild(wrapper);
+  }
   
   // Event Listeners for Dropdown
   const btn = wrapper.querySelector('#accountBtn');
