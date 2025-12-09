@@ -392,6 +392,11 @@ a {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/* Default state for mobile filter toggle (hidden on desktop) */
+.mobile-filter-toggle {
+    display: none;
+}
+
 /* ===== MOBILE MENU OVERLAY ===== */
 @media (max-width: 900px) {
     .mobile-toggle {
@@ -520,7 +525,20 @@ a {
         justify-content: center;
     }
 
-    /* Mobile Filter Toggle */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Mobile Filter Toggle - Only show on tablets and mobile */
+@media (max-width: 1024px) {
     .mobile-filter-toggle {
         display: flex;
         align-items: center;
@@ -573,17 +591,6 @@ a {
         width: 100%; /* Full width buttons on mobile */
         justify-content: flex-start;
         padding: 12px 20px;
-    }
-
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 }
 
