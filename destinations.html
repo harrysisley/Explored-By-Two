@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations - Explored By Two</title>
+    <meta name="description" content="Discover our travel guides for over 40 countries across 6 continents. Find inspiration for your next adventure with Explored By Two.">
+    <link rel="canonical" href="https://exploredbytwo.com/destinations.html">
     <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,63 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="destinations.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Travel Destinations",
+      "description": "List of countries and destinations visited by Explored By Two.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Egypt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Namibia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Morocco"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Japan"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Thailand"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Vietnam"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Iceland"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Greece"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Norway"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -20,10 +79,10 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                <a href="index.html" class="logo" aria-label="Explored By Two Home">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
                 </a>
-                <nav class="nav" id="nav">
+                <nav class="nav" id="nav" aria-label="Main Navigation">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="story.html" class="nav-link">Our Story</a>
                     <a href="destinations.html" class="nav-link active">Destinations</a>
@@ -35,7 +94,7 @@
                         <span class="toggle-icon">🌙</span>
                     </button>
                 </nav>
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -74,12 +133,13 @@
         <div class="container">
             <div class="filter-controls">
                 <div class="search-box">
+                    <label for="searchInput" class="sr-only" style="position:absolute; width:1px; height:1px; overflow:hidden;">Search destinations</label>
                     <input type="text" id="searchInput" placeholder="Search destinations..." class="search-input">
-                    <span class="search-icon">🔍</span>
+                    <span class="search-icon" aria-hidden="true">🔍</span>
                 </div>
-                <button class="mobile-filter-toggle" id="filterToggle" onclick="toggleMobileFilters()">
+                <button class="mobile-filter-toggle" id="filterToggle" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="mobileFilterContainer">
                     <span>Show Filters</span>
-                    <span class="toggle-icon">▼</span>
+                    <span class="toggle-icon" aria-hidden="true">▼</span>
                 </button>
                 <div class="filter-buttons" id="mobileFilterContainer">
                     <button class="filter-btn active" data-continent="all">All</button>
@@ -90,18 +150,18 @@
                     <button class="filter-btn" data-continent="oceania">🦘 Oceania</button>
                     <button class="filter-btn" data-continent="polar">🐧 Polar</button>
                     <div class="view-toggle">
-                        <button class="view-btn active" data-view="grid">
+                        <button class="view-btn active" data-view="grid" aria-label="Grid View">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <rect x="3" y="3" width="7" height="7"></rect>
                                 <rect x="14" y="3" width="7" height="7"></rect>
                                 <rect x="14" y="14" width="7" height="7"></rect>
                                 <rect x="3" y="14" width="7" height="7"></rect>
                             </svg>
                         </button>
-                        <button class="view-btn" data-view="list">
+                        <button class="view-btn" data-view="list" aria-label="List View">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <line x1="8" y1="6" x2="21" y2="6"></line>
                                 <line x1="8" y1="12" x2="21" y2="12"></line>
                                 <line x1="8" y1="18" x2="21" y2="18"></line>
@@ -307,58 +367,38 @@
                 <div class="destination-card" data-continent="americas" data-name="Peru">
                     <div class="destination-image gradient-orange-pink">
                         <div class="placeholder-text">Peru</div>
-                        <div class="destination-badge">🏔️ Adventure</div>
+                        <div class="destination-badge">⛰️ Hiking</div>
                     </div>
                     <div class="destination-content">
                         <div class="destination-header">
                             <h3 class="destination-title">Peru</h3>
                             <div class="destination-rating">⭐ 5.0</div>
                         </div>
-                        <p class="destination-description">Machu Picchu, Rainbow Mountain, and the Amazon. Where our
-                            journey began.</p>
+                        <p class="destination-description">Machu Picchu, Rainbow Mountain, and the Amazon. A hiker's
+                            paradise.</p>
                         <div class="destination-meta">
-                            <span class="meta-item">📍 Cusco, Machu Picchu</span>
+                            <span class="meta-item">📍 Cusco, Lima</span>
                             <span class="meta-item">📅 3 weeks</span>
                         </div>
                         <a href="#" class="destination-link">Explore →</a>
                     </div>
                 </div>
 
-                <div class="destination-card" data-continent="americas" data-name="Argentina">
+                <div class="destination-card" data-continent="americas" data-name="USA">
                     <div class="destination-image gradient-blue-teal">
-                        <div class="placeholder-text">Argentina</div>
-                        <div class="destination-badge">🏔️ Patagonia</div>
+                        <div class="placeholder-text">USA</div>
+                        <div class="destination-badge">🏞️ Parks</div>
                     </div>
                     <div class="destination-content">
                         <div class="destination-header">
-                            <h3 class="destination-title">Argentina</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
+                            <h3 class="destination-title">USA</h3>
+                            <div class="destination-rating">⭐ 4.8</div>
                         </div>
-                        <p class="destination-description">Patagonia's dramatic landscapes, glaciers, and incredible
-                            hiking. Torres del Paine is epic.</p>
+                        <p class="destination-description">National parks, vibrant cities, and endless road trips. The
+                            Southwest is a highlight.</p>
                         <div class="destination-meta">
-                            <span class="meta-item">📍 Patagonia, Buenos Aires</span>
-                            <span class="meta-item">📅 2 weeks</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="americas" data-name="Canada">
-                    <div class="destination-image gradient-gold-pink">
-                        <div class="placeholder-text">Canada</div>
-                        <div class="destination-badge">🏔️ Mountains</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Canada</h3>
-                            <div class="destination-rating">⭐ 4.9</div>
-                        </div>
-                        <p class="destination-description">Banff, Lake Louise, and the Canadian Rockies. Turquoise lakes
-                            and towering peaks.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Banff, Jasper</span>
-                            <span class="meta-item">📅 10 days</span>
+                            <span class="meta-item">📍 Utah, Arizona</span>
+                            <span class="meta-item">📅 1 month</span>
                         </div>
                         <a href="#" class="destination-link">Explore →</a>
                     </div>
@@ -368,17 +408,17 @@
                 <div class="destination-card" data-continent="oceania" data-name="New Zealand">
                     <div class="destination-image gradient-cyan-purple">
                         <div class="placeholder-text">New Zealand</div>
-                        <div class="destination-badge">🏔️ Adventure</div>
+                        <div class="destination-badge">🚐 Road Trip</div>
                     </div>
                     <div class="destination-content">
                         <div class="destination-header">
                             <h3 class="destination-title">New Zealand</h3>
                             <div class="destination-rating">⭐ 5.0</div>
                         </div>
-                        <p class="destination-description">Middle Earth come to life. Stunning landscapes, adventure
-                            sports, and friendly locals.</p>
+                        <p class="destination-description">The ultimate road trip destination. Mountains, lakes, and
+                            adventure sports.</p>
                         <div class="destination-meta">
-                            <span class="meta-item">📍 Queenstown, Milford Sound</span>
+                            <span class="meta-item">📍 South Island</span>
                             <span class="meta-item">📅 3 weeks</span>
                         </div>
                         <a href="#" class="destination-link">Explore →</a>
@@ -407,17 +447,17 @@
 
                 <!-- Polar -->
                 <div class="destination-card" data-continent="polar" data-name="Antarctica">
-                    <div class="destination-image gradient-blue-teal">
+                    <div class="destination-image gradient-gold-pink">
                         <div class="placeholder-text">Antarctica</div>
-                        <div class="destination-badge">🐧 Polar</div>
+                        <div class="destination-badge">🐧 Expedition</div>
                     </div>
                     <div class="destination-content">
                         <div class="destination-header">
                             <h3 class="destination-title">Antarctica</h3>
                             <div class="destination-rating">⭐ 5.0</div>
                         </div>
-                        <p class="destination-description">The ultimate adventure. Penguins, icebergs, and pristine
-                            wilderness. Life-changing.</p>
+                        <p class="destination-description">The final frontier. Icebergs, penguins, and pristine
+                            wilderness. A life-changing journey.</p>
                         <div class="destination-meta">
                             <span class="meta-item">📍 Antarctic Peninsula</span>
                             <span class="meta-item">📅 10 days</span>
@@ -478,7 +518,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+                <p>&copy; 2025 Explored By Two. All rights reserved.</p>
             </div>
         </div>
     </footer>

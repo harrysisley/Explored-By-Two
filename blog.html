@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Explored By Two</title>
+    <meta name="description" content="Read our latest travel guides, photography tips, and personal stories from our adventures around the world.">
+    <link rel="canonical" href="https://exploredbytwo.com/blog.html">
     <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,21 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="blog.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Explored By Two Blog",
+      "url": "https://exploredbytwo.com/blog.html",
+      "description": "Travel guides, photography tips, and stories.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Harry & Hannah"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -20,10 +37,10 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                <a href="index.html" class="logo" aria-label="Explored By Two Home">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
                 </a>
-                <nav class="nav" id="nav">
+                <nav class="nav" id="nav" aria-label="Main Navigation">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="story.html" class="nav-link">Our Story</a>
                     <a href="destinations.html" class="nav-link">Destinations</a>
@@ -35,7 +52,7 @@
                         <span class="toggle-icon">🌙</span>
                     </button>
                 </nav>
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,9 +74,9 @@
     <!-- Filter Section -->
     <section class="blog-filters">
         <div class="container">
-            <button class="mobile-filter-toggle" id="filterToggle" onclick="toggleMobileFilters()">
+            <button class="mobile-filter-toggle" id="filterToggle" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="mobileFilterContainer">
                 <span>Show Filters</span>
-                <span class="toggle-icon">▼</span>
+                <span class="toggle-icon" aria-hidden="true">▼</span>
             </button>
             <div class="filter-buttons fade-up delay-3" id="mobileFilterContainer">
                 <button class="filter-btn active" data-category="all">All Posts</button>
@@ -78,7 +95,7 @@
                 <!-- Featured Post -->
                 <article class="blog-card featured fade-up" data-category="guides" onclick="window.location.href='blog-post.html'">
                     <div class="blog-card-image">
-                        <img src="Media/cold-blog-header.jpg" alt="Iceland Landscape" class="card-img">
+                        <img src="Media/cold-blog-header.jpg" alt="Iceland Landscape" class="card-img" loading="lazy" width="800" height="500">
                         <span class="blog-category">Travel Guide</span>
                     </div>
                     <div class="blog-card-content">
@@ -90,10 +107,10 @@
                         <p class="blog-excerpt">Forget beach holidays, winter is where the magic happens. Join us as we share our favourite snowy escapes across Europe, from Iceland's geothermal spas to Copenhagen's hygge vibes.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')" aria-label="Harry"></div>
                                 <span class="author-name">Harry</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read Cozy Winter Escapes">Read Story →</span>
                         </div>
                     </div>
                 </article>
@@ -101,7 +118,7 @@
                 <!-- Regular Posts -->
                 <article class="blog-card fade-up delay-1" data-category="tips" onclick="window.location.href='blog-post-romania-castles.html'">
                     <div class="blog-card-image">
-                        <img src="Media/romania-castle-blog.jpg" alt="Romania Castles" class="card-img">
+                        <img src="Media/romania-castle-blog.jpg" alt="Romania Castles" class="card-img" loading="lazy" width="400" height="300">
                         <span class="blog-category">Travel Tips</span>
                     </div>
                     <div class="blog-card-content">
@@ -113,17 +130,17 @@
                         <p class="blog-excerpt">Romania's castles are some of Europe's best-kept secrets. From vampire legends to royal residences, here's your ultimate guide to the country's most incredible fortresses and palacess.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')" aria-label="Harry"></div>
                                 <span class="author-name">Harry</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read Romania Castles Guide">Read Story →</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="blog-card fade-up delay-2" data-category="guides" onclick="window.location.href='blog-post-mardigras.html'">
                     <div class="blog-card-image">
-                        <img src="Media/mardi-gras-parade.png" alt="Mardi Gras" class="card-img">
+                        <img src="Media/mardi-gras-parade.png" alt="Mardi Gras Parade" class="card-img" loading="lazy" width="400" height="300">
                         <span class="blog-category">Festival Guide</span>
                     </div>
                     <div class="blog-card-content">
@@ -135,17 +152,17 @@
                         <p class="blog-excerpt">Everything you need to know about experiencing the world's most famous street party in New Orleans.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')" aria-label="Hannah"></div>
                                 <span class="author-name">Hannah</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read Mardi Gras Guide">Read Story →</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="blog-card fade-up delay-3" data-category="stories" onclick="window.location.href='blog-post-patagonia.html'">
                     <div class="blog-card-image">
-                        <img src="https://images.unsplash.com/photo-1518182170546-0766bc6f9213?q=80&w=2070&auto=format&fit=crop" alt="Patagonia" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1518182170546-0766bc6f9213?q=80&w=2070&auto=format&fit=crop" alt="Patagonia Landscape" class="card-img" loading="lazy" width="400" height="300">
                         <span class="blog-category">Travel Story</span>
                     </div>
                     <div class="blog-card-content">
@@ -158,17 +175,17 @@
                             unmatched. Our journey through Torres del Paine.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')" aria-label="Harry"></div>
                                 <span class="author-name">Harry</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read Patagonia Story">Read Story →</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="blog-card fade-up delay-4" data-category="tips" onclick="window.location.href='blog-post-vietnam.html'">
                     <div class="blog-card-image">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop" alt="Vietnam Food" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop" alt="Vietnam Street Food" class="card-img" loading="lazy" width="400" height="300">
                         <span class="blog-category">Food Guide</span>
                     </div>
                     <div class="blog-card-content">
@@ -181,17 +198,17 @@
                             Minh City to experience authentic Vietnamese cuisine.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')" aria-label="Hannah"></div>
                                 <span class="author-name">Hannah</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read Vietnam Food Guide">Read Story →</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="blog-card fade-up delay-1" data-category="photography" onclick="window.location.href='blog-post-photography.html'">
                     <div class="blog-card-image">
-                        <img src="Media/photography-blog-image.jpg" alt="Camera" class="card-img">
+                        <img src="Media/photography-blog-image.jpg" alt="Camera and Lens" class="card-img" loading="lazy" width="400" height="300">
                         <span class="blog-category">Photography</span>
                     </div>
                     <div class="blog-card-content">
@@ -204,10 +221,10 @@
                             capturing stunning travel moments.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')" aria-label="Harry"></div>
                                 <span class="author-name">Harry</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read Photography Tips">Read Story →</span>
                         </div>
                     </div>
                 </article>
@@ -215,7 +232,7 @@
                 <!-- NEW POSTS -->
                 <article class="blog-card fade-up delay-2" data-category="guides" onclick="window.location.href='blog-post-newzealand.html'">
                     <div class="blog-card-image">
-                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" alt="New Zealand" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" alt="New Zealand Road Trip" class="card-img" loading="lazy" width="400" height="300">
                         <span class="blog-category">Road Trip</span>
                     </div>
                     <div class="blog-card-content">
@@ -227,17 +244,17 @@
                         <p class="blog-excerpt">Two weeks in a campervan exploring the South Island. From Milford Sound to Mount Cook, here's our complete itinerary.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/harry-image.jpeg')" aria-label="Harry"></div>
                                 <span class="author-name">Harry</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read New Zealand Guide">Read Story →</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="blog-card fade-up delay-3" data-category="stories" onclick="window.location.href='blog-post-antarctica.html'">
                     <div class="blog-card-image">
-                        <img src="https://images.unsplash.com/photo-1520627996564-38b8f4981293?q=80&w=2071&auto=format&fit=crop" alt="Antarctica" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1520627996564-38b8f4981293?q=80&w=2071&auto=format&fit=crop" alt="Antarctica Expedition" class="card-img" loading="lazy" width="400" height="300">
                         <span class="blog-category">Expedition</span>
                     </div>
                     <div class="blog-card-content">
@@ -249,10 +266,10 @@
                         <p class="blog-excerpt">Crossing the Drake Passage and stepping foot on the 7th continent. A diary of our expedition to Antarctica.</p>
                         <div class="blog-footer">
                             <div class="blog-author">
-                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')"></div>
+                                <div class="author-avatar" style="background-image: url('Media/hannah-image.jpeg')" aria-label="Hannah"></div>
                                 <span class="author-name">Hannah</span>
                             </div>
-                            <span class="blog-link">Read Story →</span>
+                            <span class="blog-link" aria-label="Read Antarctica Story">Read Story →</span>
                         </div>
                     </div>
                 </article>
@@ -273,7 +290,8 @@
                 <p class="newsletter-subtitle">Get our latest travel stories, tips, and photography delivered to your
                     inbox.</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <label for="newsletter-email" class="sr-only" style="position:absolute; width:1px; height:1px; overflow:hidden;">Email Address</label>
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" class="newsletter-input" required>
                     <button type="submit" class="btn-primary">Subscribe</button>
                 </form>
                 <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
@@ -287,7 +305,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
                     </div>
                     <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
                         adventure, and meaningful travel stories.</p>
@@ -304,21 +322,21 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">YouTube</a>
-                        <a href="#" class="social-link">Email</a>
+                        <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+                        <a href="#" class="social-link" aria-label="Email">Email</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+                <p>&copy; 2025 Explored By Two. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="blog.js"></script>
+    <script src="script.js" defer></script>
+    <script src="blog.js" defer></script>
     <script type="module" src="src/auth.js"></script>
 </body>
 

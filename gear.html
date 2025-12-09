@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Gear - Explored By Two</title>
+    <meta name="description" content="See the camera gear, travel essentials, and tech we use to travel the world full-time. Honest reviews and recommendations from Explored By Two.">
+    <link rel="canonical" href="https://exploredbytwo.com/gear.html">
     <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,43 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gear.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Travel Gear Recommendations",
+      "description": "A list of travel gear and camera equipment recommended by Explored By Two.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Sony A7 IV"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sony 24-70mm f/2.8 GM II"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Peak Design Travel Tripod"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Osprey Farpoint 40"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "MacBook Pro 14\" M3"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -20,10 +59,10 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                <a href="index.html" class="logo" aria-label="Explored By Two Home">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
                 </a>
-                <nav class="nav" id="nav">
+                <nav class="nav" id="nav" aria-label="Main Navigation">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="story.html" class="nav-link">Our Story</a>
                     <a href="destinations.html" class="nav-link">Destinations</a>
@@ -35,7 +74,7 @@
                         <span class="toggle-icon">🌙</span>
                     </button>
                 </nav>
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -59,11 +98,11 @@
     <!-- Category Tabs -->
     <section class="gear-tabs-section">
         <div class="container">
-            <div class="gear-tabs">
-                <button class="gear-tab active" data-category="camera">📷 Camera Gear</button>
-                <button class="gear-tab" data-category="travel">🎒 Travel Essentials</button>
-                <button class="gear-tab" data-category="tech">💻 Tech & Gadgets</button>
-                <button class="gear-tab" data-category="clothing">👕 Clothing</button>
+            <div class="gear-tabs" role="tablist">
+                <button class="gear-tab active" data-category="camera" role="tab" aria-selected="true" aria-controls="camera-panel">📷 Camera Gear</button>
+                <button class="gear-tab" data-category="travel" role="tab" aria-selected="false" aria-controls="travel-panel">🎒 Travel Essentials</button>
+                <button class="gear-tab" data-category="tech" role="tab" aria-selected="false" aria-controls="tech-panel">💻 Tech & Gadgets</button>
+                <button class="gear-tab" data-category="clothing" role="tab" aria-selected="false" aria-controls="clothing-panel">👕 Clothing</button>
             </div>
         </div>
     </section>
@@ -72,7 +111,7 @@
     <section class="gear-section">
         <div class="container">
             <!-- Camera Gear -->
-            <div class="gear-category active" data-category="camera">
+            <div class="gear-category active" data-category="camera" id="camera-panel" role="tabpanel">
                 <h2 class="category-title">Camera Gear</h2>
                 <p class="category-description">Our photography setup for capturing wildlife, landscapes, and everything
                     in between.</p>
@@ -85,7 +124,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Sony A7 IV</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Our main camera body. Incredible autofocus, great in low light,
                                 and perfect for both photos and video.</p>
                             <div class="gear-specs">
@@ -104,7 +143,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Sony 24-70mm f/2.8 GM II</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Our go-to lens. Sharp, versatile, and perfect for travel. Stays
                                 on the camera 80% of the time.</p>
                             <div class="gear-specs">
@@ -122,7 +161,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Sony 200-600mm f/5.6-6.3 G</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">For wildlife photography. Incredible reach and surprisingly
                                 sharp. A game-changer on safari.</p>
                             <div class="gear-specs">
@@ -140,7 +179,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Peak Design Travel Tripod</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Compact, lightweight, and incredibly well-designed. Packs down
                                 small enough to fit in our carry-on.</p>
                             <div class="gear-specs">
@@ -158,7 +197,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">DJI Mini 3 Pro</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Under 250g so no registration needed in most countries. Amazing
                                 image quality for the size.</p>
                             <div class="gear-specs">
@@ -176,7 +215,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Peak Design Everyday Backpack 30L</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Best camera bag we've ever used. Fits all our gear plus laptop.
                                 Weatherproof and beautifully designed.</p>
                             <div class="gear-specs">
@@ -191,7 +230,7 @@
             </div>
 
             <!-- Travel Essentials -->
-            <div class="gear-category" data-category="travel">
+            <div class="gear-category" data-category="travel" id="travel-panel" role="tabpanel">
                 <h2 class="category-title">Travel Essentials</h2>
                 <p class="category-description">The gear that makes long-term travel easier and more comfortable.</p>
 
@@ -203,7 +242,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Osprey Farpoint 40</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Our main travel backpack. Carry-on sized, incredibly
                                 comfortable, and has survived 47 countries.</p>
                             <div class="gear-specs">
@@ -222,7 +261,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Eagle Creek Packing Cubes</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Game-changer for staying organized. We use compression cubes to
                                 maximize space.</p>
                             <div class="gear-specs">
@@ -240,7 +279,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Grayl GeoPress Water Purifier</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Purifies water in 8 seconds. Essential for countries with
                                 questionable tap water.</p>
                             <div class="gear-specs">
@@ -258,7 +297,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Matador NanoDry Towel</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Packs down tiny, dries incredibly fast. Perfect for hostels and
                                 beach days.</p>
                             <div class="gear-specs">
@@ -273,7 +312,7 @@
             </div>
 
             <!-- Tech & Gadgets -->
-            <div class="gear-category" data-category="tech">
+            <div class="gear-category" data-category="tech" id="tech-panel" role="tabpanel">
                 <h2 class="category-title">Tech & Gadgets</h2>
                 <p class="category-description">The technology that keeps us connected and productive on the road.</p>
 
@@ -285,7 +324,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">MacBook Pro 14" M3</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">For editing photos and videos. Powerful enough for 4K editing,
                                 light enough to travel with.</p>
                             <div class="gear-specs">
@@ -303,7 +342,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">SanDisk Extreme Portable SSD 2TB</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Fast, rugged, and reliable. We backup all our photos to two of
                                 these drives.</p>
                             <div class="gear-specs">
@@ -321,7 +360,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Anker 747 GaN Charger</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">One charger for everything. 4 ports, 150W total. Replaced 5
                                 different chargers.</p>
                             <div class="gear-specs">
@@ -339,7 +378,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Sony WH-1000XM5</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Best noise cancelling headphones. Essential for long flights and
                                 noisy hostels.</p>
                             <div class="gear-specs">
@@ -354,7 +393,7 @@
             </div>
 
             <!-- Clothing -->
-            <div class="gear-category" data-category="clothing">
+            <div class="gear-category" data-category="clothing" id="clothing-panel" role="tabpanel">
                 <h2 class="category-title">Clothing</h2>
                 <p class="category-description">Quality over quantity. These pieces work in any climate and pack down
                     small.</p>
@@ -366,7 +405,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Patagonia Torrentshell 3L</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Waterproof, breathable, and packs into its own pocket. Perfect
                                 for unpredictable weather.</p>
                             <div class="gear-specs">
@@ -384,7 +423,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Allbirds Tree Dashers</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Comfortable enough for all-day walking, stylish enough for nice
                                 restaurants. Machine washable.</p>
                             <div class="gear-specs">
@@ -402,7 +441,7 @@
                         </div>
                         <div class="gear-content">
                             <h3 class="gear-name">Icebreaker Merino T-Shirts</h3>
-                            <div class="gear-rating">⭐⭐⭐⭐⭐</div>
+                            <div class="gear-rating" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                             <p class="gear-description">Odor-resistant, temperature regulating, and incredibly
                                 comfortable. Can wear for days without washing.</p>
                             <div class="gear-specs">
@@ -425,19 +464,19 @@
                 <h2 class="tips-title">Our Packing Philosophy</h2>
                 <div class="tips-grid">
                     <div class="tip-card">
-                        <div class="tip-icon">🎒</div>
+                        <div class="tip-icon" aria-hidden="true">🎒</div>
                         <h3 class="tip-title">Pack Light</h3>
                         <p class="tip-text">If you can't carry it for 30 minutes, you're bringing too much. We each
                             travel with just a 40L backpack.</p>
                     </div>
                     <div class="tip-card">
-                        <div class="tip-icon">👕</div>
+                        <div class="tip-icon" aria-hidden="true">👕</div>
                         <h3 class="tip-title">Quality Over Quantity</h3>
                         <p class="tip-text">Buy fewer, better items. One great merino shirt beats five cheap cotton
                             ones.</p>
                     </div>
                     <div class="tip-card">
-                        <div class="tip-icon">🔄</div>
+                        <div class="tip-icon" aria-hidden="true">🔄</div>
                         <h3 class="tip-title">Multi-Purpose Items</h3>
                         <p class="tip-text">Every item should serve multiple purposes. Our sarong is a towel, blanket,
                             and beach cover-up.</p>
@@ -453,7 +492,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
                     </div>
                     <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
                         adventure, and meaningful travel stories.</p>
@@ -470,21 +509,21 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">YouTube</a>
-                        <a href="#" class="social-link">Email</a>
+                        <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+                        <a href="#" class="social-link" aria-label="Email">Email</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+                <p>&copy; 2025 Explored By Two. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="gear.js"></script>
+    <script src="script.js" defer></script>
+    <script src="gear.js" defer></script>
     <script type="module" src="src/auth.js"></script>
 </body>
 

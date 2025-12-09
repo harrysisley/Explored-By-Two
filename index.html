@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explored By Two - Travel Stories from Harry & Hannah</title>
+  <meta name="description" content="Join Harry & Hannah on their journey across 40+ countries. Discover travel guides, photography tips, and inspiring stories from around the world.">
+  <link rel="canonical" href="https://exploredbytwo.com/">
   <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,25 @@
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="passport-stamps.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelBlog",
+    "name": "Explored By Two",
+    "url": "https://exploredbytwo.com/",
+    "description": "Travel stories, photography, and guides from Harry & Hannah.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Harry & Hannah"
+    },
+    "sameAs": [
+      "https://instagram.com/exploredbytwo",
+      "https://twitter.com/exploredbytwo"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -20,11 +41,11 @@
 <header class="header" id="header">
   <div class="container">
     <div class="header-content">
-      <a href="index.html" class="logo">
-        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+      <a href="index.html" class="logo" aria-label="Explored By Two Home">
+        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
       </a>
 
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="Main Navigation">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="story.html" class="nav-link">Our Story</a>
         <a href="destinations.html" class="nav-link">Destinations</a>
@@ -50,7 +71,7 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-background">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video autoplay muted loop playsinline class="hero-video" poster="Media/hero-poster.jpg">
         <source src="Media/mountains.mp4" type="video/mp4">
       </video>
     </div>
@@ -72,7 +93,7 @@
     <div class="container">
       <div class="intro-grid">
         <div class="intro-image fade-up">
-          <img src="Media/selfie.jpeg" alt="Harry and Hannah" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="Media/selfie.jpeg" alt="Harry and Hannah traveling together" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" width="600" height="400">
         </div>
         <div class="intro-text fade-up delay-1">
           <h2 class="section-title">Hi, We're Harry & Hannah</h2>
@@ -97,7 +118,7 @@
       <div class="experiences-grid">
         <a href="blog.html" class="experience-card gradient-blue-teal fade-up delay-1" style="text-decoration: none; color: inherit;">
           <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -109,7 +130,7 @@
         </a>
         <a href="photography.html" class="experience-card gradient-orange-pink fade-up delay-2" style="text-decoration: none; color: inherit;">
           <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
               <circle cx="12" cy="13" r="4"></circle>
             </svg>
@@ -121,7 +142,7 @@
         </a>
         <a href="destinations.html" class="experience-card gradient-cyan-purple fade-up delay-3" style="text-decoration: none; color: inherit;">
           <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
             </svg>
           </div>
@@ -137,11 +158,11 @@
   <section class="inspiration-section">
     <div class="container">
       <div class="inspiration-card fade-up">
-        <div class="inspiration-icon">✨</div>
+        <div class="inspiration-icon" aria-hidden="true">✨</div>
         <h3 class="inspiration-title">Not sure where to go next?</h3>
         <p class="inspiration-subtitle">Let the universe decide your next adventure.</p>
         <button class="btn-primary" id="inspireBtn">Inspire Me</button>
-        <div class="inspiration-result" id="inspirationResult"></div>
+        <div class="inspiration-result" id="inspirationResult" aria-live="polite"></div>
       </div>
     </div>
   </section>
@@ -207,7 +228,7 @@
       </div>
       <div style="text-align: center; margin-top: 32px;">
         <button class="passport-btn" onclick="window.passportManager?.openStaticModal()">
-          <span class="passport-btn-icon">📖</span>
+          <span class="passport-btn-icon" aria-hidden="true">📖</span>
           View Our Passport Collection
         </button>
       </div>
@@ -220,22 +241,22 @@
       <h2 class="stats-section-title">Our Progress</h2>
       <div class="stats-grid">
         <div class="stat-card fade-up">
-          <div class="stat-icon">🌍</div>
+          <div class="stat-icon" aria-hidden="true">🌍</div>
           <div class="stat-number" data-target="47">0</div>
           <div class="stat-label">Countries Explored</div>
         </div>
         <div class="stat-card fade-up delay-1">
-          <div class="stat-icon">📸</div>
+          <div class="stat-icon" aria-hidden="true">📸</div>
           <div class="stat-number" data-target="15000">0</div>
           <div class="stat-label">Photos Captured</div>
         </div>
         <div class="stat-card fade-up delay-2">
-          <div class="stat-icon">✈️</div>
+          <div class="stat-icon" aria-hidden="true">✈️</div>
           <div class="stat-number" data-target="120">0</div>
           <div class="stat-label">Flights Taken</div>
         </div>
         <div class="stat-card fade-up delay-3">
-          <div class="stat-icon">🎒</div>
+          <div class="stat-icon" aria-hidden="true">🎒</div>
           <div class="stat-number" data-target="3">0</div>
           <div class="stat-label">Years Traveling</div>
         </div>
@@ -248,13 +269,13 @@
     <div class="container">
       <div class="quote-carousel fade-up">
         <div class="quote-content">
-          <div class="quote-icon">"</div>
+          <div class="quote-icon" aria-hidden="true">"</div>
           <p class="quote-text">The world is a book, and those who do not travel read only one page.</p>
           <p class="quote-author">— Saint Augustine</p>
         </div>
         <div class="quote-nav">
-          <button class="quote-btn prev">←</button>
-          <button class="quote-btn next">→</button>
+          <button class="quote-btn prev" aria-label="Previous quote">←</button>
+          <button class="quote-btn next" aria-label="Next quote">→</button>
         </div>
       </div>
     </div>
@@ -287,16 +308,17 @@
       <!-- Country Search & Add -->
       <div class="country-search-container fade-up delay-1">
         <div class="search-wrapper">
+          <label for="countrySearch" class="sr-only" style="position:absolute; width:1px; height:1px; overflow:hidden;">Search for a country</label>
           <input type="text" id="countrySearch" class="country-search-input" placeholder="Search for a country...">
-          <button id="addCountryBtn" class="add-country-btn" title="Add country">+</button>
+          <button id="addCountryBtn" class="add-country-btn" title="Add country" aria-label="Add country">+</button>
         </div>
         <div class="search-results" id="searchResults"></div>
       </div>
       <!-- Collapsible Country Selector -->
       <div class="country-selector-section fade-up delay-1">
-        <button class="collapse-toggle" id="countrySelectorToggle">
+        <button class="collapse-toggle" id="countrySelectorToggle" aria-expanded="false" aria-controls="countrySelectorContent">
           <span>Browse All Countries</span>
-          <span class="toggle-icon">▼</span>
+          <span class="toggle-icon" aria-hidden="true">▼</span>
         </button>
         <div class="country-selector-content" id="countrySelectorContent">
           <div id="country-list-grid" class="country-list"></div>
@@ -315,7 +337,7 @@
           <p class="section-subtitle">Countries you select on the map will appear here.</p>
         </div>
         <button class="passport-btn" onclick="window.passportManager?.openDynamicModal()">
-          <span class="passport-btn-icon">🌍</span>
+          <span class="passport-btn-icon" aria-hidden="true">🌍</span>
           View Your Passport
         </button>
       </div>
@@ -328,7 +350,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+            <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
           </div>
           <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife, adventure,
             and meaningful travel stories.</p>
@@ -345,10 +367,10 @@
         <div class="footer-col">
           <h4 class="footer-heading">Connect</h4>
           <div class="social-links">
-            <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">Twitter</a>
-            <a href="#" class="social-link">YouTube</a>
-            <a href="#" class="social-link">Email</a>
+            <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+            <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+            <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+            <a href="#" class="social-link" aria-label="Email">Email</a>
           </div>
         </div>
       </div>
@@ -359,10 +381,10 @@
     </div>
   </footer>
 
-  <script src="countries.js"></script>
-  <script src="passport-stamps.js"></script>
-  <script src="script.js"></script>
-  <script src="map.js"></script>
+  <script src="countries.js" defer></script>
+  <script src="passport-stamps.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="map.js" defer></script>
   <script type="module" src="src/auth.js"></script>
 </body>
 

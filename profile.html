@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile - Explored By Two</title>
+  <meta name="description" content="Manage your Explored By Two profile, view your travel stats, and update your settings.">
+  <meta name="robots" content="noindex, nofollow"> <!-- Don't index profile pages -->
   <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,10 +141,10 @@
   <header class="header" id="header">
     <div class="container">
       <div class="header-content">
-        <a href="index.html" class="logo">
-          <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+        <a href="index.html" class="logo" aria-label="Explored By Two Home">
+          <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
         </a>
-        <nav class="nav" id="nav">
+        <nav class="nav" id="nav" aria-label="Main Navigation">
           <a href="index.html" class="nav-link">Home</a>
           <a href="story.html" class="nav-link">Our Story</a>
           <a href="destinations.html" class="nav-link">Destinations</a>
@@ -154,7 +156,7 @@
             <span class="toggle-icon">🌙</span>
           </button>
         </nav>
-        <button class="mobile-toggle" id="mobileToggle">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
@@ -167,8 +169,8 @@
     <div class="container">
       <div class="profile-card fade-up">
         <div class="profile-avatar-container">
-          <img src="Media/default-avatar.png" alt="Profile" class="profile-avatar" id="profileAvatar">
-          <label for="fileInput" class="avatar-upload-btn">
+          <img src="Media/default-avatar.png" alt="Profile" class="profile-avatar" id="profileAvatar" width="120" height="120">
+          <label for="fileInput" class="avatar-upload-btn" aria-label="Upload new profile picture">
             📷
           </label>
           <input type="file" id="fileInput" accept="image/*">
@@ -199,9 +201,10 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+            <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
           </div>
-          <p class="footer-text">Join Harry & Hannah on their journey around the world.</p>
+          <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+            adventure, and meaningful travel stories.</p>
         </div>
         <div class="footer-col">
           <h4 class="footer-heading">Explore</h4>
@@ -209,23 +212,26 @@
             <li><a href="destinations.html">Destinations</a></li>
             <li><a href="photography.html">Photography</a></li>
             <li><a href="blog.html">Travel Tips</a></li>
+            <li><a href="gear.html">Our Gear</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4 class="footer-heading">Connect</h4>
           <div class="social-links">
-            <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+            <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+            <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+            <a href="#" class="social-link" aria-label="Email">Email</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+        <p>&copy; 2025 Explored By Two. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <script type="module" src="src/auth.js"></script>
   <script type="module">
     import { supabase } from './src/supabase.js';
@@ -307,4 +313,5 @@
     loadProfile();
   </script>
 </body>
+
 </html>

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story - Explored By Two</title>
+    <meta name="description" content="From a chance meeting in London to exploring 40+ countries together. Read the story of Harry & Hannah and how Explored By Two began.">
+    <link rel="canonical" href="https://exploredbytwo.com/story.html">
     <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,22 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="story.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "Our Story - Explored By Two",
+      "url": "https://exploredbytwo.com/story.html",
+      "description": "The story of how Harry & Hannah met and started traveling the world.",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Harry & Hannah",
+        "description": "Travel bloggers and photographers."
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -20,10 +38,10 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                <a href="index.html" class="logo" aria-label="Explored By Two Home">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
                 </a>
-                <nav class="nav" id="nav">
+                <nav class="nav" id="nav" aria-label="Main Navigation">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="story.html" class="nav-link active">Our Story</a>
                     <a href="destinations.html" class="nav-link">Destinations</a>
@@ -35,7 +53,7 @@
                         <span class="toggle-icon">🌙</span>
                     </button>
                 </nav>
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -103,8 +121,8 @@
         <div class="container">
             <div class="story-grid">
                 <div class="story-image gradient-cyan-purple fade-up">
-                    <img src="Media/our-story-hero.jpeg" style="object-position: left;">
-                    <div class="placeholder-text">Planning</div>
+                    <img src="Media/our-story-hero.jpeg" alt="Harry and Hannah planning their trip" style="object-position: left; width: 100%; height: 100%; object-fit: cover;" loading="lazy" width="600" height="400">
+                    <div class="placeholder-text" style="display:none;">Planning</div>
                 </div>
                 <div class="story-content fade-up delay-1">
                     <span class="story-label">Chapter 3</span>
@@ -131,19 +149,19 @@
 
             <div class="journey-highlights">
                 <div class="highlight-card fade-up delay-1">
-                    <div class="highlight-icon">🦁</div>
+                    <div class="highlight-icon" aria-hidden="true">🦁</div>
                     <h3 class="highlight-title">Wildlife Encounters</h3>
                     <p class="highlight-text">Face-to-face with lions in the Serengeti, penguins in Antarctica, and
                         elephants in Namibia.</p>
                 </div>
                 <div class="highlight-card fade-up delay-2">
-                    <div class="highlight-icon">📸</div>
+                    <div class="highlight-icon" aria-hidden="true">📸</div>
                     <h3 class="highlight-title">15,000+ Photos</h3>
                     <p class="highlight-text">Every sunset, every smile, every moment captured and cherished forever.
                     </p>
                 </div>
                 <div class="highlight-card fade-up delay-3">
-                    <div class="highlight-icon">🌏</div>
+                    <div class="highlight-icon" aria-hidden="true">🌏</div>
                     <h3 class="highlight-title">Life-Changing Moments</h3>
                     <p class="highlight-text">From northern lights in Iceland to glaciers in Patagonia—moments that took our
                         breath away.</p>
@@ -196,7 +214,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
                     </div>
                     <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
                         adventure, and meaningful travel stories.</p>
@@ -213,20 +231,20 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">YouTube</a>
-                        <a href="#" class="social-link">Email</a>
+                        <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+                        <a href="#" class="social-link" aria-label="Email">Email</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+                <p>&copy; 2025 Explored By Two. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script type="module" src="src/auth.js"></script>
 </body>
 

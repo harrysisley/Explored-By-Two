@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography - Explored By Two</title>
+    <meta name="description" content="Explore our travel photography portfolio featuring wildlife, landscapes, and cultures from over 40 countries.">
+    <link rel="canonical" href="https://exploredbytwo.com/photography.html">
     <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,21 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="photography.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Explored By Two Photography Portfolio",
+      "url": "https://exploredbytwo.com/photography.html",
+      "description": "A collection of travel photography from Harry & Hannah.",
+      "author": {
+        "@type": "Person",
+        "name": "Harry & Hannah"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -20,10 +37,10 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                <a href="index.html" class="logo" aria-label="Explored By Two Home">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
                 </a>
-                <nav class="nav" id="nav">
+                <nav class="nav" id="nav" aria-label="Main Navigation">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="story.html" class="nav-link">Our Story</a>
                     <a href="destinations.html" class="nav-link">Destinations</a>
@@ -35,7 +52,7 @@
                         <span class="toggle-icon">🌙</span>
                     </button>
                 </nav>
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,9 +74,9 @@
     <!-- Category Filter -->
     <section class="photo-filter-section">
         <div class="container">
-            <button class="mobile-filter-toggle" id="filterToggle" onclick="toggleMobileFilters()">
+            <button class="mobile-filter-toggle" id="filterToggle" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="mobileFilterContainer">
                 <span>Show Filters</span>
-                <span class="toggle-icon">▼</span>
+                <span class="toggle-icon" aria-hidden="true">▼</span>
             </button>
             <div class="photo-filters" id="mobileFilterContainer">
                 <button class="photo-filter-btn active" data-category="all">All Photos</button>
@@ -79,7 +96,7 @@
                 <!-- Wildlife -->
                 <div class="photo-item tall" data-category="wildlife">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=2059&auto=format&fit=crop" alt="Lion in Serengeti" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=2059&auto=format&fit=crop" alt="Lion in Serengeti" class="photo-image" loading="lazy" width="400" height="600">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">King of the Serengeti</h3>
@@ -93,7 +110,7 @@
 
                 <div class="photo-item" data-category="landscape">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop" alt="Northern Lights" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop" alt="Northern Lights" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Northern Lights Dance</h3>
@@ -107,7 +124,7 @@
 
                 <div class="photo-item wide" data-category="landscape">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1533052601725-703d7c2707f5?q=80&w=2070&auto=format&fit=crop" alt="Torres del Paine" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1533052601725-703d7c2707f5?q=80&w=2070&auto=format&fit=crop" alt="Torres del Paine" class="photo-image" loading="lazy" width="800" height="400">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Torres del Paine</h3>
@@ -120,7 +137,7 @@
 
                 <div class="photo-item" data-category="landscape">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=2159&auto=format&fit=crop" alt="Glacial Lagoon" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=2159&auto=format&fit=crop" alt="Glacial Lagoon" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Glacial Lagoon</h3>
@@ -134,7 +151,7 @@
 
                 <div class="photo-item tall" data-category="wildlife">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1551406837-724303884e79?q=80&w=2070&auto=format&fit=crop" alt="Gentoo Penguin" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1551406837-724303884e79?q=80&w=2070&auto=format&fit=crop" alt="Gentoo Penguin" class="photo-image" loading="lazy" width="400" height="600">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Antarctic Gentoo</h3>
@@ -147,7 +164,7 @@
 
                 <div class="photo-item" data-category="adventure">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?q=80&w=2070&auto=format&fit=crop" alt="Rainbow Mountain" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?q=80&w=2070&auto=format&fit=crop" alt="Rainbow Mountain" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Rainbow Mountain Trek</h3>
@@ -160,7 +177,7 @@
 
                 <div class="photo-item wide" data-category="landscape">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=2144&auto=format&fit=crop" alt="Namibia Dunes" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=2144&auto=format&fit=crop" alt="Namibia Dunes" class="photo-image" loading="lazy" width="800" height="400">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Dune 45 Sunrise</h3>
@@ -173,7 +190,7 @@
 
                 <div class="photo-item" data-category="people">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1489769811155-68b57428706b?q=80&w=2070&auto=format&fit=crop" alt="Maasai Elder" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1489769811155-68b57428706b?q=80&w=2070&auto=format&fit=crop" alt="Maasai Elder" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Maasai Elder</h3>
@@ -186,7 +203,7 @@
 
                 <div class="photo-item tall" data-category="wildlife">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?q=80&w=2064&auto=format&fit=crop" alt="Elephant" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?q=80&w=2064&auto=format&fit=crop" alt="Elephant" class="photo-image" loading="lazy" width="400" height="600">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Desert Elephant</h3>
@@ -199,7 +216,7 @@
 
                 <div class="photo-item" data-category="culture">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1569668723429-9fb7e19bd039?q=80&w=2070&auto=format&fit=crop" alt="Angkor Wat" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1569668723429-9fb7e19bd039?q=80&w=2070&auto=format&fit=crop" alt="Angkor Wat" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Angkor Wat Dawn</h3>
@@ -212,7 +229,7 @@
 
                 <div class="photo-item wide" data-category="landscape">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1506361797048-46a6342d3fb1?q=80&w=2070&auto=format&fit=crop" alt="Norwegian Fjords" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1506361797048-46a6342d3fb1?q=80&w=2070&auto=format&fit=crop" alt="Norwegian Fjords" class="photo-image" loading="lazy" width="800" height="400">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Norwegian Fjords</h3>
@@ -225,7 +242,7 @@
 
                 <div class="photo-item" data-category="adventure">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=2070&auto=format&fit=crop" alt="Kayaking" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=2070&auto=format&fit=crop" alt="Kayaking" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Glacier Kayaking</h3>
@@ -238,7 +255,7 @@
 
                 <div class="photo-item tall" data-category="landscape">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1476611317561-60e1b778edfb?q=80&w=2070&auto=format&fit=crop" alt="Skogafoss" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1476611317561-60e1b778edfb?q=80&w=2070&auto=format&fit=crop" alt="Skogafoss" class="photo-image" loading="lazy" width="400" height="600">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Skógafoss</h3>
@@ -251,7 +268,7 @@
 
                 <div class="photo-item" data-category="people">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" alt="Marrakech" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" alt="Marrakech" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Marrakech Souk</h3>
@@ -264,7 +281,7 @@
 
                 <div class="photo-item" data-category="wildlife">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=2070&auto=format&fit=crop" alt="Leopard" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=2070&auto=format&fit=crop" alt="Leopard" class="photo-image" loading="lazy" width="400" height="300">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Elusive Leopard</h3>
@@ -277,7 +294,7 @@
 
                 <div class="photo-item wide" data-category="culture">
                     <div class="photo-card">
-                        <img src="https://images.unsplash.com/photo-1583251633146-d603471f204e?q=80&w=2070&auto=format&fit=crop" alt="Holi Festival" class="photo-image">
+                        <img src="https://images.unsplash.com/photo-1583251633146-d603471f204e?q=80&w=2070&auto=format&fit=crop" alt="Holi Festival" class="photo-image" loading="lazy" width="800" height="400">
                         <div class="photo-overlay">
                             <div class="photo-info">
                                 <h3 class="photo-title">Holi Festival</h3>
@@ -329,9 +346,9 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">×</button>
-        <button class="lightbox-nav prev" id="lightboxPrev">‹</button>
-        <button class="lightbox-nav next" id="lightboxNext">›</button>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">×</button>
+        <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">›</button>
         <div class="lightbox-content">
             <div class="lightbox-image" id="lightboxImage"></div>
             <div class="lightbox-info">
@@ -348,7 +365,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
                     </div>
                     <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
                         adventure, and meaningful travel stories.</p>
@@ -365,21 +382,21 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">YouTube</a>
-                        <a href="#" class="social-link">Email</a>
+                        <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+                        <a href="#" class="social-link" aria-label="Email">Email</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+                <p>&copy; 2025 Explored By Two. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="photography.js"></script>
+    <script src="script.js" defer></script>
+    <script src="photography.js" defer></script>
     <script type="module" src="src/auth.js"></script>
 </body>
 

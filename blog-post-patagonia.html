@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Hidden Gems in Iceland - Explored By Two</title>
+    <title>Why We Fell in Love with Patagonia - Explored By Two</title>
+    <meta name="description" content="Discover why we fell in love with Patagonia. A travel story about the wild landscapes, hiking trails, and unforgettable moments in this remote region.">
+    <link rel="canonical" href="https://exploredbytwo.com/blog-post-patagonia.html">
     <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,6 +141,30 @@
             }
         }
     </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Why We Fell in Love with Patagonia",
+      "image": "https://images.unsplash.com/photo-1518182170546-0766bc6f9213?q=80&w=2070&auto=format&fit=crop",
+      "author": {
+        "@type": "Person",
+        "name": "Harry"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Explored By Two",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://exploredbytwo.com/Media/EB2 LOGO.png"
+        }
+      },
+      "datePublished": "2024-10-15",
+      "description": "Discover why we fell in love with Patagonia. A travel story about the wild landscapes, hiking trails, and unforgettable moments."
+    }
+    </script>
 </head>
 
 <body>
@@ -148,10 +174,10 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="logo-img">
+                <a href="index.html" class="logo" aria-label="Explored By Two Home">
+                    <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
                 </a>
-                <nav class="nav" id="nav">
+                <nav class="nav" id="nav" aria-label="Main Navigation">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="story.html" class="nav-link">Our Story</a>
                     <a href="destinations.html" class="nav-link">Destinations</a>
@@ -163,7 +189,7 @@
                 <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
                     <span class="toggle-icon">🌙</span>
                 </button>
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -205,7 +231,7 @@
             Deep in the Icelandic highlands, far from the tourist trail, lies Hveravellir—a geothermal wonderland where you can soak in natural hot springs surrounded by bubbling mud pots and steaming vents. The journey here requires a 4x4, but the reward is a completely unspoiled experience. We spent an evening here under the midnight sun, and it felt like being on another planet.
         </p>
 
-        <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=2070&auto=format&fit=crop" alt="Iceland Landscape" class="post-image-full">
+        <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=2070&auto=format&fit=crop" alt="Iceland Landscape" class="post-image-full" loading="lazy" width="1200" height="600">
 
         <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">2. Stuðlagil Canyon</h2>
         <p class="post-text">
@@ -216,7 +242,7 @@
             We arrived at golden hour, and the way the light hit the blue water against the dark basalt was absolutely mesmerizing. It's easily one of the most photogenic spots in Iceland.
         </p>
 
-        <img src="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?q=80&w=2070&auto=format&fit=crop" alt="Iceland Waterfall" class="post-image-full">
+        <img src="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?q=80&w=2070&auto=format&fit=crop" alt="Iceland Waterfall" class="post-image-full" loading="lazy" width="1200" height="600">
 
         <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">3. Rauðasandur Beach</h2>
         <p class="post-text">
@@ -233,7 +259,7 @@
             This rhyolite mountain range in the highlands is a kaleidoscope of colors—reds, yellows, greens, and oranges paint the landscape. Geothermal activity creates steaming vents throughout the area, and the hiking trails offer some of the most unique scenery in Iceland. It's like walking through a painting.
         </p>
 
-        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop" alt="Iceland Northern Lights" class="post-image-full">
+        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop" alt="Iceland Northern Lights" class="post-image-full" loading="lazy" width="1200" height="600">
 
         <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">6. Hvítserkur Sea Stack</h2>
         <p class="post-text">
@@ -264,7 +290,8 @@
             <h3 class="newsletter-title" style="font-size: 32px; color: #fff;">Planning a Trip to Iceland?</h3>
             <p class="newsletter-subtitle" style="color: #fff;">Get our complete Iceland road trip guide sent to your inbox.</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <label for="newsletter-email" class="sr-only" style="position:absolute; width:1px; height:1px; overflow:hidden;">Email Address</label>
+                <input type="email" id="newsletter-email" placeholder="Enter your email" class="newsletter-input" required>
                 <button type="submit" class="btn-primary">Send It</button>
             </form>
         </div>
@@ -298,7 +325,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="Media/EB2 LOGO.png" alt="Explored By Two" class="footer-logo-img">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
                     </div>
                     <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
                         adventure, and meaningful travel stories.</p>
@@ -315,20 +342,20 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">YouTube</a>
-                        <a href="#" class="social-link">Email</a>
+                        <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="social-link" aria-label="YouTube">YouTube</a>
+                        <a href="#" class="social-link" aria-label="Email">Email</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Explored By Two. All rights reserved.</p>
+                <p>&copy; 2025 Explored By Two. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
         // Reading Progress Bar
         window.onscroll = function() {
