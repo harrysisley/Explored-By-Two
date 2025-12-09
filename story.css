@@ -196,3 +196,32 @@
         flex-direction: column;
     }
 }
+
+/* ===== DARK MODE ===== */
+body.dark-mode .story-section.alt {
+    background: #16213e;
+}
+
+body.dark-mode .story-title {
+    color: white;
+}
+
+body.dark-mode .story-text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .cta-section {
+    background: #16213e;
+}
+
+body.dark-mode .cta-card {
+    background: #252a41;
+}
+
+body.dark-mode .cta-title {
+    color: white;
+}
+
+body.dark-mode .cta-text {
+    color: rgba(255, 255, 255, 0.7);
+}
