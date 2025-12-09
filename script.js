@@ -840,21 +840,21 @@ const recentAdventures = [
         title: "Cozy Winter Escapes: Our Guide to the Best Cold-Weather Destinations",
         date: "Dec 3, 2025",
         image: "Media/cold-blog-header.jpg",
-        link: "blog-post.html",
+        link: "/winter-escapes",
         description: "Forget beach holidays, winter is where the magic happens. Join us as we share our favourite snowy escapes across Europe."
     },
     {
         title: "The Ultimate Guide to Romania's Most Stunning Castles",
         date: "Nov 8, 2024",
         image: "Media/romania-castle-blog.jpg",
-        link: "blog-post-romania-castles.html",
+        link: "/romania-castles",
         description: "Romania's castles are some of Europe's best-kept secrets. From vampire legends to royal residences."
     },
     {
         title: "Mardi Gras: A Complete Guide to the Ultimate Party",
         date: "Feb 15, 2025",
         image: "Media/mardi-gras-parade.png",
-        link: "blog-post-mardigras.html",
+        link: "/mardi-gras",
         description: "Everything you need to know about experiencing the world's most famous street party in New Orleans."
     }
 ];

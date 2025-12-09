@@ -13,12 +13,13 @@ export default defineConfig({
         // Add all your HTML pages
         blog: resolve(__dirname, "blog.html"),
         antarctica: resolve(__dirname, "blog-post-antarctica.html"),
-        mardigras: resolve(__dirname, "blog-post-mardigras.html"),
-        newzealand: resolve(__dirname, "blog-post-newzealand.html"),
-        romaniaCastles: resolve(__dirname, "blog-post-romania-castles.html"),
+        "mardi-gras": resolve(__dirname, "blog-post-mardigras.html"),
+        "new-zealand": resolve(__dirname, "blog-post-newzealand.html"),
+        "romania-castles": resolve(__dirname, "blog-post-romania-castles.html"),
         patagonia: resolve(__dirname, "blog-post-patagonia.html"),
-        photography: resolve(__dirname, "blog-post-photography.html"),
+        "photography-tips": resolve(__dirname, "blog-post-photography.html"),
         vietnam: resolve(__dirname, "blog-post-vietnam.html"),
+        "winter-escapes": resolve(__dirname, "blog-post.html"),
 
         contact: resolve(__dirname, "contact.html"),
         destinations: resolve(__dirname, "destinations.html"),
