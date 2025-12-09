@@ -27,8 +27,8 @@ const authStyles = `
   }
 
   .auth-modal {
-    background: var(--bg-color, #ffffff);
-    color: var(--text-color, #333);
+    background: var(--color-card, #ffffff);
+    color: var(--color-text, #333);
     padding: 2.5rem;
     border-radius: 24px;
     width: 90%;
@@ -37,7 +37,7 @@ const authStyles = `
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     transform: translateY(20px);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid var(--border-color, rgba(0,0,0,0.1));
+    border: 1px solid var(--color-border, rgba(0,0,0,0.1));
   }
 
   .auth-modal-overlay.active .auth-modal {
@@ -52,12 +52,12 @@ const authStyles = `
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--text-muted, #666);
+    color: var(--color-text-muted, #666);
     transition: color 0.2s;
   }
   
   .auth-close:hover {
-    color: var(--text-color, #000);
+    color: var(--color-text, #000);
   }
 
   .auth-title {
@@ -66,6 +66,7 @@ const authStyles = `
     margin-bottom: 2rem;
     text-align: center;
     font-family: 'Playfair Display', serif;
+    color: var(--color-primary);
   }
 
   .auth-form {
@@ -76,11 +77,11 @@ const authStyles = `
 
   .auth-input {
     padding: 1rem;
-    border: 1px solid var(--border-color, #e5e7eb);
+    border: 1px solid var(--color-border, #e5e7eb);
     border-radius: 12px;
     font-size: 1rem;
-    background: var(--input-bg, #f9fafb);
-    color: var(--text-color, #333);
+    background: var(--color-bg-alt, #f9fafb);
+    color: var(--color-text, #333);
     transition: all 0.2s;
     box-sizing: border-box;
     width: 100%;
@@ -92,14 +93,14 @@ const authStyles = `
   
   .auth-input:focus {
     outline: none;
-    border-color: var(--primary-color, #000);
-    background: var(--bg-color, #fff);
+    border-color: var(--color-accent, #000);
+    background: var(--color-card, #fff);
     box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
   }
 
   .auth-btn {
-    background: var(--primary-color, #000);
-    color: #fff;
+    background: var(--color-text, #000); /* Use text color for high contrast button (black in light, white in dark) */
+    color: var(--color-bg, #fff); /* Inverse text color */
     padding: 1rem;
     border: none;
     border-radius: 12px;
@@ -123,11 +124,11 @@ const authStyles = `
     margin-top: 1.5rem;
     text-align: center;
     font-size: 0.95rem;
-    color: var(--text-muted, #666);
+    color: var(--color-text-muted, #666);
   }
 
   .auth-switch a {
-    color: var(--primary-color, #000);
+    color: var(--color-text, #000);
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
@@ -139,7 +140,7 @@ const authStyles = `
   }
 
   .auth-error {
-    background-color: #fef2f2;
+    background-color: rgba(239, 68, 68, 0.1);
     color: #ef4444;
     padding: 0.75rem;
     border-radius: 8px;
@@ -147,7 +148,7 @@ const authStyles = `
     text-align: center;
     margin-bottom: 1rem;
     display: none;
-    border: 1px solid #fee2e2;
+    border: 1px solid rgba(239, 68, 68, 0.2);
   }
   
   /* Dropdown Styles */
@@ -181,22 +182,22 @@ const authStyles = `
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: #f3f4f6;
+    background-color: var(--color-bg-alt, #f3f4f6);
     background-size: cover;
     background-position: center;
-    border: 2px solid var(--border-color, #e5e7eb);
+    border: 2px solid var(--color-border, #e5e7eb);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    color: #374151;
+    color: var(--color-text);
     font-size: 0.9rem;
   }
   
   .account-label {
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--text-color, #333);
+    color: var(--color-text, #333);
     display: none; /* Hidden on mobile/default, shown if needed */
   }
   
@@ -211,10 +212,10 @@ const authStyles = `
     top: 120%;
     right: 0;
     width: 240px;
-    background: var(--bg-color, #ffffff);
+    background: var(--color-card, #ffffff);
     border-radius: 16px;
     box-shadow: 0 10px 40px -10px rgba(0,0,0,0.15);
-    border: 1px solid var(--border-color, rgba(0,0,0,0.05));
+    border: 1px solid var(--color-border, rgba(0,0,0,0.05));
     padding: 0.5rem;
     opacity: 0;
     visibility: hidden;
@@ -235,7 +236,7 @@ const authStyles = `
       width: 100%;
       justify-content: flex-start;
       padding: 12px;
-      background: var(--bg-color, #f3f4f6);
+      background: var(--color-bg-alt, #f3f4f6);
       border-radius: 12px;
     }
 
@@ -249,7 +250,7 @@ const authStyles = `
       margin-top: 0.5rem;
       transform: none;
       box-shadow: none;
-      border: 1px solid var(--border-color, #e5e7eb);
+      border: 1px solid var(--color-border, #e5e7eb);
       background: transparent;
     }
     
@@ -269,19 +270,19 @@ const authStyles = `
   
   .dropdown-header {
     padding: 1rem;
-    border-bottom: 1px solid var(--border-color, #f3f4f6);
+    border-bottom: 1px solid var(--color-border, #f3f4f6);
     margin-bottom: 0.5rem;
   }
   
   .dropdown-user-name {
     font-weight: 600;
-    color: var(--text-color, #111);
+    color: var(--color-text, #111);
     font-size: 0.95rem;
     display: block;
   }
   
   .dropdown-user-email {
-    color: var(--text-muted, #666);
+    color: var(--color-text-muted, #666);
     font-size: 0.85rem;
     margin-top: 0.25rem;
     display: block;
@@ -295,7 +296,7 @@ const authStyles = `
     align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1rem;
-    color: var(--text-color, #333);
+    color: var(--color-text, #333);
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.2s;
@@ -308,12 +309,12 @@ const authStyles = `
   }
   
   .dropdown-item:hover {
-    background-color: var(--hover-bg, #f9fafb);
+    background-color: var(--color-bg-alt, #f9fafb);
   }
   
   .dropdown-divider {
     height: 1px;
-    background-color: var(--border-color, #f3f4f6);
+    background-color: var(--color-border, #f3f4f6);
     margin: 0.5rem 0;
   }
   
@@ -351,7 +352,7 @@ const authStyles = `
   }
   
   body.dark-mode .toggle-switch {
-    background-color: var(--primary-color, #3b82f6);
+    background-color: var(--color-accent, #3b82f6);
   }
   
   body.dark-mode .toggle-switch::after {
@@ -360,8 +361,8 @@ const authStyles = `
   
   /* Login Button Style */
   .login-btn-header {
-    background-color: var(--primary-color, #000);
-    color: #fff;
+    background-color: var(--color-text, #000);
+    color: var(--color-bg, #fff);
     padding: 0.5rem 1.25rem;
     border-radius: 50px;
     font-weight: 500;
@@ -375,8 +376,8 @@ const authStyles = `
   }
   
   body.dark-mode .login-btn-header {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-text);
+    color: var(--color-bg);
   }
 </style>
 `
@@ -409,6 +410,7 @@ const authModalHTML = `
 let isLoginMode = true;
 
 export function initAuth() {
+  console.log('Auth: Initializing...');
   // Inject Styles and HTML
   if (!document.getElementById('auth-styles')) {
     document.head.insertAdjacentHTML('beforeend', authStyles);
@@ -679,7 +681,7 @@ function updateHeader(user) {
         
         <a href="profile.html" class="dropdown-item">
           <span class="dropdown-icon">👤</span>
-          Account Details
+          Account
         </a>
         
         <button class="dropdown-item" id="dropdownDarkMode">
@@ -712,7 +714,7 @@ function updateHeader(user) {
       <div class="dropdown-menu" id="accountDropdown">
         <button class="dropdown-item" onclick="window.openAuthModal()">
           <span class="dropdown-icon">✨</span>
-          Login / Sign Up
+          Login / Signup
         </button>
         
         <div class="dropdown-divider"></div>
@@ -784,12 +786,21 @@ function updateHeader(user) {
 
 // Auto-init if running in browser
 if (typeof window !== 'undefined') {
-  // Expose supabase globally for other scripts (like passport-stamps.js)
-  window.supabase = supabase;
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAuth);
-  } else {
-    initAuth();
+  try {
+    console.log('Auth: Script loaded');
+    // Expose supabase globally for other scripts (like passport-stamps.js)
+    window.supabase = supabase;
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+          console.log('Auth: DOMContentLoaded');
+          initAuth();
+      });
+    } else {
+      console.log('Auth: Immediate init');
+      initAuth();
+    }
+  } catch (err) {
+    console.error('Auth: Initialization error:', err);
   }
 }
