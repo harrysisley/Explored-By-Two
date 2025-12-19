@@ -487,3 +487,43 @@
 .dark-mode .no-results-text {
     color: #B0B5C5;
 }
+
+/* --- ENHANCED DESTINATIONS UI (VISUAL POLISH) --- */
+/* Strictly visual: hover states and refined spacing */
+
+/* 1. Clearer Spacing */
+.destinations-grid {
+    gap: 40px !important;
+    padding-bottom: 40px;
+    /* Removed ::before separator to adhere to strict "no new UI components" rule */
+}
+
+/* 2. Interactive Card States */
+.destination-card {
+    position: relative;
+    cursor: pointer; /* Affordance */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px) !important; /* Gentle elevation */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 3. Inner Image Depth */
+.destination-card:hover .destination-image {
+    transform: scale(1.05) !important; /* Subtle zoom */
+}
+
+/* 4. Click Feedback (Pulse) */
+/* Uses existing JS animation hook */
+@keyframes pulse {
+    0% { transform: translateY(-8px) scale(1); }
+    50% { transform: translateY(-8px) scale(0.98); }
+    100% { transform: translateY(-8px) scale(1); }
+}
+
+/* Ensure no pseudo-element labels are visible if they were added previously */
+.destination-card::after {
+    display: none !important;
+}
