@@ -1,11 +1,9 @@
 /* ===== STORY PAGE STYLES ===== */
 
-/*
-.story-hero {
-    /* Styles handled by .hero-section-common */ */
+/* Styles handled by .hero-section-common */
 
 .story-hero .hero-background {
-    background-image: url('Media/switzerland-winter-blog.jpg');
+    background-image: url('Media/our-story-bg-image.jfif');
 }
 
 /* Story Sections */
