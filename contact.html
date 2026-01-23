@@ -106,7 +106,11 @@
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper fade-up">
                     <h2 class="form-title">Send us a message</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/exploredbytwo@hotmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New message from Explored By Two Contact Form">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" id="name" name="name" class="form-input" placeholder="Your name"
@@ -137,7 +141,7 @@
                                 placeholder="Tell us what's on your mind..." rows="6" required></textarea>
                         </div>
 
-                        <button type="submit" class="btn-primary btn-full">Send Message</button>
+                        <button type="submit" class="btn-primary btn-full" id="submitBtn">Send Message</button>
                     </form>
 
                     <div class="form-success" id="formSuccess" role="alert" aria-live="polite">

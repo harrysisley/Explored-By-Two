@@ -4,17 +4,47 @@
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const originalBtnText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
 
-    // Hide form and show success message
-    contactForm.style.display = 'none';
-    formSuccess.classList.add('active');
+    try {
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
 
-    // Reset form
-    setTimeout(() => {
-        contactForm.reset();
-    }, 500);
+        const response = await fetch('https://formsubmit.co/ajax/exploredbytwo@hotmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            // Hide form and show success message
+            contactForm.style.display = 'none';
+            formSuccess.classList.add('active');
+            
+            // Reset form
+            contactForm.reset();
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        console.error('Submission error:', error);
+        alert('Sorry, there was an error sending your message. Please try again or email us directly.');
+        
+        // Reset button
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+    }
 });
 
 // FAQ Accordion
