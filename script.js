@@ -839,7 +839,7 @@ const recentAdventures = [
     {
         title: "Cozy Winter Escapes: Our Guide to the Best Cold-Weather Destinations",
         date: "Dec 3, 2025",
-        image: "Media/cold-blog-header.jpg",
+        image: "Media/reykjavik-blog.jpg",
         link: "/winter-escapes",
         description: "Forget beach holidays, winter is where the magic happens. Join us as we share our favourite snowy escapes across Europe."
     },
