@@ -190,23 +190,70 @@
         }
 
         @media (max-width: 768px) {
+            .post-header {
+                height: auto;
+                min-height: 60vh;
+                padding: 120px 20px 80px;
+            }
+
+            .post-meta-large {
+                gap: 12px;
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .page-title {
+                font-size: 32px !important;
+                line-height: 1.2;
+            }
+
             .post-content {
-                padding: 32px;
-                margin-top: -50px;
-                width: 90%;
+                padding: 40px 20px;
+                margin-top: 0; /* Remove overlap on mobile */
+                width: 100%;
+                box-shadow: none; /* Cleaner for mobile */
             }
-            
+
+            .post-text {
+                font-size: 18px;
+                line-height: 1.7;
+                margin-bottom: 24px;
+            }
+
+            .drop-cap::first-letter {
+                font-size: 64px;
+                margin-top: 4px;
+            }
+
             .post-image-full {
-                height: 300px;
+                width: calc(100% + 40px); /* Break out of padding */
+                margin-left: -20px;
+                transform: none;
+                border-radius: 0;
+                height: auto;
+                aspect-ratio: 4/3;
+                margin-top: 32px;
+                margin-bottom: 32px;
             }
-            
+
             .post-quote {
-                font-size: 24px;
+                font-size: 22px;
                 padding: 0;
+                margin: 40px 0;
+            }
+
+            .food-list li {
+                font-size: 16px;
             }
 
             .budget-grid {
                 grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .post-content h2 {
+                font-size: 26px !important;
+                margin: 40px 0 20px !important;
             }
         }
     </style>
