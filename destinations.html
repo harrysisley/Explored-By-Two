@@ -134,12 +134,12 @@
                     <span class="hero-stat-label">Continents</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-number">47</span>
+                    <span class="hero-stat-number" id="stats-country-count">49</span>
                     <span class="hero-stat-label">Countries</span>
                 </div>
                 <div class="hero-stat">
                     <span class="hero-stat-number">100+</span>
-                    <span class="hero-stat-label">Cities</span>
+                    <span class="hero-stat-label">Stories</span>
                 </div>
             </div>
         </div>
@@ -197,254 +197,8 @@
     <section class="destinations-section">
         <div class="container">
             <div class="destinations-grid" id="destinationsGrid">
-                <!-- Africa -->
-                <div class="destination-card" data-continent="africa" data-name="Egypt">
-                    <div class="destination-image gradient-orange-pink">
-                        <div class="placeholder-text">Egypt</div>
-                        <div class="destination-badge">🐫 History</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Ciaro, Egypt</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
-                        </div>
-                        <p class="destination-description">Incredible history, stunning landscapes, and vibrant cities.
-                            From Ciaro to Giza.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Ciaro, Giza</span>
-                            <span class="meta-item">📅 1 Night</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="africa" data-name="Namibia">
-                    <div class="destination-image gradient-gold-pink">
-                        <div class="placeholder-text">Namibia</div>
-                        <div class="destination-badge">🏜️ Desert</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Namibia</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
-                        </div>
-                        <p class="destination-description">Dramatic dunes, wildlife, and otherworldly landscapes.
-                            Sossusvlei is unforgettable.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Sossusvlei, Etosha</span>
-                            <span class="meta-item">📅 10 days</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="africa" data-name="Morocco">
-                    <div class="destination-image gradient-cyan-purple">
-                        <div class="placeholder-text">Morocco</div>
-                        <div class="destination-badge">🕌 Culture</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Morocco</h3>
-                            <div class="destination-rating">⭐ 4.8</div>
-                        </div>
-                        <p class="destination-description">Vibrant souks, stunning architecture, and the Sahara desert.
-                            A feast for the senses.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Marrakech, Sahara</span>
-                            <span class="meta-item">📅 1 week</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Asia -->
-                <div class="destination-card" data-continent="asia" data-name="Japan">
-                    <div class="destination-image gradient-blue-teal">
-                        <div class="placeholder-text">Japan</div>
-                        <div class="destination-badge">🏯 Culture</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Japan</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
-                        </div>
-                        <p class="destination-description">Ancient temples, modern cities, and incredible food. Cherry blossoms in
-                            spring are magical.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Tokyo, Kyoto, Osaka</span>
-                            <span class="meta-item">📅 3 weeks</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="asia" data-name="Thailand">
-                    <div class="destination-image gradient-orange-pink">
-                        <div class="placeholder-text">Thailand</div>
-                        <div class="destination-badge">🏝️ Beach</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Thailand</h3>
-                            <div class="destination-rating">⭐ 4.9</div>
-                        </div>
-                        <p class="destination-description">Tropical paradise, incredible street food, and warm
-                            hospitality. Island hopping heaven.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Bangkok, Phuket</span>
-                            <span class="meta-item">📅 2 weeks</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-
-
-                <!-- Europe -->
-                <div class="destination-card" data-continent="europe" data-name="Iceland">
-                    <div class="destination-image gradient-blue-teal">
-                        <div class="placeholder-text">Iceland</div>
-                        <div class="destination-badge">🌋 Nature</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Iceland</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
-                        </div>
-                        <p class="destination-description">Waterfalls, glaciers, and northern lights. Raw, untamed
-                            beauty at every turn.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Reykjavik, Ring Road</span>
-                            <span class="meta-item">📅 10 days</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="europe" data-name="Greece">
-                    <div class="destination-image gradient-gold-pink">
-                        <div class="placeholder-text">Greece</div>
-                        <div class="destination-badge">🏛️ History</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Greece</h3>
-                            <div class="destination-rating">⭐ 4.9</div>
-                        </div>
-                        <p class="destination-description">Ancient ruins, stunning islands, and incredible sunsets.
-                            Santorini is a dream.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Athens, Santorini</span>
-                            <span class="meta-item">📅 2 weeks</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="europe" data-name="Norway">
-                    <div class="destination-image gradient-cyan-purple">
-                        <div class="placeholder-text">Norway</div>
-                        <div class="destination-badge">🏔️ Fjords</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Norway</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
-                        </div>
-                        <p class="destination-description">Majestic fjords, charming villages, and midnight sun. Nature
-                            at its finest.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Bergen, Lofoten</span>
-                            <span class="meta-item">📅 1 week</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Americas -->
-                <div class="destination-card" data-continent="americas" data-name="Peru">
-                    <div class="destination-image gradient-orange-pink">
-                        <div class="placeholder-text">Peru</div>
-                        <div class="destination-badge">⛰️ Hiking</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Peru</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
-                        </div>
-                        <p class="destination-description">Machu Picchu, Rainbow Mountain, and the Amazon. A hiker's
-                            paradise.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Cusco, Lima</span>
-                            <span class="meta-item">📅 3 weeks</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="americas" data-name="USA">
-                    <div class="destination-image gradient-blue-teal">
-                        <div class="placeholder-text">USA</div>
-                        <div class="destination-badge">🏞️ Parks</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">USA</h3>
-                            <div class="destination-rating">⭐ 4.8</div>
-                        </div>
-                        <p class="destination-description">National parks, vibrant cities, and endless road trips. The
-                            Southwest is a highlight.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Utah, Arizona</span>
-                            <span class="meta-item">📅 1 month</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Oceania -->
-                <div class="destination-card" data-continent="oceania" data-name="New Zealand">
-                    <div class="destination-image gradient-cyan-purple">
-                        <div class="placeholder-text">New Zealand</div>
-                        <div class="destination-badge">🚐 Road Trip</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">New Zealand</h3>
-                            <div class="destination-rating">⭐ 5.0</div>
-                        </div>
-                        <p class="destination-description">The ultimate road trip destination. Mountains, lakes, and
-                            adventure sports.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 South Island</span>
-                            <span class="meta-item">📅 3 weeks</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="oceania" data-name="Australia">
-                    <div class="destination-image gradient-blue-teal">
-                        <div class="placeholder-text">Australia</div>
-                        <div class="destination-badge">🏝️ Diverse</div>
-                    </div>
-                    <div class="destination-content">
-                        <div class="destination-header">
-                            <h3 class="destination-title">Australia</h3>
-                            <div class="destination-rating">⭐ 4.8</div>
-                        </div>
-                        <p class="destination-description">Great Barrier Reef, Sydney, and the Outback. A continent of
-                            contrasts.</p>
-                        <div class="destination-meta">
-                            <span class="meta-item">📍 Sydney, Great Barrier Reef</span>
-                            <span class="meta-item">📅 2 weeks</span>
-                        </div>
-                        <a href="#" class="destination-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Polar -->
+                <!-- Dynamically populated by destinations.js -->
+            </div>
 
             </div>
 
@@ -505,6 +259,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="destinations-data.js"></script>
     <script src="destinations.js"></script>
     <script type="module" src="src/auth.js"></script>
 </body>
