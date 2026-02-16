@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TFSLNG22');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosnia & Herzegovina Travel Guide: Sarajevo During Eid + The Bosnian Pyramid Mystery</title>
+    <meta name="description" content="Our complete guide to Sarajevo during Eid, the mysterious Visoko pyramids, and why Bosnia & Herzegovina is Europe's best kept secret.">
+    <link rel="canonical" href="https://exploredbytwo.com/blog-post-bosnia.html">
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        /* Inline styles for specific blog post elements */
+        .post-header {
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .post-background {
+            position: absolute;
+            inset: 0;
+            background: url('Media/sarajevo-landing.jpg') center/cover;
+            z-index: -1;
+        }
+
+        .post-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .post-title {
+            font-size: clamp(48px, 6vw, 84px);
+            margin-bottom: 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-meta-large {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+
+        .post-content {
+            max-width: 800px;
+            margin: -100px auto 0;
+            background: var(--color-card);
+            padding: 80px;
+            position: relative;
+            z-index: 10;
+            box-shadow: var(--shadow-lg);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 84px;
+            float: left;
+            line-height: 0.8;
+            margin-right: 16px;
+            margin-top: 8px;
+            color: var(--color-text);
+        }
+
+        .post-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        body.dark-mode .post-text {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .post-content h2 {
+            color: var(--color-text);
+        }
+
+        body.dark-mode .post-content h2 {
+            color: #fff;
+        }
+
+        .post-image-full {
+            width: 90%;
+            max-width: 1200px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            height: 600px;
+            object-fit: cover;
+            margin-bottom: 64px;
+            margin-top: 64px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .post-image-full {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .post-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-style: italic;
+            text-align: center;
+            margin: 64px 0;
+            color: var(--color-text);
+            line-height: 1.4;
+            border-left: none;
+            padding: 0 40px;
+        }
+
+        body.dark-mode .post-quote {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--color-accent);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        .food-list {
+            margin-bottom: 32px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .food-list li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .food-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        .budget-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .budget-item {
+            background: rgba(0,0,0,0.03);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        body.dark-mode .budget-item {
+            background: rgba(255,255,255,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .post-content {
+                padding: 32px;
+                margin-top: -50px;
+                width: 90%;
+            }
+            
+            .post-image-full {
+                height: 300px;
+            }
+            
+            .post-quote {
+                font-size: 24px;
+                padding: 0;
+            }
+
+            .budget-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Bosnia & Herzegovina Travel Guide: Sarajevo During Eid + The Bosnian Pyramid Mystery",
+      "image": "https://exploredbytwo.com/Media/sarajevo-landing.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Harry"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Explored By Two",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://exploredbytwo.com/Media/EB2 LOGO.png"
+        }
+      },
+      "datePublished": "2026-02-16",
+      "description": "Explored Sarajevo during Eid and investigated the mysterious Bosnian Pyramids in Visoko. A full budget travel guide."
+    }
+    </script>
+    
+    <!-- Travelpayouts Verification -->
+    <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+      (function () {
+          var script = document.createElement("script");
+          script.async = 1;
+          script.src = 'https://tpembars.com/NDgwNzcy.js?t=480772';
+          document.head.appendChild(script);
+      })();
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFSLNG22"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="Explored By Two Home">
+          <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
+        </a>
+        <nav class="nav" id="nav" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="story.html" class="nav-link">Our Story</a>
+          <a href="destinations.html" class="nav-link">Destinations</a>
+          <a href="photography.html" class="nav-link">Photography</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+          <a href="gear.html" class="nav-link">Gear</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Post Header -->
+    <header class="post-header">
+        <div class="post-background"></div>
+        <div class="post-overlay"></div>
+        <div class="container">
+            <div class="post-meta-large fade-up">
+                <span>Bosnia & Herzegovina, Adventure</span>
+                <span>•</span>
+                <span>Feb 16, 2026</span>
+                <span>•</span>
+                <span>11-14 Min Read</span>
+            </div>
+            <h1 class="page-title fade-up delay-1">Bosnia & Herzegovina Travel Guide: Sarajevo During Eid + The Bosnian Pyramid Mystery</h1>
+            <div class="blog-author fade-up delay-2" style="justify-content: center; color: white;">
+                <div class="author-avatar" style="background-image: url(Media/harry-image.jpeg)"></div>
+                <span class="author-name" style="color: white;">By Harry</span>
+            </div>
+        </div>
+    </header>
+
+<!-- Post Content -->
+<article class="post-content fade-up delay-3">
+
+    <p class="post-text drop-cap">
+        Look, I'm going to be completely honest with you. When Hannah and I booked our trip to Bosnia specifically to experience Eid, we thought we'd just be ticking off another European country. What we didn't expect was the moment our plane started descending into Sarajevo and we looked out the window to see these stunning mountains surrounding the city. I turned to Hannah and said "are we sure we're landing in Europe?" because honestly, it looked like we were approaching somewhere in Asia. The landscape was absolutely gorgeous.
+    </p>
+
+    <p class="post-text">
+        After visiting 49 countries over the past four years, we've learned that sometimes the places you know least about end up surprising you the most. Bosnia was definitely one of those places. Between witnessing Eid celebrations in Sarajevo's markets, exploring underground 'healing tunnels', and meeting the guy who claims he's discovered the world's oldest pyramids, this trip turned into something way more memorable than we ever expected.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Landing in Sarajevo: Not What We Expected</h2>
+    <img src="Media/mountains.jpg" alt="Sarajevo Mountain View" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        The first surprise came before we even landed. As the plane descended, we got this incredible view of mountains everywhere. Like proper dramatic, beautiful mountains that you'd expect to see in Nepal or somewhere, not a 2.5 hour flight from the UK. The valley that Sarajevo sits in is surrounded by these peaks, and coming in to land gave us this first glimpse that Bosnia was going to be different from what we'd imagined.
+    </p>
+    <p class="post-text">
+        We'd both done a fair bit of research before the trip (I handle the photos, Hannah handles making sure we don't get lost), but nothing really prepared us for how naturally beautiful it would be. Most of what you see about Bosnia online focuses on the war history or Sarajevo's architecture, which is all important, but the actual landscape is stunning and doesn't get talked about enough.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Experiencing Eid in Sarajevo: Respectfully Witnessing Something Special</h2>
+    <img src="Media/sarajevo-architecture.jpg" alt="Sarajevo Old Town During Eid" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        We'd specifically timed our visit to Sarajevo to coincide with Eid. Neither of us are religious, but we have huge respect for all cultures and religions, and we'd both been reading about how special it is to experience Eid in a Muslim country. Since Bosnia was already on our list, we thought why not time it right to witness the celebrations?
+    </p>
+    <p class="post-text">
+        We're really glad we did because the atmosphere was incredible. Baščaršija (the old town) was packed with locals celebrating, market stalls everywhere selling traditional sweets and treats, and the smell of fresh baklava and Bosnian coffee hitting you from every direction. I was constantly stopping to take photos of everything while Hannah was making sure we actually knew where we were going (our usual dynamic).
+    </p>
+    <p class="post-text">
+        The call to prayer echoing around the city, mosques lit up beautifully at night, and just this general vibe of community and celebration everywhere you looked. As non-Muslim travelers, we were obviously just observers, but everyone was so welcoming and didn't mind us being there respectfully taking it all in. People were happy to explain what was going on, share food recommendations, and generally just made us feel really welcome.
+    </p>
+
+    <blockquote class="post-quote">
+        "The whole city just had this buzzing energy that made it feel really special."
+    </blockquote>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">The Architecture: Literally Walking Through Different Centuries</h2>
+    <img src="Media/sarajevo-architecture.jpg" alt="Sarajevo Architecture Mix" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        This is what really blew my mind about Sarajevo. You can be standing in front of a 16th-century Ottoman mosque, turn around and there's an Austro-Hungarian building from the 1800s, and then a bit further down the road you've got these massive Yugoslav-era concrete blocks. It's like someone took different bits of European history and just threw them all together in one city.
+    </p>
+    <p class="post-text">
+        I kept stopping every five minutes to take photos of the buildings (Hannah was very patient with this) because honestly, the architecture is stunning. The old Ottoman quarter with its narrow cobbled streets and traditional houses, the grand Austro-Hungarian city hall (which got rebuilt after being destroyed in the war), and even the brutalist stuff has this interesting appeal to it.
+    </p>
+    <p class="post-text">
+        You can't really talk about Sarajevo without mentioning the war though. The Sarajevo Roses (those red resin-filled mortar shell impacts on the pavement) are still visible around the city, and they're a sobering reminder of what happened here not that long ago. We're both only 26, so this stuff happened in our lifetime, which makes it feel way more real than reading about conflicts from centuries ago.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">The Bosnian Pyramids: Are They Real or What?</h2>
+    <img src="Media/bosnian-pyramids.jpg" alt="Bosnian Pyramid of the Sun" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        Alright, so this is where things get really weird. About 30 minutes outside Sarajevo in a town called Visoko, there's this massive hill that some people claim is actually the world's oldest and largest pyramid. And not just any pyramid, but part of a whole complex of pyramids that could rewrite human history. Sounds crazy, right? That's exactly what we thought.
+    </p>
+    <p class="post-text">
+        So basically, in 2005, this Bosnian-American researcher called Semir Osmanagić claimed he'd discovered these pyramids. He believes they're over 12,000 years old and were built by some ancient advanced civilization. The mainstream archaeology community pretty much all says it's just natural hills with some interesting geological formations. But here's the thing, they're still doing excavations there, tourists visit from all over the world, and there's this whole infrastructure built around it.
+    </p>
+    <p class="post-text">
+        We always book our tours through <a href="https://www.getyourguide.com/" target="_blank">GetYourGuide</a>, and for Visoko we went with their <a href="https://www.getyourguide.com/sarajevo-l1013/sarajevo-mysteries-and-secrets-of-visoko-pyramids-t105777/" target="_blank">Sarajevo Mysteries and Secrets of Visoko Pyramids tour</a>. Having a guide made such a difference because they could explain the whole controversy, the history, and what we were actually looking at. Plus they sorted all the transport, which was way easier than trying to figure out local buses ourselves.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">The Ravne Tunnels: The 'Healing Mine' Experience</h2>
+    <img src="Media/ravne-tunnels.jpg" alt="Ravne Tunnels Interior" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        The tour also included the Ravne Tunnels, which are underneath the hill. Now this is where it gets even weirder. These tunnels are being called a 'healing mine' because apparently the air down there has negative ions or something that's supposed to be good for you. People travel from all over to just sit in these tunnels and breathe the air. There's even a little meditation area set up down there.
+    </p>
+    <p class="post-text">
+        Going down into the tunnels is a real experience. It's about 30 meters underground, cool and damp, and they've got these walkways set up through the natural passages. Whether the 'healing' stuff is real or just placebo, I couldn't tell you, but there were definitely people down there who'd traveled specifically for the health benefits.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">The Food: Super Cheap and Absolutely Delicious</h2>
+    <img src="Media/bosnian-food.jpg" alt="Bosnian Food Ćevapi and Burek" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        Right, can we talk about the food for a minute? Because honestly, this might have been our favorite part of Bosnia. The food is incredible and costs basically nothing. Like, we're talking full meals for the price of a coffee back home.
+    </p>
+    
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin: 32px 0 16px;">Where to get the best ćevapi:</h3>
+    <ul class="food-list">
+        <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Ćevabdžinica+Željo+Sarajevo" target="_blank">Ćevabdžinica Željo</a>:</strong> (Željo 1 and Željo 2). This is where loads of locals go and it's cheap. About €3-4 per portion.</li>
+        <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Ćevabdžinica+Hodžić+Sarajevo" target="_blank">Ćevabdžinica Hodžić</a>:</strong> Comes highly recommended by locals as well.</li>
+        <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Ćevabdžinica+Nune+Sarajevo" target="_blank">Nune</a>:</strong> Has been around since 1967 and is a local institution.</li>
+    </ul>
+
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin: 32px 0 16px;">Best burek spots:</h3>
+    <ul class="food-list">
+        <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Buregdžinica+Sač+Sarajevo" target="_blank">Buregdžinica Sač</a>:</strong> Hands down the best according to pretty much everyone. They bake it the traditional way over hot coals.</li>
+        <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Buregdžinica+Bosna+Sarajevo" target="_blank">Buregdžinica Bosna</a>:</strong> Another great option in the old town, always packed with locals.</li>
+    </ul>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Bosnia Budget Breakdown: What It Actually Cost</h2>
+    <div class="budget-grid">
+        <div class="budget-item">
+            <h4>Sarajevo</h4>
+            <ul class="food-list">
+                <li>Accommodation: €25-35/night</li>
+                <li>Meals: €3-6 for ćevapi/burek</li>
+                <li>Nicer Dinner: €10-15</li>
+                <li>Coffee: €1-2</li>
+                <li>Beer: €2-3</li>
+            </ul>
+        </div>
+        <div class="budget-item">
+            <h4>Visoko Pyramids</h4>
+            <ul class="food-list">
+                <li>GetYourGuide Tour: €35 per person</li>
+                <li>(Includes transport, guide, entries)</li>
+            </ul>
+        </div>
+    </div>
+    <p class="post-text">
+        <strong>Total daily budget for us as a couple:</strong> Around €50-70 all in, which is incredibly cheap for Europe.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Practical Tips for Visiting Bosnia & Herzegovina</h2>
+    <p class="post-text">
+        <strong>Best time to visit:</strong> Spring (April-May) or fall (September-October) for good weather. Check the Islamic calendar if you want to experience Eid.
+    </p>
+    <p class="post-text">
+        <strong>How long to stay:</strong> We'd recommend four to five days to really enjoy it without rushing.
+    </p>
+    <p class="post-text">
+        <strong>Money:</strong> The currency is the Convertible Mark (BAM or KM). Cash is king here, so make sure you hit an ATM when you arrive.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Final Thoughts</h2>
+    <img src="Media/sarajevo-final.jpg" alt="Sarajevo Sunset" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        After visiting 49 countries over four years, Bosnia ranks up there as one of our most memorable experiences. It's authentic, affordable, naturally beautiful, and still relatively undiscovered by mass tourism.
+    </p>
+    <p class="post-text">
+        If you're planning a Balkans trip or looking for somewhere off the beaten path in Europe, seriously consider Bosnia. And if you can respectfully time it around Eid to witness the celebrations, even better. Just don't forget to look out the window when you're landing.
+    </p>
+
+    <div class="blog-tags" style="margin-top: 64px; display: flex; gap: 12px; flex-wrap: wrap;">
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Bosnia & Herzegovina</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Sarajevo</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Eid</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Travel Guide</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Pyramids</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Adventure</span>
+    </div>
+
+</article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/exploredbytwo?igsh=MWF5bmVvaWc4YjRqdg%3D%3D&utm_source=qr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                        <a href="https://www.facebook.com/share/1CQ78cSRRY/?mibextid=wwXIfr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                        <a href="https://youtube.com/@explored-by-two?si=Dt4kVKsKqcfGMx3m" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+                        <a href="mailto:exploredbytwo@hotmail.com" class="social-link" aria-label="Email">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        // Reading Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <script type="module" src="src/auth.js"></script>
+</body>
+
+</html>
