@@ -837,9 +837,16 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Bosnia & Herzegovina Travel Guide: Sarajevo During Eid + The Bosnian Pyramid Mystery",
+        date: "Feb 16, 2026",
+        image: "Media/bosnia-background.jpg",
+        link: "/bosnia-guide",
+        description: "From stunning mountain views landing in Sarajevo to the mysterious pyramids of Visoko, Bosnia surprised us at every turn."
+    },
+    {
         title: "Cozy Winter Escapes: Our Guide to the Best Cold-Weather Destinations",
         date: "Dec 3, 2025",
-        image: "Media/reykjavik-blog.jpg",
+        image: "Media/amsterdam-winter-blog.jpg",
         link: "/winter-escapes",
         description: "Forget beach holidays, winter is where the magic happens. Join us as we share our favourite snowy escapes across Europe."
     },
