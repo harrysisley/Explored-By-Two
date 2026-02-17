@@ -34,10 +34,6 @@ function renderDestinations(data) {
         const gradientClass = dest.image ? '' : gradients[index % gradients.length];
         const imageStyle = dest.image ? `background-image: url(${dest.image}); background-size: cover; background-position: center;` : '';
         
-        const cardLink = dest.blog ? `onclick="window.location.href='${dest.blog}'"` : '';
-        const linkText = dest.blog ? 'Read Guide' : 'Coming Soon';
-        const linkIcon = dest.blog ? '→' : '⏳';
-        
         card.innerHTML = `
             <div class="destination-image ${gradientClass}" style="${imageStyle}">
                 <div class="placeholder-text">${dest.name}</div>
@@ -46,26 +42,20 @@ function renderDestinations(data) {
             <div class="destination-content">
                 <div class="destination-header">
                     <h3 class="destination-title">${dest.name}</h3>
-                    ${dest.blog ? '<div class="destination-rating">★ Guide Live</div>' : ''}
                 </div>
                 <p class="destination-description">
-                    ${dest.blog ? `Check out our full travel guide and stories from our trip to ${dest.name}.` : `We've explored ${dest.name}! We're currently working on the full travel guide for this destination.`}
+                    We're currently crafting a comprehensive downloadable travel guide for ${dest.name}, featuring our full itinerary and local secrets.
                 </p>
                 <div class="destination-meta">
                     <span class="meta-item">📍 ${dest.continent.charAt(0).toUpperCase() + dest.continent.slice(1)}</span>
                 </div>
-                <div class="destination-link-container" style="margin-top: auto;">
-                    <span class="destination-link" style="${!dest.blog ? 'opacity: 0.5; cursor: default;' : ''}">
-                        ${linkText} ${linkIcon}
+                <div class="destination-link-container" style="margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(var(--color-text-rgb), 0.1);">
+                    <span class="destination-link" style="opacity: 0.7; font-size: 0.9rem; font-weight: 500; color: var(--color-accent);">
+                        Travel Guide Coming Soon... ⏳
                     </span>
                 </div>
             </div>
         `;
-        
-        if (dest.blog) {
-            card.style.cursor = 'pointer';
-            card.onclick = () => window.location.href = dest.blog;
-        }
 
         destinationsGrid.appendChild(card);
     });
