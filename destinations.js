@@ -34,10 +34,20 @@ function renderDestinations(data) {
         const gradientClass = dest.image ? '' : gradients[index % gradients.length];
         const imageStyle = dest.image ? `background-image: url(${dest.image}); background-size: cover; background-position: center;` : '';
         
+        const continentMap = {
+            'africa': '🦁 Africa',
+            'asia': '🏯 Asia',
+            'europe': '🏰 Europe',
+            'americas': '🗽 Americas',
+            'oceania': '🦘 Oceania',
+            'polar': '🐧 Polar'
+        };
+        const continentTag = continentMap[dest.continent] || dest.continent;
+        
         card.innerHTML = `
             <div class="destination-image ${gradientClass}" style="${imageStyle}">
                 <div class="placeholder-text">${dest.name}</div>
-                <div class="destination-badge">${dest.badge}</div>
+                <div class="destination-badge">${continentTag}</div>
             </div>
             <div class="destination-content">
                 <div class="destination-header">
