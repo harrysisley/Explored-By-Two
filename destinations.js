@@ -94,7 +94,7 @@ function filterDestinations(continent, searchTerm, cards) {
         const matchesSearch = cardName.includes(term);
 
         if (matchesContinent && matchesSearch) {
-            card.style.display = 'flex';
+            card.style.display = '';
             card.style.animation = 'none';
             setTimeout(() => {
                 card.style.animation = `fadeUp 0.6s ease forwards ${index * 0.05}s`;
