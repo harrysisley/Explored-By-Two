@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81YVXFSLWV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-81YVXFSLWV');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TFSLNG22');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egypt Travel Guide: 24 Hours at the Pyramids of Giza</title>
+    <meta name="description" content="Our whirlwind 24-hour trip to the Pyramids of Giza. From visa tips to the reality of camel rides and waking up to ancient wonders.">
+    <link rel="canonical" href="https://exploredbytwo.com/blog-post-egypt.html">
+    <link rel="icon" type="image/png" href="Media/EB2 LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        /* Inline styles for specific blog post elements */
+        .post-header {
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .post-background {
+            position: absolute;
+            inset: 0;
+            background: url('Media/egypt-pyramids-heading-background.jpg') center/cover;
+            z-index: -1;
+        }
+
+        .post-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .post-title {
+            font-size: clamp(48px, 6vw, 84px);
+            margin-bottom: 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-meta-large {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+
+        .post-content {
+            max-width: 800px;
+            margin: -100px auto 0;
+            background: var(--color-card);
+            padding: 80px;
+            position: relative;
+            z-index: 10;
+            box-shadow: var(--shadow-lg);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 84px;
+            float: left;
+            line-height: 0.8;
+            margin-right: 16px;
+            margin-top: 8px;
+            color: var(--color-text);
+        }
+
+        .post-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        body.dark-mode .post-text {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .post-content h2 {
+            color: var(--color-text);
+        }
+
+        body.dark-mode .post-content h2 {
+            color: #fff;
+        }
+
+        .post-image-full {
+            width: 90%;
+            max-width: 1200px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            height: 600px;
+            object-fit: cover;
+            margin-bottom: 64px;
+            margin-top: 64px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .post-image-full {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .post-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-style: italic;
+            text-align: center;
+            margin: 64px 0;
+            color: var(--color-text);
+            line-height: 1.4;
+            border-left: none;
+            padding: 0 40px;
+        }
+
+        body.dark-mode .post-quote {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--color-accent);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        .food-list {
+            margin-bottom: 32px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .food-list li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .food-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        .budget-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .budget-item {
+            background: rgba(0,0,0,0.03);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        body.dark-mode .budget-item {
+            background: rgba(255,255,255,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .post-header {
+                height: auto;
+                min-height: 60vh;
+                padding: 120px 20px 80px;
+            }
+
+            .post-meta-large {
+                gap: 12px;
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .page-title {
+                font-size: 32px !important;
+                line-height: 1.2;
+            }
+
+            .post-content {
+                padding: 40px 20px;
+                margin-top: 0; /* Remove overlap on mobile */
+                width: 100%;
+                box-shadow: none; /* Cleaner for mobile */
+            }
+
+            .post-text {
+                font-size: 18px;
+                line-height: 1.7;
+                margin-bottom: 24px;
+            }
+
+            .drop-cap::first-letter {
+                font-size: 64px;
+                margin-top: 4px;
+            }
+
+            .post-image-full {
+                width: calc(100% + 40px); /* Break out of padding */
+                margin-left: -20px;
+                transform: none;
+                border-radius: 0;
+                height: auto;
+                aspect-ratio: 4/3;
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+
+            .post-quote {
+                font-size: 22px;
+                padding: 0;
+                margin: 40px 0;
+            }
+
+            .food-list li {
+                font-size: 16px;
+            }
+
+            .budget-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .post-content h2 {
+                font-size: 26px !important;
+                margin: 40px 0 20px !important;
+            }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Egypt Travel Guide: 24 Hours at the Pyramids of Giza",
+      "image": "https://exploredbytwo.com/Media/egypt-pyramids-heading-background.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Hannah"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Explored By Two",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://exploredbytwo.com/Media/EB2 LOGO.png"
+        }
+      },
+      "datePublished": "2026-02-20",
+      "description": "Our complete guide to spending 24 hours at the Pyramids of Giza, including visa info, hotel reviews, and why you should skip the camel rides."
+    }
+    </script>
+    
+    <!-- Travelpayouts Verification -->
+    <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+      (function () {
+          var script = document.createElement("script");
+          script.async = 1;
+          script.src = 'https://tpembars.com/NDgwNzcy.js?t=480772';
+          document.head.appendChild(script);
+      })();
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFSLNG22"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="Explored By Two Home">
+          <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="logo-img" width="150" height="60">
+        </a>
+        <nav class="nav" id="nav" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="story.html" class="nav-link">Our Story</a>
+          <a href="destinations.html" class="nav-link">Destinations</a>
+          <a href="photography.html" class="nav-link">Photography</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+          <a href="gear.html" class="nav-link">Gear</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Post Header -->
+    <header class="post-header">
+        <div class="post-background"></div>
+        <div class="post-overlay"></div>
+        <div class="container">
+            <div class="post-meta-large fade-up">
+                <span>Egypt, Bucket List</span>
+                <span>•</span>
+                <span>Feb 20, 2026</span>
+                <span>•</span>
+                <span>8-10 Min Read</span>
+            </div>
+            <h1 class="page-title fade-up delay-1">Egypt Travel Guide: 24 Hours at the Pyramids of Giza</h1>
+            <div class="blog-author fade-up delay-2" style="justify-content: center; color: white;">
+                <div class="author-avatar" style="background-image: url(Media/hannah-image.jpeg)"></div>
+                <span class="author-name" style="color: white;">By Hannah</span>
+            </div>
+        </div>
+    </header>
+
+<!-- Post Content -->
+<article class="post-content fade-up delay-3">
+
+    <p class="post-text drop-cap">
+        Harry and I only had one night in Egypt during our backpacking trip last year. We'd just flown in from Cyprus and were heading to Saudi Arabia the next day, so this was our tiny window to see one of the Seven Wonders of the Ancient World. After visiting 49 countries over four years, we've learned that sometimes you don't need weeks in a place to have an incredible experience. Sometimes 24 hours of pure bucket-list ticking is exactly what you need.
+    </p>
+
+    <p class="post-text">
+        Those 24 hours at the Pyramids were absolutely surreal, but they also opened our eyes to some serious issues that every traveler needs to know about before visiting Giza.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Getting to Giza: Visa and Transport</h2>
+    <img src="Media/egypt-pyramid.jpeg" alt="The Great Pyramids of Giza" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        We flew into Sphinx airport in April 2025 (the airport is gorgeous by the way, really modern and well-organized), and the first thing we had to sort was our visa on arrival. This is really important to know before you go. UK citizens need a visa to enter Egypt, and you can get it on arrival at the airport for $25 USD per person. Make sure you have cash in US dollars because they don't always accept cards. The process was straightforward, just a bit of queuing, but nothing too stressful. For the most up-to-date travel advice and requirements, check the <a href="https://www.gov.uk/foreign-travel-advice/egypt" target="_blank">UK government's Egypt travel guidance</a> before you book.
+    </p>
+    <p class="post-text">
+        We'd pre-arranged a hotel taxi pickup from the airport straight to our hotel in Giza, which honestly made everything so much easier. No stress about haggling with random taxi drivers or worrying about getting scammed. The drive took about 45 minutes depending on traffic, and before we knew it, we were pulling up to our hotel with the Pyramids literally in view.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Our Hotel: Waking Up to the Pyramids</h2>
+    <img src="Media/egypt-view-from-hotel.jpeg" alt="Stunning view of the Pyramids from our hotel balcony" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        We stayed at the Grand Pyramids Inn, and honestly, this might have been one of the best hotel deals we've ever gotten. £14.74 for one night with breakfast included. The room was basic, sure, but when you're waking up to views of the Pyramids from your balcony, who cares about fancy amenities?
+    </p>
+    <p class="post-text">
+        The best part? They gave us a free upgrade to a room with a direct view of the Pyramids. Harry was out on that balcony taking photos constantly (he's our photographer, I'm the one making sure we don't get lost), and I don't blame him. There's something absolutely surreal about having your morning coffee while staring at structures that are over 4,500 years old.
+    </p>
+    <p class="post-text">
+        The hotel is also right across from the Egyptian Museum, which looks absolutely incredible. It houses thousands of ancient Egyptian artifacts including Tutankhamun's treasures, mummies, and some of the most important archaeological finds in history. If you have more than 24 hours in Cairo, this should absolutely be on your list. It's one of those museums you could easily spend half a day exploring.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">The Pyramid Tour: Everything You Need to Know</h2>
+    <p class="post-text">
+        We booked our tour through GetYourGuide (we use them for pretty much all our tours now), and it cost £37 for both of us. The Giza Pyramids day tour included hotel pickup, a guide, and transport to all the main sites around the pyramid complex.
+    </p>
+    <img src="Media/egypt-tour-with-guide-selfie.jpeg" alt="Harry and Hannah with our guide at Giza" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        Having a guide made such a difference. They explained the history, the construction theories, and all the fascinating details that you'd completely miss if you just wandered around on your own. Plus, they navigate all the crowds and know the best spots for photos, which Harry absolutely appreciated.
+    </p>
+
+    <img src="Media/egypt-sphinx-and-pyramid.jpeg" alt="The Great Sphinx with the Pyramids in the background" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+
+
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin: 32px 0 16px;">Inside the Pyramids</h3>
+    <p class="post-text">
+        We didn't go inside the Pyramids, which I know sounds mad when we traveled all that way. But here's the thing, it costs extra, you have to queue for ages, and we'd read that it's incredibly hot, claustrophobic, and honestly not that impressive inside compared to the exterior. With only 24 hours, we decided to spend our time experiencing the complex from the outside and soaking in the whole atmosphere instead.
+    </p>
+    <p class="post-text">
+        If you've got more time and really want to go inside, absolutely do it. But if you're short on time like we were, don't feel like you're missing out massively by skipping it.
+    </p>
+
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin: 32px 0 16px;">The Camel Situation: Please Read This Before You Go</h3>
+    <p class="post-text">
+        Right, I need to address something really important that we witnessed during our tour. The treatment of the camels at Giza is heartbreaking. These animals are overworked, underfed, and clearly in distress. We watched camels being hit, forced to work in the extreme heat with no shade or water, and carrying tourists who have no idea about the suffering they're contributing to.
+    </p>
+    <p class="post-text">
+        Please, please do not take a camel ride at the Pyramids. I know it seems like a classic tourist experience, but the welfare of these animals is shocking. They're not tourist attractions, they're living beings that deserve so much better.
+        If you want to help, consider donating to <a href="https://www.esmaegypt.org/" target="_blank" style="color: var(--color-accent); text-decoration: underline; font-weight: 500;">ESMA (Egyptian Society for Mercy to Animals)</a>, a charity that works to improve the lives of working animals in Egypt. Even a small donation makes a real difference.
+    </p>
+    <p class="post-text">
+        We knew about the camel situation before we went, which is why we made the conscious decision to avoid it entirely. I'm glad we did, but seeing it in person really hit home how important it is to speak up about this.
+    </p>
+
+    <blockquote class="post-quote">
+        "The Pyramids are every bit as incredible as you imagine, but ethical travel matters more than the perfect photo."
+    </blockquote>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Learning About Perfume Oils and Papyrus</h2>
+    <img src="Media/egypt-papyrus.jpeg" alt="Traditional Papyrus demonstration in Giza" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        Our tour included stops at a perfume oil workshop and a papyrus demonstration, which I actually found really interesting (Harry was less convinced, but humor me). The perfume oil place showed us how they create traditional Egyptian scents using natural ingredients, and honestly, some of them smelled incredible. They're not pushy about selling, but if you're into fragrances, it's worth checking out.
+    </p>
+    <p class="post-text">
+        The papyrus demonstration showed us the traditional method of making papyrus paper from the papyrus plant. It's fascinating to see how they've been doing it for thousands of years, and you can buy some if you want a unique souvenir. Again, no pressure, just interesting to learn about.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">The Food: What We Ate (And What You Should Try)</h2>
+    <img src="Media/egypt-food.jpeg" alt="Delicious Egyptian Kofta and Rice" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        We only had time to try one proper meal during our 24 hours, and we went for kofta with yellow rice. Honestly, it was absolutely unreal. The kofta was perfectly spiced, juicy, and served with this fragrant yellow rice that I could have eaten about three plates of. Egyptian food is so cheap as well. Our meal cost us basically nothing compared to what we'd pay back home.
+    </p>
+    
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; margin: 32px 0 16px;">Recommended spots if you have more time:</h3>
+    <ul class="food-list">
+        <li><strong>Abou Tarek (Downtown Cairo):</strong> Apparently the best koshari in Cairo. Koshari is Egypt's national dish (rice, lentils, pasta, chickpeas, and tomato sauce), and this place has been serving it since 1950.</li>
+        <li><strong>Felfela (multiple locations):</strong> Great for traditional Egyptian food including kofta, ful medames, and ta'ameya (Egyptian falafel).</li>
+        <li><strong>Kazaz (near the Pyramids):</strong> Local spot serving amazing grilled meats and mezze at really affordable prices.</li>
+        <li><strong>Andrea El Mariouteya (on the way to the Pyramids):</strong> Famous for their grilled chicken and pigeon, apparently a must-visit.</li>
+    </ul>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Safety in Egypt: Our Honest Experience</h2>
+    <p class="post-text">
+        One thing that really surprised both Harry and me was how polite and welcoming the Egyptian people were. We'd heard mixed things before we went, but everyone we met was friendly, helpful, and genuinely seemed happy to have tourists visiting.
+    </p>
+    <p class="post-text">
+        That said, you definitely need to be vigilant. Keep your belongings close, don't flash expensive cameras or jewelry around unnecessarily, and be aware of your surroundings, especially in crowded areas. We felt safe the entire time, but we were also cautious and sensible about it.
+    </p>
+    <p class="post-text">
+        As a woman traveling with Harry, I didn't experience any issues, but I'd recommend dressing modestly (covering shoulders and knees) out of respect for the local culture and to avoid unwanted attention.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Egypt Budget Breakdown: What It Actually Cost</h2>
+    <div class="budget-grid">
+        <div class="budget-item">
+            <h4>Before Arrival & Accommodation</h4>
+            <ul class="food-list">
+                <li>Visa on Arrival: $25 USD / person ($50 total)</li>
+                <li>Grand Pyramids Inn: £14.74 (One night, breakfast included)</li>
+                <li>Airport Pickup: Included in hotel booking</li>
+            </ul>
+        </div>
+        <div class="budget-item">
+            <h4>Daily Expenses</h4>
+            <ul class="food-list">
+                <li>Giza Pyramids Tour (GYG): £37 for both</li>
+                <li>Meal (Kofta & Rice): ~£8 for both</li>
+                <li>Total for 24 hours: ~£110 for both</li>
+            </ul>
+        </div>
+    </div>
+    <p class="post-text">
+        Honestly, for seeing one of the Seven Wonders of the World and having an experience we'll never forget, that's incredibly affordable.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Practical Tips for Visiting the Pyramids</h2>
+    <p class="post-text">
+        <strong>Best time to visit:</strong> We went in April and the weather was hot but manageable. Avoid summer (June-August) if you can because it's absolutely scorching. Winter (November-February) is meant to be ideal.
+    </p>
+    <p class="post-text">
+        <strong>How long you need:</strong> If you're just doing the Pyramids like we did, one full day is enough. If you want to explore Cairo properly, give yourself 3-4 days.
+    </p>
+    <p class="post-text">
+        <strong>What to bring:</strong> Sunscreen, hat, sunglasses, comfortable walking shoes, water bottle, and modest clothing.
+    </p>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 48px 0 24px;">Final Thoughts</h2>
+    <img src="Media/egypt-pyramid-selfie.jpeg" alt="Harry and Hannah at the Pyramids of Giza" class="post-image-full" style="border-radius: 16px;" loading="lazy" width="1200" height="600">
+    <p class="post-text">
+        Egypt might have been our shortest country visit out of 49, but it was one of the most memorable. The Pyramids are every bit as incredible as you imagine, the food is delicious and cheap, and the people are genuinely welcoming. Just please, if you visit, skip the camel rides. Those animals deserve so much better.
+    </p>
+    <p class="post-text">
+        Would we go back? Absolutely. One night wasn't nearly enough, and we both left Egypt wanting to come back and explore properly. Next time we'd love to see the Valley of the Kings. 
+    </p>
+
+    <div class="blog-tags" style="margin-top: 64px; display: flex; gap: 12px; flex-wrap: wrap;">
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Egypt</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Pyramids</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Travel Guide</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Budget Travel</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Bucket List</span>
+        <span class="tag" style="background: rgba(0,0,0,0.05); padding: 8px 16px; border-radius: 20px; font-size: 14px;">Responsible Travel</span>
+    </div>
+
+</article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Media/EB2 LOGO.png" alt="Explored By Two Logo" class="footer-logo-img" width="150" height="60" loading="lazy">
+                    </div>
+                    <p class="footer-text">Join Harry & Hannah on their journey around the world. Discovering wildlife,
+                        adventure, and meaningful travel stories.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="blog.html">Travel Tips</a></li>
+                        <li><a href="gear.html">Our Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/exploredbytwo?igsh=MWF5bmVvaWc4YjRqdg%3D%3D&utm_source=qr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                        <a href="https://www.facebook.com/share/1CQ78cSRRY/?mibextid=wwXIfr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                        <a href="https://youtube.com/@explored-by-two?si=Dt4kVKsKqcfGMx3m" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+                        <a href="mailto:exploredbytwo@hotmail.com" class="social-link" aria-label="Email">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explored By Two. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        // Reading Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <script type="module" src="src/auth.js"></script>
+</body>
+
+</html>

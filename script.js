@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Egypt Travel Guide: 24 Hours at the Pyramids of Giza",
+        date: "Feb 20, 2026",
+        image: "Media/egypt-pyramids-heading-background.jpg",
+        link: "/egypt-guide",
+        description: "Harry and I only had one night in Egypt, but it was exactly what we needed to see one of the Seven Wonders of the Ancient World."
+    },
+    {
         title: "Bosnia & Herzegovina Travel Guide: Sarajevo During Eid + The Bosnian Pyramid Mystery",
         date: "Feb 16, 2026",
         image: "Media/bosnia-background.jpg",
