@@ -1,7 +1,7 @@
 const destinationsData = [
     // Europe
     { name: "Albania", continent: "europe", badge: "🏔️ Nature" },
-    { name: "Armenia", continent: "europe", badge: "⛪ History" },
+    { name: "Armenia", continent: "europe", badge: "⛪ History", image: "Media/armenia-cascade.png" },
     { name: "Austria", continent: "europe", badge: "⛷️ Alps" },
     { name: "Belgium", continent: "europe", badge: "🍫 Culture" },
     { name: "Bosnia & Herzegovina", continent: "europe", badge: "☕ Adventure", image: "Media/bosnia-background.jpg" },

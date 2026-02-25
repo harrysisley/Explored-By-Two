@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Armenia Travel Guide: Yerevan and Why This Hidden Gem Deserves More Attention",
+        date: "Feb 25, 2026",
+        image: "Media/armenia-cascade.png",
+        link: "/armenia-guide",
+        description: "Armenia was one of those countries that kept popping up on our list. We finally made it to Yerevan, and it was the best decision of our entire trip."
+    },
+    {
         title: "Egypt Travel Guide: 24 Hours at the Pyramids of Giza",
         date: "Feb 20, 2026",
         image: "Media/egypt-pyramids-heading-background.jpg",
