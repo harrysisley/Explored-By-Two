@@ -839,7 +839,7 @@ const recentAdventures = [
     {
         title: "Armenia Travel Guide: Yerevan and Why This Hidden Gem Deserves More Attention",
         date: "Feb 25, 2026",
-        image: "Media/armenia-cascade.png",
+        image: "Media/armenia-blog-post-main.jpeg",
         link: "/armenia-guide",
         description: "Armenia was one of those countries that kept popping up on our list. We finally made it to Yerevan, and it was the best decision of our entire trip."
     },
