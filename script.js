@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Athens Travel Guide: Ancient History, Street Cats, and the Best Gyros in Greece",
+        date: "Mar 2, 2026",
+        image: "Media/athens-blog-post-main.png",
+        link: "/athens-guide",
+        description: "Athens is where Western civilization began. Discover the history, food, culture, and the massive population of street cats."
+    },
+    {
         title: "Armenia Travel Guide: Yerevan and Why This Hidden Gem Deserves More Attention",
         date: "Feb 25, 2026",
         image: "Media/armenia-blog-post-main.jpeg",

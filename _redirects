@@ -7,6 +7,7 @@
 /bosnia-guide             /blog-post-bosnia.html             200
 /egypt-guide              /blog-post-egypt.html              200
 /armenia-guide            /blog-post-armenia.html            200
+/athens-guide             /blog-post-athens.html             200
 
 # Domain redirect
 https://exploredbytwo.com/* https://www.exploredbytwo.com/:splat 301
