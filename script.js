@@ -839,7 +839,7 @@ const recentAdventures = [
     {
         title: "Athens Travel Guide: Ancient History, Street Cats, and the Best Gyros in Greece",
         date: "Mar 2, 2026",
-        image: "Media/athens-blog-post-main.png",
+        image: "Media/athens-blog-background.jpeg",
         link: "/athens-guide",
         description: "Athens is where Western civilization began. Discover the history, food, culture, and the massive population of street cats."
     },
