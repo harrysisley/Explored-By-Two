@@ -1,13 +1,13 @@
 # Blog post redirects - clean URLs
-/winter-escapes           /blog-post.html           200
-/romania-castles          /blog-post-romania-castles.html    200
-/mardi-gras               /blog-post-mardigras.html          200
-/photography-tips         /blog-post-photography.html        200
+/winter-escapes           /blog-posts/blog-post.html           200
+/romania-castles          /blog-posts/blog-post-romania-castles.html    200
+/mardi-gras               /blog-posts/blog-post-mardigras.html          200
+/photography-tips         /blog-posts/blog-post-photography.html        200
 /new-zealand              /blog-post-newzealand.html         200
-/bosnia-guide             /blog-post-bosnia.html             200
-/egypt-guide              /blog-post-egypt.html              200
-/armenia-guide            /blog-post-armenia.html            200
-/athens-guide             /blog-post-athens.html             200
+/bosnia-guide             /blog-posts/blog-post-bosnia.html             200
+/egypt-guide              /blog-posts/blog-post-egypt.html              200
+/armenia-guide            /blog-posts/blog-post-armenia.html            200
+/athens-guide             /blog-posts/blog-post-athens.html             200
 
 # Domain redirect
 https://exploredbytwo.com/* https://www.exploredbytwo.com/:splat 301
