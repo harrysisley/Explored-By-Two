@@ -839,7 +839,7 @@ const recentAdventures = [
     {
         title: "Hanoi: Two Nights in Vietnam's Chaotic, Charming Capital",
         date: "Mar 5, 2026",
-        image: "Media/hanoi-hero.png",
+        image: "Media/hanoi-main-image.jpeg",
         link: "/hanoi-guide",
         description: "Hanoi was our first stop in Vietnam, and even with just two nights, it completely won us over. Discover the Old Quarter, street food, and unique culture."
     },

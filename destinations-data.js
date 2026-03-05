@@ -52,7 +52,7 @@ const destinationsData = [
 
     // Asia
     { name: "Thailand", continent: "asia", badge: "🏝️ Tropical" },
-    { name: "Vietnam", continent: "asia", badge: "🍜 Pho", image: "Media/hanoi-hero.png", link: "/hanoi-guide" },
+    { name: "Vietnam", continent: "asia", badge: "🍜 Pho", image: "Media/hanoi-main-image.jpeg", link: "/hanoi-guide" },
     { name: "Singapore", continent: "asia", badge: "🏙️ Garden City" },
 
     // Polar
