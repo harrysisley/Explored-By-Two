@@ -44,6 +44,10 @@ function renderDestinations(data) {
         };
         const continentTag = continentMap[dest.continent] || dest.continent;
         
+        const linkHtml = dest.link 
+            ? `<a href="${dest.link}" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; width: 100%; text-align: center; display: inline-block;">View Travel Guide →</a>`
+            : `<span class="destination-link" style="opacity: 0.7; font-size: 0.9rem; font-weight: 500; color: var(--color-accent);">Travel Guide Coming Soon... ⏳</span>`;
+        
         card.innerHTML = `
             <div class="destination-image ${gradientClass}" style="${imageStyle}">
                 <div class="placeholder-text">${dest.name}</div>
@@ -54,18 +58,25 @@ function renderDestinations(data) {
                     <h3 class="destination-title">${dest.name}</h3>
                 </div>
                 <p class="destination-description">
-                    We're currently crafting a comprehensive downloadable travel guide for ${dest.name}, featuring our full itinerary and local secrets.
+                    ${dest.link ? `Discover our complete travel guide for ${dest.name}, including our favorite spots, food recommendations, and budget tips.` : `We're currently crafting a comprehensive downloadable travel guide for ${dest.name}, featuring our full itinerary and local secrets.`}
                 </p>
                 <div class="destination-meta">
                     <span class="meta-item">📍 ${dest.continent.charAt(0).toUpperCase() + dest.continent.slice(1)}</span>
                 </div>
                 <div class="destination-link-container" style="margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(var(--color-text-rgb), 0.1);">
-                    <span class="destination-link" style="opacity: 0.7; font-size: 0.9rem; font-weight: 500; color: var(--color-accent);">
-                        Travel Guide Coming Soon... ⏳
-                    </span>
+                    ${linkHtml}
                 </div>
             </div>
         `;
+
+        if (dest.link) {
+            card.style.cursor = 'pointer';
+            card.onclick = (e) => {
+                if (e.target.tagName !== 'A') {
+                    window.location.href = dest.link;
+                }
+            };
+        }
 
         destinationsGrid.appendChild(card);
     });

@@ -1,10 +1,10 @@
 const destinationsData = [
     // Europe
     { name: "Albania", continent: "europe", badge: "🏔️ Nature" },
-    { name: "Armenia", continent: "europe", badge: "⛪ History", image: "Media/armenia-blog-post-main.jpeg" },
+    { name: "Armenia", continent: "europe", badge: "⛪ History", image: "Media/armenia-blog-post-main.jpeg", link: "/armenia-guide" },
     { name: "Austria", continent: "europe", badge: "⛷️ Alps" },
     { name: "Belgium", continent: "europe", badge: "🍫 Culture" },
-    { name: "Bosnia & Herzegovina", continent: "europe", badge: "☕ Adventure", image: "Media/bosnia-background.jpg" },
+    { name: "Bosnia & Herzegovina", continent: "europe", badge: "☕ Adventure", image: "Media/bosnia-background.jpg", link: "/bosnia-guide" },
     { name: "Bulgaria", continent: "europe", badge: "🏰 Castles" },
     { name: "Croatia", continent: "europe", badge: "🌊 Coastline" },
     { name: "Cyprus", continent: "europe", badge: "☀️ Island" },
@@ -15,7 +15,7 @@ const destinationsData = [
     { name: "Finland", continent: "europe", badge: "🎿 Arctic" },
     { name: "France", continent: "europe", badge: "🍷 Gastronomy" },
     { name: "Germany", continent: "europe", badge: "🥨 Modern" },
-    { name: "Greece", continent: "europe", badge: "🏛️ Ancient" },
+    { name: "Greece", continent: "europe", badge: "🏛️ Ancient", link: "/athens-guide" },
     { name: "Hungary", continent: "europe", badge: "♨️ Thermal" },
     { name: "Iceland", continent: "europe", badge: "🌋 Volcanic" },
     { name: "Ireland", continent: "europe", badge: "☘️ Emerald" },
@@ -28,7 +28,7 @@ const destinationsData = [
     { name: "Northern Ireland", continent: "europe", badge: "🧥 Giants" },
     { name: "Norway", continent: "europe", badge: "🏔️ Fjords" },
     { name: "Poland", continent: "europe", badge: "🥟 History" },
-    { name: "Romania", continent: "europe", badge: "🧛 Dracula" },
+    { name: "Romania", continent: "europe", badge: "🧛 Dracula", link: "/romania-castles" },
     { name: "Scotland", continent: "europe", badge: "🥃 Highlands" },
     { name: "Slovakia", continent: "europe", badge: "⛰️ Tatras" },
     { name: "Spain", continent: "europe", badge: "💃 Fiestas" },
@@ -44,15 +44,15 @@ const destinationsData = [
     { name: "Falkland Islands", continent: "americas", badge: "🐧 Wildlife" },
     { name: "Mexico", continent: "americas", badge: "🌮 Tacos" },
     { name: "Uruguay", continent: "americas", badge: "🏖️ Beaches" },
-    { name: "USA", continent: "americas", badge: "🗽 Diverse" },
+    { name: "USA", continent: "americas", badge: "🗽 Diverse", link: "/mardi-gras" },
 
     // Africa
-    { name: "Egypt", continent: "africa", badge: "🐫 Pyramids" },
+    { name: "Egypt", continent: "africa", badge: "🐫 Pyramids", link: "/egypt-guide" },
     { name: "Morocco", continent: "africa", badge: "🕌 Souks" },
 
     // Asia
     { name: "Thailand", continent: "asia", badge: "🏝️ Tropical" },
-    { name: "Vietnam", continent: "asia", badge: "🍜 Pho" },
+    { name: "Vietnam", continent: "asia", badge: "🍜 Pho", image: "Media/hanoi-hero.png", link: "/hanoi-guide" },
     { name: "Singapore", continent: "asia", badge: "🏙️ Garden City" },
 
     // Polar

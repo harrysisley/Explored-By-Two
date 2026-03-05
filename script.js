@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Hanoi: Two Nights in Vietnam's Chaotic, Charming Capital",
+        date: "Mar 5, 2026",
+        image: "Media/hanoi-hero.png",
+        link: "/hanoi-guide",
+        description: "Hanoi was our first stop in Vietnam, and even with just two nights, it completely won us over. Discover the Old Quarter, street food, and unique culture."
+    },
+    {
         title: "Athens Travel Guide: Ancient History, Street Cats, and the Best Gyros in Greece",
         date: "Mar 2, 2026",
         image: "Media/athens-blog-background.jpeg",
