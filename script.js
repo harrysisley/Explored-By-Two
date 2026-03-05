@@ -867,7 +867,7 @@ const recentAdventures = [
     {
         title: "Bosnia & Herzegovina Travel Guide: Sarajevo During Eid + The Bosnian Pyramid Mystery",
         date: "Feb 16, 2026",
-        image: "Media/bosnia-background.jpg",
+        image: "Media/bosnia-hero-image.jpeg",
         link: "/bosnia-guide",
         description: "From stunning mountain views landing in Sarajevo to the mysterious pyramids of Visoko, Bosnia surprised us at every turn."
     },

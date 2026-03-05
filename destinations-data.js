@@ -4,7 +4,7 @@ const destinationsData = [
     { name: "Armenia", continent: "europe", badge: "⛪ History", image: "Media/armenia-blog-post-main.jpeg", link: "/armenia-guide" },
     { name: "Austria", continent: "europe", badge: "⛷️ Alps" },
     { name: "Belgium", continent: "europe", badge: "🍫 Culture" },
-    { name: "Bosnia & Herzegovina", continent: "europe", badge: "☕ Adventure", image: "Media/bosnia-background.jpg", link: "/bosnia-guide" },
+    { name: "Bosnia & Herzegovina", continent: "europe", badge: "☕ Adventure", image: "Media/bosnia-hero-image.jpeg", link: "/bosnia-guide" },
     { name: "Bulgaria", continent: "europe", badge: "🏰 Castles" },
     { name: "Croatia", continent: "europe", badge: "🌊 Coastline" },
     { name: "Cyprus", continent: "europe", badge: "☀️ Island" },
