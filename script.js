@@ -840,7 +840,7 @@ const recentAdventures = [
         title: "Teotihuacan & Guadalupe Shrine: A Day Trip Into Mexico's Ancient Mysteries",
         date: "Mar 9, 2026",
         image: "Media/mexico-pyramid-hero-main.jpeg",
-        link: "/mexico-guide",
+        link: "/mexico-teotihuacan-guide",
         description: "Explore the ancient mysteries of Teotihuacan. Discover the Pyramids of the Sun and Moon, history, and why this site remains a fascination."
     },
     {
