@@ -42,7 +42,8 @@ const destinationsData = [
     { name: "Argentina", continent: "americas", badge: "🥩 Tango" },
     { name: "Chile", continent: "americas", badge: "🍷 Patagonia" },
     { name: "Falkland Islands", continent: "americas", badge: "🐧 Wildlife" },
-    { name: "Mexico", continent: "americas", badge: "🌮 Tacos" },
+    { name: "Mexico", continent: "americas", badge: "🌮 Tacos", image: "Media/mexico-teotihuacan-hero.jpg", link: "/mexico-guide" },
+
     { name: "Uruguay", continent: "americas", badge: "🏖️ Beaches" },
     { name: "USA", continent: "americas", badge: "🗽 Diverse", link: "/mardi-gras" },
 

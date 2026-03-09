@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Teotihuacan & Guadalupe Shrine: A Day Trip Into Mexico's Ancient Mysteries",
+        date: "Mar 9, 2026",
+        image: "Media/mexico-teotihuacan-hero.jpg",
+        link: "/mexico-guide",
+        description: "Explore the ancient mysteries of Teotihuacan. Discover the Pyramids of the Sun and Moon, history, and why this site remains a fascination."
+    },
+    {
         title: "Hanoi: Two Nights in Vietnam's Chaotic, Charming Capital",
         date: "Mar 5, 2026",
         image: "Media/hanoi-main-image.jpeg",

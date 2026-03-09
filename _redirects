@@ -9,6 +9,9 @@
 /armenia-guide            /blog-posts/blog-post-armenia.html            200
 /athens-guide             /blog-posts/blog-post-athens.html             200
 /hanoi-guide              /blog-posts/blog-post-hanoi.html              200
+/mexico-guide             /blog-posts/blog-post-mexico-teotihuacan.html 200
+
+
 
 # Domain redirect
 https://exploredbytwo.com/* https://www.exploredbytwo.com/:splat 301
