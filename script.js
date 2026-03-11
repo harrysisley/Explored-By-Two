@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Pompeii: The Roman City Frozen in Time by Mount Vesuvius",
+        date: "Mar 11, 2026",
+        image: "Media/pompeii-hero-main.jpeg",
+        link: "/pompeii-guide",
+        description: "Walking down a 2,000-year-old street and seeing the wheel ruts from Roman carts still carved into the stone. Pompeii isn't just an archaeological site, it's a snapshot of Roman life."
+    },
+    {
         title: "Teotihuacan & Guadalupe Shrine: A Day Trip Into Mexico's Ancient Mysteries",
         date: "Mar 9, 2026",
         image: "Media/mexico-pyramid-hero-main.jpeg",

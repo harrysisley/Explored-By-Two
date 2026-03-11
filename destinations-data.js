@@ -19,7 +19,7 @@ const destinationsData = [
     { name: "Hungary", continent: "europe", badge: "♨️ Thermal" },
     { name: "Iceland", continent: "europe", badge: "🌋 Volcanic" },
     { name: "Ireland", continent: "europe", badge: "☘️ Emerald" },
-    { name: "Italy", continent: "europe", badge: "🍕 Renaissance" },
+    { name: "Italy", continent: "europe", badge: "🏛️ Ancient", image: "https://images.unsplash.com/photo-1541432924032-4e9d0124896e?q=80&w=2000&auto=format&fit=crop", link: "/pompeii-guide" },
     { name: "Latvia", continent: "europe", badge: "🏛️ Art Nouveau" },
     { name: "Lithuania", continent: "europe", badge: "🏰 Medieval" },
     { name: "Luxembourg", continent: "europe", badge: "🏰 Fortress" },
