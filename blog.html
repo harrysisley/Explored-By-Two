@@ -121,7 +121,11 @@
     <!-- Blog Grid -->
     <section class="blog-section">
         <div class="container">
-            <div class="blog-grid">
+                <!-- Dynamic Sanity Section -->
+                <div id="sanity-posts-container" class="blog-grid" style="grid-column: 1 / -1; margin-bottom: 2rem;">
+                    <!-- Sanity posts will appear here -->
+                </div>
+
                 <!-- Featured Post (Pompeii) -->
                 <article class="blog-card featured fade-up" data-category="guides" onclick="window.location.href='/pompeii-guide'">
                     <div class="blog-card-image">
@@ -431,6 +435,7 @@
 
     <script src="script.js" defer></script>
     <script src="blog.js" defer></script>
+    <script type="module" src="src/blog-sanity-display.js"></script>
     <script type="module" src="src/auth.js"></script>
 </body>
 

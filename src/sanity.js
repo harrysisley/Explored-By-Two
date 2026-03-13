@@ -1,0 +1,21 @@
+import { createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
+
+export const client = createClient({
+  projectId: 'xvmd91iz',
+  dataset: 'production',
+  useCdn: true, // set to `false` to bypass the edge cache
+  apiVersion: '2024-03-13', // use current date (YYYY-MM-DD) to target the latest API version
+});
+
+const builder = imageUrlBuilder(client);
+
+export function urlFor(source) {
+  return builder.image(source);
+}
+
+// Example function to fetch posts
+export async function getPosts() {
+  const posts = await client.fetch('*[_type == "post"]');
+  return posts;
+}
