@@ -54,7 +54,7 @@ const continentIcons = {
 
 // Hardcoded countries for the static section
 const hardcodedCountries = [
-    "Iceland", "Italy", "Luxembourg", "France", "Greece", "Türkiye", "Netherlands", "Bulgaria", "Romania", "Ireland", "Austria", "Belgium", "Northern Ireland", "Norway", "Finland", "Latvia", "Scotland", "Wales", "USA", "Germany", "Denmark", "Spain", "Poland", "Argentina", "Chile", "Antarctica", "Falkland Islands", "Uruguay", "Sweden", "Bosnia", "Estonia", "Albania", "Malta", "Slovakia", "Hungary", "Mexico", "Croatia", "Lithuania", "Czech Republic", "Armenia", "Cyprus", "Egypt", "Thailand", "Vietnam", "Singapore"
+    "Iceland", "Italy", "Luxembourg", "France", "Greece", "Türkiye", "Netherlands", "Bulgaria", "Romania", "Ireland", "Austria", "Belgium", "Northern Ireland", "Norway", "Finland", "Latvia", "Scotland", "Wales", "USA", "Germany", "Denmark", "Spain", "Poland", "Argentina", "Chile", "Antarctica", "Falkland Islands", "Uruguay", "Sweden", "Bosnia", "Estonia", "Albania", "Malta", "Slovakia", "Hungary", "Mexico", "Croatia", "Lithuania", "Czech Republic", "Armenia", "Cyprus", "Egypt", "Thailand", "Vietnam", "Singapore", "Morocco"
 ];
 
 // Passport Stamps Manager
