@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Rabat, Morocco: Our 50th Country Celebration",
+        date: "Mar 24, 2026",
+        image: "Media/rabat-main-image.jpeg",
+        link: "/rabat-morocco",
+        description: "Our 50th country had to be special, and Morocco absolutely delivered. Explore our one-night itinerary in Rabat and how we did it on a shoestring budget."
+    },
+    {
         title: "Pompeii: The Roman City Frozen in Time by Mount Vesuvius",
         date: "Mar 11, 2026",
         image: "Media/pompeii-hero-main.jpeg",
