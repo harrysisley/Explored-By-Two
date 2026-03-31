@@ -837,6 +837,13 @@ document.addEventListener('click', (e) => {
 // To update the homepage, simply add your new blog post to the TOP of this list.
 const recentAdventures = [
     {
+        title: "Tallinn, Estonia: Our Cute Little Weekend Away",
+        date: "Mar 31, 2026",
+        image: "Media/tallinn-main-image.jpeg",
+        link: "/tallinn-estonia",
+        description: "Tallinn just felt easy to like. It is compact, really pretty, and full of character. Explore our weekend away in Estonia."
+    },
+    {
         title: "Rabat, Morocco: Our 50th Country Celebration",
         date: "Mar 24, 2026",
         image: "Media/rabat-main-image.jpeg",
